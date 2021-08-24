@@ -10,4 +10,9 @@
             <page caminho="tipos.md"></page>
         </assunto>
     </categoria>
+    <categoria titulo="Intermediário" caminho="Intermediario">
+        <assunto titulo="Conversões implícitas" caminho="conversoes_implicitas">
+            <page caminho="conversoes_implicitas.md"></page>
+        </assunto>
+    </categoria>
 </estrutura>
