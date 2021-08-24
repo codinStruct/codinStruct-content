@@ -2,9 +2,9 @@
 <!DOCTYPE estrutura SYSTEM "../estrutura.dtd">
 
 <estrutura>
-    <categoria titulo="Básico" caminho="Básico">
-        <assunto titulo="Introdução" caminho="introdução">
-            <page caminho="introdução.md"></page>
+    <categoria titulo="Básico" caminho="Basico">
+        <assunto titulo="Introdução" caminho="introducao">
+            <page caminho="introducao.md"></page>
         </assunto>
     </categoria>
 </estrutura>
