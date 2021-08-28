@@ -6,6 +6,9 @@
         <assunto titulo="Introdução" caminho="introducao">
             <page caminho="introducao.md"></page>
         </assunto>
+        <assunto titulo="Primeiro programa" caminho="primeiro_programa">
+            <page caminho="primeiro_programa.md"></page>
+        </assunto>
         <assunto titulo="Tipos fundamentais" caminho="tipos">
             <page caminho="tipos.md"></page>
         </assunto>
