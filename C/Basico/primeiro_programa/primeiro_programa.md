@@ -47,14 +47,10 @@ executável comumente será chamado `a.exe` ou `a.out`, mas o nome pode ser
 alterado fornecendo a opção `-o` seguida pelo caminho de destino. Para
 criar o executável `Programa` usaríamos o comando `gcc main.c -o Programa`.
 
-Seu compilador provavelmente permite escolher qual padrão do C utilizar. No GCC,
-por exemplo, o padrão é escolhido a opção `-std`, como `-std=c99` e `-std=c17`.
-Use o padrão atual a não ser que haja um ótimo motivo para usar um padrão antigo
-ou ainda não oficialmente lançado.
+Se tudo der certo, a execução do programa exibirá `Hello, World!`.
 
-Alguns compiladores também oferecem extensões à linguagem, que tornam o código
-menos portável já que nem todos os compiladores fornecem as mesmas extensões.
-Apenas utilize esses recursos com cautela e ótimos motivos. Um jeito rápido de
-desativar as extensões no GCC é utilizando a opção `-Wpedantic`.
-
-Se tudo der certo, a saída do programa será `Hello, World!`.
+# Referências
+* Padrão C18 (ISO/IEC 9899:2018):
+  * 5.1.2.2 Hosted environment (p: 10)
+  * 6.8.6.4 The return statement (p: 112)
+  * 7.21 Input/output <stdio.h> (p: 218)
