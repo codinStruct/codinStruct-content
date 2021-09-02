@@ -4,18 +4,18 @@
 <estrutura>
     <categoria titulo="Básico" caminho="Basico">
         <assunto titulo="Introdução" caminho="introducao">
-            <page caminho="introducao.md"></page>
+            <page titulo="Introdução" caminho="introducao.md"></page>
         </assunto>
         <assunto titulo="Primeiro programa" caminho="primeiro_programa">
-            <page caminho="primeiro_programa.md"></page>
+            <page titulo="Primeiro programa" caminho="primeiro_programa.md"></page>
         </assunto>
         <assunto titulo="Tipos fundamentais" caminho="tipos">
-            <page caminho="tipos.md"></page>
+            <page titulo="Tipos fundamentais" caminho="tipos.md"></page>
         </assunto>
     </categoria>
     <categoria titulo="Intermediário" caminho="Intermediario">
         <assunto titulo="Conversões implícitas" caminho="conversoes_implicitas">
-            <page caminho="conversoes_implicitas.md"></page>
+            <page titulo="Conversões implícitas" caminho="conversoes_implicitas.md"></page>
         </assunto>
     </categoria>
 </estrutura>

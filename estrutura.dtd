@@ -15,6 +15,6 @@
 <!-- Página pertencente a um assunto -->
 <!ELEMENT page EMPTY>
 <!ATTLIST page
-    titulo CDATA #IMPLIED
+    titulo CDATA #REQUIRED
     caminho CDATA #REQUIRED
 >
