@@ -75,7 +75,7 @@ int main(void)
 
 - **`#include <arquivo>`**:
   - Deve ser utilizado com arquivos cuja localização é conhecida pelo
-    pré-processador, os arquivos da biblioteca-padrão como `stdio.h` normalmente
+    pré-processador; os arquivos da biblioteca padrão como `stdio.h` normalmente
     podem ser incluídos dessa forma. As localizações buscadas costumam ser
     definidas em uma
     [variável de ambiente](https://pt.wikipedia.orgwikVari%C3%A1vel_de_ambiente).
