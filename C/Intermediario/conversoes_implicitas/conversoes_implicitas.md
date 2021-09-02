@@ -1,4 +1,5 @@
 # Conversões implícitas
+
 Os tipos integrais são claramente diferentes dos tipos de ponto flutuante. Essa
 diferença não se dá somente nos valores que os objetos podem assumir, mas também
 na representação deles na memória.
@@ -21,14 +22,15 @@ putchar('\n');
 for (int x = 0; x < sizeof(f); ++x)
     printf("%.2hhx ", ((char *)&f)[x]);
 ```
+
 <!-- ? Esse código funciona em qualquer implementação? -->
 
 A seguinte tabela exibe as informações obtidas executando os trechos acima em
 certo sistema Linux x86-64:
 
-|       |      i      |      f      |
-|-------|-------------|-------------|
-| Valor |      1      |      1      |
+|       | i           | f           |
+| ----- | ----------- | ----------- |
+| Valor | 1           | 1           |
 | Bytes | 01 00 00 00 | 00 00 80 3f |
 
 Até atribuindo o valor de `f` para `i` com `i = f` e executando o código
@@ -47,12 +49,14 @@ padrão C ISO:
 
 <!-- TODO: Explicar como usar casts para evitar conversões implícitas -->
 
-# Exercícios
+## Exercícios
+
 1. Exiba as memórias de um `int` e um `float` com o mesmo valor e verifique se
    há alguma diferença.
 1. Copie a memória de um `int` com valor 5 para um `float`, sem conversões,
    utilizando um cast. Exiba as memórias assim como no exercício anterior.
 
-# Referências
-* Padrão C18 (ISO/IEC 9899:2018):
-  * 6.3 Conversions (p: 37)
+## Referências
+
+- Padrão C18 ([ISO/IEC 9899:2018](https://www.iso.org/standard/74528.html)):
+  - 6.3 Conversions

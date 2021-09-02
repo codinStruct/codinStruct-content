@@ -1,10 +1,14 @@
-# O que é C?
-C é uma linguagem de programação amplamente utilizada que influenciou várias
-linguagens populares, como C++. É pequena, de baixo nível e fortemente focada
-em desempenho. Algumas de suas características podem ser vistas negativamente
-por alguns programadores, mas são vantagens em diversas situações.
+# Introdução
 
-# Sua história
+## O que é C?
+
+C é uma linguagem de programação amplamente utilizada que influenciou várias
+linguagens populares, como C++. É pequena, de baixo nível e fortemente focada em
+desempenho. Algumas de suas características podem ser vistas negativamente por
+alguns programadores, mas são vantagens em diversas situações.
+
+## Sua história
+
 Desenvolvida na década de 70 por Dennis Ritchie, Ken Thompson e outros na Bell
 Laboratories, C foi criada como uma extensão de B — linguagem que fez parte do
 desenvolvimento do sistema operacional UNIX, que foi depois reescrito em C.
