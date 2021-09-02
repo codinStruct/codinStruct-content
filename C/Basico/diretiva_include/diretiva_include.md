@@ -78,7 +78,7 @@ int main(void)
     pré-processador; os arquivos da biblioteca padrão como `stdio.h` normalmente
     podem ser incluídos dessa forma. As localizações buscadas costumam ser
     definidas em uma
-    [variável de ambiente](https://pt.wikipedia.orgwikVari%C3%A1vel_de_ambiente).
+    [variável de ambiente](https://pt.wikipedia.org/wiki/Vari%C3%A1vel_de_ambiente).
 - **`#include "arquivo"`**:
   - Deve conter o caminho para o arquivo, como
     `C:/Users/João/Documents/arquivo`. Normalmente esse caminho pode também ser
