@@ -9,6 +9,9 @@
         <assunto titulo="Primeiro programa" caminho="primeiro_programa">
             <page titulo="Primeiro programa" caminho="primeiro_programa.md"></page>
         </assunto>
+        <assunto titulo="Diretiva #include" caminho="diretiva_include">
+            <page titulo="Diretiva #include" caminho="diretiva_include.md"></page>
+        </assunto>
         <assunto titulo="Tipos fundamentais" caminho="tipos">
             <page titulo="Tipos fundamentais" caminho="tipos.md"></page>
         </assunto>
