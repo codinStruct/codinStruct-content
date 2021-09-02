@@ -37,7 +37,7 @@ Exemplos de fontes confiáveis:
   - É destacado no site oficial do jQuery.
 - [Python Docs](https://docs.python.org/), pois:
   - É destacado no site oficial do Python.
-- [ISO/IEC 14882:2020](https://www.iso.org/standard/79358.html)
+- [ISO/IEC 14882:2020](https://www.iso.org/standard/79358.html), pois:
   - É um padrão ISO para a linguagem C++. Não use especificamente essa versão, e
     sim a mais recentemente ratificada.
 
