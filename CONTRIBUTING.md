@@ -9,6 +9,20 @@ o pequeno guia abaixo:
 
 ## Estilo
 
+### Títulos de commits
+
+Títulos de commits devem iniciar com certo emoji dependendo do tipo de
+alteração. Isso pode deixar as mensagens mais concisas.
+
+| Emoji | Significado                       |
+| :---: | --------------------------------- |
+|  ✨   | Conteúdo novo                     |
+|  ✏️   | Conteúdo adicionado em uma página |
+|  ♻️   | Conteúdo modificado em uma página |
+|  🔍️  | Erro corrigido no conteúdo        |
+|  🔥   | Arquivo removido                  |
+|  💥   | Grandes mudanças                  |
+
 ### Markdown
 
 #### Formatação
