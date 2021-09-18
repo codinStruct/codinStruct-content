@@ -1,6 +1,6 @@
 # Conversões implícitas
 
-Os tipos integrais são claramente diferentes dos tipos de ponto flutuante. Essa
+Os tipos inteiros são claramente diferentes dos tipos de ponto flutuante. Essa
 diferença não se dá somente nos valores que os objetos podem assumir, mas também
 na representação deles na memória.
 
@@ -38,7 +38,7 @@ novamente, os resultados são os mesmos que na tabela. Como isso é possível?
 
 Esse é o efeito das conversões implícitas no C. Veja bem: para não haver
 resultados inesperados, o compilador gera código que converte o valor em ponto
-flutuante para um tipo integral mesmo que as representações não batam. Isso
+flutuante para um tipo inteiro mesmo que as representações não batam. Isso
 significa que ao executar `i = f`, a memória não é apenas copiada mas também
 convertida na atribuição.
 
@@ -59,4 +59,5 @@ padrão C ISO:
 ## Referências
 
 - Padrão C18 ([ISO/IEC 9899:2018](https://www.iso.org/standard/74528.html)):
+  - 6.2.5 Types
   - 6.3 Conversions
