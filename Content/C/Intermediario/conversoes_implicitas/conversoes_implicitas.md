@@ -15,12 +15,12 @@ dos bytes que compõem esses objetos:
 
 ```c
 for (int x = 0; x < sizeof(i); ++x)
-    printf("%.2hhx ", ((char *)&i)[x]);
+    printf("%.2hhx ", ((unsigned char *)&i)[x]);
 
 putchar('\n');
 
 for (int x = 0; x < sizeof(f); ++x)
-    printf("%.2hhx ", ((char *)&f)[x]);
+    printf("%.2hhx ", ((unsigned char *)&f)[x]);
 ```
 
 <!-- ? Esse código funciona em qualquer implementação? -->
@@ -60,4 +60,5 @@ padrão C ISO:
 
 - Padrão C18 ([ISO/IEC 9899:2018](https://www.iso.org/standard/74528.html)):
   - 6.2.5 Types
+  - 6.2.6 Representations of types
   - 6.3 Conversions
