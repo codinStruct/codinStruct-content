@@ -143,7 +143,7 @@ int main(void)
     // Isso se torna int vi = MaxInt(ai, bi);
     int vi = MAX(ai, bi);
 
-    // Isso se torna float vi = *(float *)Max(&af, &bf, CmpFloat);
+    // Isso se torna float vf = *(float *)Max(&af, &bf, CmpFloat);
     float vf = *(float *)MAX(&af, &bf, CmpFloat);
 
     // vi agora vale 5 e vf agora vale 5.0
