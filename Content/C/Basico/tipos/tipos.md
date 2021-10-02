@@ -140,7 +140,14 @@ isalpha('?'); // false
 
 ### Tipo `double`
 
-Representa um número real, como `-30.52` ou `529.0023`.
+Representa um número real, como `-30.52` ou `529.0023`. Ao ser convertido para
+um inteiro a parte fracionária é descartada, portanto `15.89` se torna `15`. Se
+o valor for alto/baixo demais para ser representado por um `int`, o
+comportamento é indefinido.
+
+```c
+int i = 15.89; // i é igual a 15
+```
 
 ## Referências
 
