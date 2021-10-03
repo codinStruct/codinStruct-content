@@ -79,7 +79,7 @@ isso, mas é mais simples do que parece:
 ```c
 int v;
 
-// O compilador transformará isso em puts("v é um int);
+// O compilador transformará isso em puts("v é um int");
 _Generic(v, char:    puts("v é um char"),
             int:     puts("v é um int"),
             float:   puts("v é um float"),
