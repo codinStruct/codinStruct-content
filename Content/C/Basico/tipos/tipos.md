@@ -49,7 +49,7 @@ char ch = '\''; // Okay
 ```
 
 Valores `char` são internamente representados por valores inteiros, e o valor de
-cada caractere depende do sistema. Muitos programas utilizam o conjunto de
+cada caractere depende do sistema. Muitos sistemas utilizam o conjunto de
 caracteres ASCII, parcialmente mostrado na tabela abaixo.
 
 | Valor | Caractere | Valor | Caractere | Valor | Caractere |
