@@ -14,8 +14,9 @@ a ser compilado. Imagine dois arquivos:
 Arquivo `externo.c`:
 
 ```c
-// Olá,
-// eu sou o conteúdo do arquivo externo.c
+int a;
+int b;
+int c;
 ```
 
 Arquivo `main.c`:
@@ -33,8 +34,9 @@ Quando a compilação de `main.c` for solicitada, o pré-processador enviará o
 seguinte código para o compilador:
 
 ```c
-// Olá,
-// eu sou o conteúdo do arquivo externo.c
+int a;
+int b;
+int c;
 
 int main(void)
 {
