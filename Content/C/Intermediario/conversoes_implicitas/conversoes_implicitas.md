@@ -49,12 +49,7 @@ padrão C ISO:
 
 <!-- TODO: Explicar como usar casts para evitar conversões implícitas -->
 
-## Exercícios
 
-1. Exiba as memórias de um `int` e um `float` com o mesmo valor e verifique se
-   há alguma diferença.
-1. Copie a memória de um `int` com valor 5 para um `float`, sem conversões,
-   utilizando um cast. Exiba as memórias assim como no exercício anterior.
 
 ## Referências
 
