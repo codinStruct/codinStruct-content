@@ -1,0 +1,20 @@
+<!-- Represents the structure of a language file tree -->
+<!ELEMENT lang EMPTY>
+<!ATTLIST lang
+    title CDATA #REQUIRED
+    path CDATA #REQUIRED
+>
+<!ELEMENT categories (category*)>
+<!-- Categories belonging to a language -->
+<!ELEMENT category (page*)>
+<!ATTLIST category
+    title CDATA #REQUIRED
+    path CDATA #REQUIRED
+>
+<!-- Pages belonging to a category -->
+<!ELEMENT pages (page*)>
+<!ELEMENT page EMPTY>
+<!ATTLIST page
+    title CDATA #REQUIRED
+    path CDATA #REQUIRED
+>
