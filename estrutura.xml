@@ -21,4 +21,15 @@
             <page title="Seleção Genérica" path="selecao_generica"></page>
         </category>
     </language>
+    <language title="Python" path="Python">
+        <category title="Básico" path="Basico">
+            <page title="Sobre" path="sobre"></page>
+            <page title="Primeiros Passos" path="primeiros_passos"></page>
+            <page title="Primeiro Programa" path="primeiro_programa"></page>
+            <page title="Entrada de Dados" path="entrada_dados"></page>
+            <page title="Tipos de Dados" path="tipagem"></page>
+            <page title="Operações Aritméticas" path="operacoes_aritmeticas"></page>
+            <page title="Comentarios" path="comentario"></page>
+        </category>
+    </language>
 </main>
