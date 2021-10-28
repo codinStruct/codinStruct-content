@@ -1,4 +1,5 @@
-<!-- Represents the structure of a language file tree -->
+<!ELEMENT langs (lang*)>
+<!-- Represents a programming language -->
 <!ELEMENT lang EMPTY>
 <!ATTLIST lang
     title CDATA #REQUIRED

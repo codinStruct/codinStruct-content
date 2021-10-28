@@ -1,3 +1,5 @@
-<!DOCTYPE lang SYSTEM "../structure.dtd">
+<!DOCTYPE langs SYSTEM "../structure.dtd">
 
-<lang title="C" path="C/"></lang>
+<langs>
+    <lang title="C" path="C/"></lang>
+</langs>
