@@ -79,8 +79,8 @@ int foo(void)
 
 ## Escopo
 
-Todos identificadores, como nomes de variáveis e funções, possuem um escopo que
-determina onde podem ser acessados.
+Todos os identificadores, como nomes de variáveis e funções, possuem um escopo
+que determina onde podem ser acessados.
 
 ### Escopo de bloco
 

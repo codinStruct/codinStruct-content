@@ -52,7 +52,7 @@ atribuição.
 
 ## Promoções inteiras
 
-Todos tipos inteiros possuem a propriedade abstrata quantitativa rank, e aqui
+Todos os tipos inteiros possuem a propriedade abstrata quantitativa rank, e aqui
 está a relação entre os ranks dos inteiros padrões: `_Bool` < (`char` e
 `signed char`) < `short` < `int` < `long` < `long long` (Um tipo sem sinal
 possui o mesmo rank que sua contraparte com sinal). Essa propriedade define em

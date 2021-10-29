@@ -61,9 +61,9 @@ Exemplos de fontes duvidosas:
   - Não é oficial.
   - Apresenta frequentes erros e uso de práticas desencorajadas.
 
-Não é necessário incluir referências para todas afirmações, mas quando haver
+Não é necessário incluir referências para todas as afirmações, mas quando haver
 referências, devem estar listadas no final do documento sob o cabeçalho de nível
-2 "Referências". A estrutura da lista não segue padrões rígidos mas deve ser
+2 "Referências". A estrutura da lista não segue padrões rígidos, mas deve ser
 consistente com as demais.
 
 Aqui está um bom exemplo:

@@ -111,7 +111,7 @@ Não se engane, a função `ExibirDuo` é apenas um exemplo e não deve ser muit
 ## Função `printf`
 
 A função `printf`, diferente de `puts`, tem a capacidade de formatar os dados
-antes de exibí-los. O primeiro parâmetro da função é uma string de formato, que
+antes de exibi-los. O primeiro parâmetro da função é uma string de formato, que
 informa à função a série de operações de saída a serem realizadas.
 
 A string `"Hello, World!"`, ao ser usada como string de formato, faz com que
