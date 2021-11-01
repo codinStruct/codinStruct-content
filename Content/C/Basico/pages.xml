@@ -9,4 +9,5 @@
     <page title="Tipos fundamentais básicos" path="tipos/tipos.md"></page>
     <page title="Tabelas de tipos fundamentais" path="tipos/tabelas.md"></page>
     <page title="Saída básica" path="entrada_e_saida/saida.md"></page>
+    <page title="Entrada básica" path="entrada_e_saida/entrada.md"></page>
 </pages>
