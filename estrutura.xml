@@ -12,6 +12,7 @@
             <page title="Tabelas de Tipos Fundamentais" path="tabelas"></page>
             <page title="Saída Básica" path="saida"></page>
             <page title="Entrada Básica" path="entrada"></page>
+            <page title="Operadores Aritméticos Básicos" path="ops_aritmeticos.md"></page>
         </category>
         <category title="Intermediário" path="Intermediario">
             <page title="Conversões Implícitas" path="conversoes_implicitas"></page>
