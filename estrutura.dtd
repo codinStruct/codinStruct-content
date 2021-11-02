@@ -1,19 +1,18 @@
-<!ELEMENT langs (lang*)>
+<!-- Our root node -->
+<!ELEMENT main (language*)>
 <!-- Represents a programming language -->
-<!ELEMENT lang EMPTY>
-<!ATTLIST lang
+<!ELEMENT language (category*)>
+<!ATTLIST language
     title CDATA #REQUIRED
     path CDATA #REQUIRED
 >
-<!ELEMENT categories (category*)>
-<!-- Categories belonging to a language -->
+<!-- Category belonging to a language -->
 <!ELEMENT category (page*)>
 <!ATTLIST category
     title CDATA #REQUIRED
     path CDATA #REQUIRED
 >
-<!-- Pages belonging to a category -->
-<!ELEMENT pages (page*)>
+<!-- Page belonging to a category -->
 <!ELEMENT page EMPTY>
 <!ATTLIST page
     title CDATA #REQUIRED

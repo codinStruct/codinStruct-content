@@ -1,7 +1,0 @@
-<!DOCTYPE categories SYSTEM "../../structure.dtd">
-
-<categories>
-    <category title="Básico" path="Basico/"></category>
-    <category title="Intermediário" path="Intermediario/"></category>
-    <category title="Independente" path="Independente/"></category>
-</categories>
