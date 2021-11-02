@@ -3,21 +3,21 @@
 <main>
     <language title="C" path="C">
         <category title="Básico" path="Basico">
-            <page title="Introdução" path="introducao.md"></page>
-            <page title="Primeiro programa" path="primeiro_programa.md"></page>
-            <page title="Diretiva #include" path="diretiva_include.md"></page>
-            <page title="Funções" path="funcoes.md"></page>
-            <page title="Variáveis" path="variaveis.md"></page>
-            <page title="Tipos fundamentais básicos" path="tipos/tipos.md"></page>
-            <page title="Tabelas de tipos fundamentais" path="tipos/tabelas.md"></page>
-            <page title="Saída básica" path="entrada_e_saida/saida.md"></page>
-            <page title="Entrada básica" path="entrada_e_saida/entrada.md"></page>
+            <page title="Introdução" path="introducao"></page>
+            <page title="Primeiro Programa" path="primeiro_programa"></page>
+            <page title="Diretiva #include" path="diretiva_include"></page>
+            <page title="Funções" path="funcoes"></page>
+            <page title="Variáveis" path="variaveis"></page>
+            <page title="Tipos Fundamentais Básicos" path="tipos"></page>
+            <page title="Tabelas de Tipos Fundamentais" path="tabelas"></page>
+            <page title="Saída Básica" path="saida"></page>
+            <page title="Entrada Básica" path="entrada"></page>
         </category>
-        <category title="Intermediário" path="Intermediario/">
-            <page title="Conversões implícitas" path="conversoes_implicitas.md"></page>
+        <category title="Intermediário" path="Intermediario">
+            <page title="Conversões Implícitas" path="conversoes_implicitas"></page>
         </category>
-        <category title="Independente" path="Independente/">
-            <page title="Seleção genérica" path="Avançado/selecao_generica.md"></page>
+        <category title="Avançado" path="Avancado">
+            <page title="Seleção Genérica" path="selecao_generica"></page>
         </category>
     </language>
 </main>
