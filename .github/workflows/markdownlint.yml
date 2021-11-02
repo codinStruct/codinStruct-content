@@ -1,0 +1,22 @@
+name: Markdownlint
+
+on:
+  push:
+    paths:
+      - '**.md'
+  pull_request:
+    paths:
+      - '**.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: markdownlint-cli
+        uses: nosborn/github-action-markdown-cli@v2.0.0
+        with:
+          config_file: ".markdownlint.json"
+          files: "**.md"
+          ignore_files: "README.md"
