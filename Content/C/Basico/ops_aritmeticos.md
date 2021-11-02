@@ -14,7 +14,7 @@ um, e vamos fazer isso agora.
 
 ## Operadores binários
 
-Todos operadores binários no C recebem um operando de cada lado, no formato
+Todos os operadores binários no C recebem um operando de cada lado, no formato
 `<operando> <operador> <operando>` (o número de espaços não importa, podendo ser
 até mesmo zero).
 
@@ -59,18 +59,18 @@ Mais alguns exemplos:
 
 ## Operadores unários
 
-Todos operadores unários ficam à esquerda do operando, no formato
+Todos os operadores unários ficam à esquerda do operando, no formato
 `<operador> <operando>` (o número de espaços geralmente não importa).
 
 ### `+` unário
 
-O operador unário `+` é quase sempre um no-op—uma operação que não faz nada.
+O operador unário `+` é quase sempre um no-op uma operação que não faz nada.
 
 Apenas em alguns casos, o operador unário `+` irá converter seu operando para
 outro tipo. Esse processo é chamado promoção inteira, que será detalhado bem
 depois.
 
-Por enquanto, não se preocupe com esse operador pois é raro encontrar um motivo
+Por enquanto, não se preocupe com esse operador, pois é raro encontrar um motivo
 legítimo para usá-lo.
 
 ### `-` unário
@@ -80,7 +80,7 @@ de seu operando, transformando 50 em -50, -25 em 25, etc.
 
 Ele pode ser no-op quando seu operando possui valor zero, mas em alguns sistemas
 é possível distinguir entre zero positivo e zero negativo. Não se preocupe muito
-com isso pois o sinal do zero raramente altera o comportamento de um programa.
+com isso, pois o sinal do zero raramente altera o comportamento de um programa.
 
 ## Precedência
 
@@ -89,8 +89,8 @@ Isso significa que alguns operadores são executados antes dos outros,
 independente da ordem de escrita em uma expressão.
 
 Os operadores `*` e `/` possuem maior precedência que os operadores binários `+`
-e `-`, portanto a expressão `a + b / 2` é o mesmo que `a + (b / 2)`. As versões
-unárias de `+` e `-` possuem maior precedência que todos operadores acima,
+e `-`, portanto, a expressão `a + b / 2` é o mesmo que `a + (b / 2)`. As versões
+unárias de `+` e `-` possuem maior precedência que todos os operadores acima,
 portanto `a + b * -c` é o mesmo que `a + (b * (-c))`.
 
 Aqui estão mais alguns exemplos da precedência desses operadores:
