@@ -23,6 +23,22 @@ até mesmo zero).
 O operador binário `+` funciona igual na matemática: o valor da operação é a
 soma dos dois operandos. `5 + 3`, por exemplo, é uma expressão de valor 8.
 
+Como exemplo, aqui está um programa que soma dois números que o usuário digitar:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int a, b;
+    printf("Digite dois números: ");
+    scanf("%d%d", &a, &b); // "%d %d" pode ser mais legível
+    printf("%d\n", a + b);
+
+    return 0;
+}
+```
+
 ### `-` binário
 
 O operador binário `-` funciona de forma parecida ao operador `+` binário, porém
@@ -81,6 +97,24 @@ de seu operando, transformando 50 em -50, -25 em 25, etc.
 Ele pode ser no-op quando seu operando possui valor zero, mas em alguns sistemas
 é possível distinguir entre zero positivo e zero negativo. Não se preocupe muito
 com isso, pois o sinal do zero raramente altera o comportamento de um programa.
+
+Como exemplo de uso do `-` unário, aqui está um programa que inverte o número
+que o usuário digitar:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int num;
+
+    printf("Digite um número: ");
+    scanf("%d", &num);
+    printf("%d\n", -num);
+
+    return 0;
+}
+```
 
 ## Precedência
 
