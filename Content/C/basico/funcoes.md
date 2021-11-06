@@ -10,7 +10,7 @@ Um grande motivo para utilizar uma função é que basta utilizar o nome dela pa
 executá-la. Não é necessário reescrever seu código, e isso facilita o
 desenvolvimento de qualquer programa.
 
-## Definição e uso
+## Definição e Uso
 
 Definir uma função é simples e consiste em especificar:
 

@@ -1,4 +1,4 @@
-# Entrada básica
+# Entrada Básica
 
 As funções de saída do C permitem ao programa interagir com o usuário lendo
 informações. A função principal que usaremos pra isso é a função `scanf` de

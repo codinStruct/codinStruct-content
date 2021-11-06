@@ -1,6 +1,6 @@
 # Variáveis
 
-## Definição e inicialização
+## Definição e Inicialização
 
 A maneira mais simples de armazenar dados em C é pelo uso de variáveis.
 
@@ -82,7 +82,7 @@ int foo(void)
 Todos os identificadores, como nomes de variáveis e funções, possuem um escopo
 que determina onde podem ser acessados.
 
-### Escopo de bloco
+### Escopo de Bloco
 
 Os parâmetros de uma função podem ser acessados apenas em seu corpo, isso
 significa que `n` pode ser acessado em `foo` mas não em `bar`:
@@ -172,7 +172,7 @@ int foo(void)
 }
 ```
 
-### Escopo de arquivo
+### Escopo de Arquivo
 
 Uma variável declarada fora de um bloco possui escopo de arquivo—pode ser
 acessada em qualquer lugar do arquivo após sua declaração:

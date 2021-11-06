@@ -1,6 +1,6 @@
-# Tabelas de tipos fundamentais
+# Tabelas de Tipos Fundamentais
 
-## Tipos inteiros
+## Tipos Inteiros
 
 | Especificadores (palavras-chave, a ordem não importa)                                   |   Tipo equivalente   | Descrição                                                                |
 | --------------------------------------------------------------------------------------- | :------------------: | ------------------------------------------------------------------------ |

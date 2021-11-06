@@ -1,10 +1,10 @@
-# Primeiro programa
+# Primeiro Programa
 
 O primeiro programa que várias pessoas costumam escrever consiste em exibir
 "Hello, World!" ("Olá, Mundo!" em inglês). Um simples código C para essa tarefa
 é o seguinte:
 
-## Código-fonte
+## Código-Fonte
 
 Arquivo `main.c`:
 

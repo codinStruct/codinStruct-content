@@ -1,11 +1,11 @@
-# Tipos fundamentais básicos
+# Tipos Fundamentais Básicos
 
 Anteriormente vimos que funções, parâmetros e variáveis podem representar
 diferentes tipos de dados. Alguns tipos já estão embutidos como palavras-chave
 na linguagem, e serão chamados de **tipos fundamentais**. Esse grupo inclui os
 tipos inteiros e os tipos flutuantes, que podem ser vistos abaixo.
 
-## Tipos inteiros
+## Tipos Inteiros
 
 ### Tipo `int`
 
@@ -136,7 +136,7 @@ isalpha(','); // false
 isalpha('?'); // false
 ```
 
-## Tipos flutuantes
+## Tipos Flutuantes
 
 ### Tipo `double`
 

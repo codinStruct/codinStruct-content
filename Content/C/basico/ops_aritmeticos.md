@@ -1,4 +1,4 @@
-# Operadores aritméticos básicos
+# Operadores Aritméticos Básicos
 
 Virtualmente toda manipulação de dados em um programa C é feita por operadores,
 que são tokens que indicam ações a serem realizadas com seus operandos (valores
@@ -12,7 +12,7 @@ binária quando tem aridade 2.
 No C é possível separar os operadores em grupos de acordo com a aridade de cada
 um, e vamos fazer isso agora.
 
-## Operadores binários
+## Operadores Binários
 
 Todos os operadores binários no C recebem um operando de cada lado, no formato
 `<operando> <operador> <operando>` (o número de espaços não importa, podendo ser
@@ -73,7 +73,7 @@ Mais alguns exemplos:
 | `40 % 7`  |   5   | `40 / 7` é igual a 5, `7 * 5` é igual a 35 e `40 - 35` é 5       |
 | `-10 % 3` |  -1   | `-10 / 3` é igual a -3, `3 * -3` é igual a -9 e `-10 -(-9)` é -1 |
 
-## Operadores unários
+## Operadores Unários
 
 Todos os operadores unários ficam à esquerda do operando, no formato
 `<operador> <operando>` (o número de espaços geralmente não importa).

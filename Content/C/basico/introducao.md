@@ -7,7 +7,7 @@ linguagens populares, como C++. É pequena, de baixo nível e fortemente focada 
 desempenho. Algumas de suas características podem ser vistas negativamente por
 alguns programadores, mas são vantagens em diversas situações.
 
-## Sua história
+## Sua História
 
 Desenvolvida na década de 70 por Dennis Ritchie, Ken Thompson e outros na Bell
 Laboratories, C foi criada como uma extensão de B — linguagem que fez parte do

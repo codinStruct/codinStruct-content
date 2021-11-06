@@ -1,4 +1,4 @@
-# Conversões implícitas
+# Conversões Implícitas
 
 Com a intenção de simplificar o código, em algumas situações os compiladores C
 convertem valores para outros tipos mesmo sem um cast. Esse processo realmente
@@ -6,7 +6,7 @@ facilita o desenvolvimento, mas é necessário compreendê-lo para que não ocor
 imprevistos. Essas conversões possuem regras complexas, memorizá-las é
 preferível mas pode ser desnecessário para programas relativamente simples.
 
-## Conversões de atribuição
+## Conversões de Atribuição
 
 Os tipos inteiros são claramente diferentes dos tipos de ponto flutuante. Essa
 diferença não se dá somente nos valores que podem assumir, mas também na
@@ -50,7 +50,7 @@ para um valor inteiro mesmo que as representações não batam. Isso significa q
 ao executar `i = f`, a memória não é apenas copiada mas também convertida na
 atribuição.
 
-## Promoções inteiras
+## Promoções Inteiras
 
 Todos os tipos inteiros possuem a propriedade abstrata quantitativa rank, e aqui
 está a relação entre os ranks dos inteiros padrões: `_Bool` < (`char` e
@@ -98,7 +98,7 @@ printf("a == %d", a);
 printf("a == %u", a);
 ```
 
-## Conversões aritméticas usuais
+## Conversões Aritméticas Usuais
 
 As conversões aritméticas usuais ocorrem quando um operador aritmético é
 aplicado a operandos de diferentes tipos, portanto há a necessidade de pelo
@@ -130,7 +130,7 @@ Quando consideramos tipos complexos e imaginários as regras são similares, por
 tipos complexos só se convertem para tipos complexos e tipos imaginários só se
 convertem para tipos imaginários, enquanto tipos reais continuam sendo reais.
 
-## Considerações sobre desempenho
+## Considerações sobre Desempenho
 
 Quando seu objetivo for atingir desempenho máximo em um programa, tenha em mente
 o custo da conversão entre tipos. Em um certo sistema x86-64 a atribuição da

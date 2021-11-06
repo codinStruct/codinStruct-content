@@ -1,8 +1,8 @@
 <!DOCTYPE main SYSTEM "estrutura.dtd">
 
 <main>
-    <language title="C" path="C">
-        <category title="Básico" path="Basico">
+    <language title="C" path="c">
+        <category title="Básico" path="basico">
             <page title="Introdução" path="introducao"></page>
             <page title="Primeiro Programa" path="primeiro_programa"></page>
             <page title="Diretiva #include" path="diretiva_include"></page>
@@ -14,10 +14,10 @@
             <page title="Entrada Básica" path="entrada"></page>
             <page title="Operadores Aritméticos Básicos" path="ops_aritmeticos"></page>
         </category>
-        <category title="Intermediário" path="Intermediario">
+        <category title="Intermediário" path="intermediario">
             <page title="Conversões Implícitas" path="conversoes_implicitas"></page>
         </category>
-        <category title="Avançado" path="Avancado">
+        <category title="Avançado" path="avancado">
             <page title="Seleção Genérica" path="selecao_generica"></page>
         </category>
     </language>
