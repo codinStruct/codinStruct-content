@@ -1,8 +1,14 @@
-# codinStruct-content
+<div align="center">
+  <h1>codinStruct-content</h1>
+  <a href="https://creativecommons.org/licenses/by-sa/4.0/">
+    <img src="https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg"></img>
+  </a>
+  <a href="https://github.com/codinStruct/codinStruct-content/actions/workflows/markdownlint.yml">
+    <img src="https://github.com/codinStruct/codinStruct-content/actions/workflows/markdownlint.yml/badge.svg"></img>
+  </a>
+</div>
 
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-sa/4.0/)
-
-## O que é isso?
+<h2 align="center">O que é isso?</h2>
 
 Esse é um repertório de informações e conhecimento relacionados a linguagens de
 programação, dispostos de forma em que promova o aprendizado com aprofundamento
@@ -16,7 +22,7 @@ estiver aprendendo algum assunto aqui sem conhecimento prévio, é essencial que
 você não pule nenhuma página. Não se engane, não há necessidade de memorizar
 tudo; a noção da exisência de um conceito é suficiente na maioria dos casos.
 
-## Como isso está sendo utilizado?
+<h2 align="center">Como isso está sendo utilizado?</h2>
 
 Esse conteúdo é dedicado para uso no
 [codinStruct](https://github.com/codinStruct/codinStruct), mas pode ser
@@ -26,7 +32,7 @@ com a licença
 arquivo XML contém as informações relacionadas à estruturação e ordem das
 categorias e páginas.
 
-## Acredita que algo está errado?
+<h2 align="center">Acredita que algo está errado?</h2>
 
 Verifique duas vezes e crie alguma
 [issue](https://github.com/codinStruct/codinStruct-content/issues) se achar
