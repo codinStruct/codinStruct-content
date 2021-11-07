@@ -122,3 +122,13 @@ int a[50] = {0};
 Você pode estar se perguntando o que acontece ao tentar acessar, por exemplo, o
 décimo elemento em um array de comprimento 9. O comportamento resultante é
 indefinido—pode não acontecer nada e pode explodir o planeta.
+
+## Referências
+
+- ISO/IEC JTC1/SC22/WG14 N2310:
+  <!-- Tipos escalares/agregados -->
+  - 6.2.5 Types
+  <!-- Operador [] -->
+  - 6.5.2.1 Array subscripting
+  <!-- Inicialização de arrays, inicialização padrão de tipos agregados -->
+  - 6.7.9 Initialization
