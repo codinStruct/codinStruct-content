@@ -97,7 +97,7 @@ várias linhas:
 int i[32] = {5, 9, 2, 1, 8, 0, 2, 5
              2, 2, 1, 3, 5, 6, 7, 5,
              0, 7, 3, 4, 9, 9, 9, 8,
-             1, 8, 2, 3, 2, 6, 2, 6}
+             1, 8, 2, 3, 2, 6, 2, 6};
 ```
 
 Uma vantagem de usar um inicializador, além de não ter valores indefinidos, é
@@ -119,4 +119,6 @@ acordo com seus tipos. Para todos os tipos escalares vistos até agora, o valor 
 int a[50] = {0};
 ```
 
-Você pode estar se perguntando o que acontece ao tentar acessar
+Você pode estar se perguntando o que acontece ao tentar acessar, por exemplo, o
+décimo elemento em um array de comprimento 9. O comportamento resultante é
+indefinido—pode não acontecer nada e pode explodir o planeta.
