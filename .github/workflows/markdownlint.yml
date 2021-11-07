@@ -7,8 +7,8 @@ on:
     paths:
       - 'Content/**.md'
   pull_request:
-    paths:
-      - 'Content/**.md'
+    branches:
+      - main
 
 jobs:
   build:
