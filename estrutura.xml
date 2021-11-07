@@ -25,8 +25,8 @@
     <language title="Javascript" path="javascript">
         <category title="Básico" path="basico">
             <page title="Introdução" path="introducao"></page>
-            <page title="Variáveis" path="variaveis"></page>
             <page title="Tipos" path="tipos"></page>
+            <page title="Variáveis" path="variaveis"></page>
             <page title="Comentários" path="comentarios"></page>
             <page title="Funções" path="funcoes"></page>
         </category>
