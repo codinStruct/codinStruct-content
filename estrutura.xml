@@ -22,4 +22,12 @@
             <page title="Seleção Genérica" path="selecao_generica"></page>
         </category>
     </language>
+    <language title="Javascript" path="javascript">
+        <category title="Básico" path="básico">
+            <page title="Introdução" path="introducao"></page>
+            <page title="Variáveis" path="variaveis"></page>
+            <page title="Comentários" path="comentários"></page>
+            <page title="Funções" path="funcoes"></page>
+        </category>
+    </language>
 </main>
