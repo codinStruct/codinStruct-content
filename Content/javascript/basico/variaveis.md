@@ -41,7 +41,7 @@ nome = "João";
 ## Referências
 
 - Mozilla Foundation ([Sintaxe e tipos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types))
-- Ecma International ([ECMA-262](https://tc39.es/ecma262/#sec-identifier-names))
+- Ecma International ([ECMA-262](https://tc39.es/ecma262))
   - 12.6 Names and Keywords
   - 14.3 Declarations and the Variable Statement
     - 14.3.2 Variable Statement

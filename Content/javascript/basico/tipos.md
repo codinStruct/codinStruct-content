@@ -17,5 +17,5 @@ De acordo com a especificação ECMAScript 2022 existem 8 tipos primitivos:
 
 ## Referências
 
-- Ecma International ([ECMA-262](https://tc39.es/ecma262/#sec-identifier-names))
+- Ecma International ([ECMA-262](https://tc39.es/ecma262))
   - 6.1 ECMAScript Language Types
