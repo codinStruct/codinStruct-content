@@ -2,11 +2,13 @@ name: Markdownlint
 
 on:
   push:
+    branches:
+      - main
     paths:
-      - '**.md'
+      - 'Content/**.md'
   pull_request:
     paths:
-      - '**.md'
+      - 'Content/**.md'
 
 jobs:
   build:
@@ -20,11 +22,11 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v11.5
         with:
-          files: .(md)$
+          path: Content
+          files: \.md$
 
       - name: markdownlint-cli
         uses: nosborn/github-action-markdown-cli@v2.0.0
         with:
           config_file: ".markdownlint.json"
           files: ${{steps.changed-files.outputs.all_modified_files}}
-          ignore_files: "README.md"
