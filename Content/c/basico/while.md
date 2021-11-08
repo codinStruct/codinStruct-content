@@ -31,7 +31,7 @@ puts("e terminamos!");
 Saída: `0 1 2 3 4 5 6 7 8 9 10 e terminamos!`
 
 Enquanto esse tipo de laço tem seus usos, eles são mais poderosos quando
-utilizados com arrays. Utiliznado um laço que percorre um array, podemos
+utilizados com arrays. Utilizando um laço que percorre um array, podemos
 realizar operações com todos seus elementos um por um. Que tal reduzir um array
 à soma de todos valores nele contidos?
 
