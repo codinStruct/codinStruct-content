@@ -4,7 +4,7 @@ Virtualmente toda manipulação de dados em um programa C é feita por operadore
 que são tokens que indicam ações a serem realizadas com seus operandos (valores
 que a operação recebe).
 
-Na matemática, a soma é uma operação representada por `+` e se aplica à dois
+Na matemática, a soma é uma operação representada por `+` e se aplica a dois
 valores, i.e. uma operação binária. A aridade de uma função/operação é o número
 de operandos que ela recebe. Uma operação é unária quando tem aridade 1 e
 binária quando tem aridade 2.
