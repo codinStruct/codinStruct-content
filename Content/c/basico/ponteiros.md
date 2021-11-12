@@ -37,12 +37,12 @@ int i;
 int *p = &i; // p se refere a i
 
 *p = 5; // A indireção acessa i
-printf("%d\n", i)   // Exibe 5
-printf("%d\n", *p) // Exibe 5
+printf("%d\n", i);  // Exibe 5
+printf("%d\n", *p); // Exibe 5
 
 i = 12;
-printf("%d\n", i)   // Exibe 12
-printf("%d\n", *p) // Exibe 12
+printf("%d\n", i);  // Exibe 12
+printf("%d\n", *p); // Exibe 12
 ```
 
 Como pode ser observado acima, a indireção de um ponteiro é análoga ao objeto a
