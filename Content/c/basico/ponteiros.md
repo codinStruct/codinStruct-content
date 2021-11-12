@@ -88,3 +88,11 @@ refere. Embora o escopo de `endereço` seja o corpo da função, o objeto alvo p
 estar em algum lugar externo. Essa versão é mais intuitiva que a anterior, pois
 basta utilizar `incremento(&num)` para `num` ser incrementado, sem necessidade
 de receber um valor de retorno.
+
+## Referências
+
+- ISO/IEC JTC1/SC22/WG14 N2310:
+  <!-- Operadores unários * e & -->
+  - 6.5.3.2 Address and indirection operators
+  <!-- Declaração de ponteiros -->
+  - 6.7.6 Declarators
