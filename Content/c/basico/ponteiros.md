@@ -89,6 +89,32 @@ estar em algum lugar externo. Essa versão é mais intuitiva que a anterior, poi
 basta utilizar `incremento(&num)` para `num` ser incrementado, sem necessidade
 de receber um valor de retorno.
 
+## Inicialização
+
+Como vimos, ponteiros comumente se referem a outros objetos. Quando um ponteiro
+não é inicializado, seu valor é indefinido e utilizar o operador de indireção
+poderá causar comportamento perigoso e indesejado.
+
+Uma maneira segura de especificar que um ponteiro não referencia algum objeto é
+utilizar a constante `NULL` definida em `<stddef.h>`, e.g. `int *p = NULL;`.
+`NULL` em uma condição é equivalente a `false`, assim, antes de realizar uma
+indireção no ponteiro, é possível verificar se ele é nulo:
+
+```c
+void incremento(int *endereço)
+{
+    if (endereço)
+        *endereço = *endereço + 1;
+}
+```
+
+Se o ponteiro recebido for nulo, a condição `endereço` será `false` e a
+instrução `*endereço = *endereço + 1;` não será executada.
+
+Em outras palavras, utilizar `NULL` é uma convenção para que ponteiros sem alvo
+possuam um valor que os identifiquem. Funções de várias bibliotecas (incluindo a
+biblioteca padrão) verificam se um ponteiro é nulo antes de tentar utilizá-lo.
+
 ## Referências
 
 - ISO/IEC JTC1/SC22/WG14 N2310:
