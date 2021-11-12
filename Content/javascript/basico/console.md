@@ -98,3 +98,7 @@ console.count('Hello World');
 // Hello World: 2
 // Hello World: 3
 ```
+
+# Referências
+
+- Mozilla Foundation ([Console](https://developer.mozilla.org/pt-BR/docs/Web/API/console))
