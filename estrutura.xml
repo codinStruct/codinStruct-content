@@ -38,5 +38,8 @@
             <page title="Condicional Switch" path="condicional_switch"></page>
             <page title="Operador Condicional (Ternário)" path="operador_condicional"></page>
         </category>
+        <category title="Avançado" path="avancado">
+            <page title="Parâmetros Rest" path="parametros_rest"></page>
+        </category>
     </language>
 </main>
