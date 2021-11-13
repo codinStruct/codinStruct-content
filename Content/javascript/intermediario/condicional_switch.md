@@ -8,7 +8,7 @@ são testados para igualdade com o valor da expressão.
 Ele é muito parecido com o condicional `if`, porém, ele não possui uma condição
 de parada em cada `case`, sendo necessário o uso do comando `break`.
 
-Existe támbem o comando `default` que é executado quando nenhum dos `case` é
+Existe também o comando `default` que é executado quando nenhum dos `case` é
 igual ao valor da expressão.
 
 Exemplo da estrutura do condicional `switch`:
