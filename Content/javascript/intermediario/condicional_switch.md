@@ -64,7 +64,9 @@ switch (dia) {
 
 ## Uso do comando `break`
 
-Quando se usa o condicional `switch` é importante que se use o comando `break` para que o código não continue executando os `case` restantes que não sejam iguais ao valor da expressão. Exemplo:
+Quando se usa o condicional `switch` é importante que se use o comando `break`
+para que o código não continue executando os `case` restantes que não sejam
+iguais ao valor da expressão. Exemplo:
 
 ```javascript
 var dia = "quinta";
