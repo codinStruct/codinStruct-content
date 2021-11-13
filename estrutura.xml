@@ -35,6 +35,7 @@
         </category>
         <category title="Intermediário" path="intermediario">
             <page title="Funções Arrow" path="funcoes_arrow"></page>
+            <page title="Condicional Switch" path="condicional_switch"></page>
             <page title="Operador Condicional (Ternário)" path="operador_condicional"></page>
         </category>
     </language>
