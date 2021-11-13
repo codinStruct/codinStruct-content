@@ -31,6 +31,7 @@
             <page title="Comentários" path="comentarios"></page>
             <page title="Funções" path="funcoes"></page>
             <page title="Console" path="console"></page>
+            <page title="Condicional If" path="condicional_if"></page>
         </category>
         <category title="Intermediário" path="intermediario">
             <page title="Funções Arrow" path="funcoes_arrow"></page>
