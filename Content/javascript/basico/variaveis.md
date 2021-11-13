@@ -30,10 +30,16 @@ var duas partes = 22;
 var function;
 ```
 
+Pode-se até declarar varias variáveis ao mesmo tempo com o uso da vírgula:
+
+```javascript
+var nome = "João", sobrenome = "Silva", idade = "18";
+```
+
 É possível também declarar variáveis mas atribuir valores a elas após a declaração:
 
 ```javascript
-var nome; // neste momento tem valor undefined
+var nome; // neste momento nome tem valor undefined
 
 nome = "João";
 ```

@@ -4,7 +4,7 @@ O condicional `if` é usado para desviar o fluxo do programa dependendo de uma c
 
 A forma mais simples do condicional `if` contém apenas um bloco de código:
 
-```js
+```javascript
 if (condição) {
     // código que será executado caso a condição seja verdadeira
 }
@@ -12,7 +12,7 @@ if (condição) {
 
 O condicional ainda pode vir acompanhado da palavra chave `else` e de um bloco de código que será executado caso a condição seja falsa:
 
-```js
+```javascript
 if (condição) {
     // código que será executado caso a condição seja verdadeira
 } else {
@@ -22,7 +22,7 @@ if (condição) {
 
 É possível ainda conectar dois condicionais para criar uma estrutura de decisão mais complexa:
 
-```js
+```javascript
 if (condição1) {
     // código que será executado caso a condição1 seja verdadeira
 } else if (condição2) {
@@ -34,7 +34,7 @@ if (condição1) {
 
 ## Exemplos
 
-```js
+```javascript
 var debug = true;
 
 if (debug) {
@@ -44,7 +44,7 @@ if (debug) {
 // Resultado: "Debugando..."
 ```
 
-```js
+```javascript
 var grande = true;
 var pesado = true;
 
@@ -61,7 +61,7 @@ if (grande && pesado) {
 // Resultado: "Grande e pesado!"
 ```
 
-```js
+```javascript
 function compararValores(valor1, valor2) {
     if (valor1 > valor2) {
         return "Maior";

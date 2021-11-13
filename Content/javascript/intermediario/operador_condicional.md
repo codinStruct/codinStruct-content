@@ -2,7 +2,7 @@
 
 O operador é basicamente uma forma abreviada de uma expressão condicional, exceto que ela retorna um valor dependendo da condição. A sintaxe básica desse operador é:
 
-```js
+```javascript
 resultado = condicao ? valor_se_verdadeiro : valor_se_falso
 ```
 
@@ -14,7 +14,7 @@ Esse operador também é comumente chamado como **ternário** pois é formado po
 
 Em funções que retornam um valor dependendo de uma condição:
 
-```js
+```javascript
 function maximo(a, b) {
   // Se a for maior que b, retorna a, senão retorna b
   return a > b ? a : b;
@@ -26,7 +26,7 @@ maximo(20, 10); // Resultado: 20
 
 Em conjunto para simular um *if/else if/else* ou um *switch/case*:
 
-```js
+```javascript
 var numero = 2;
 
 var texto = numero == 1 ? 'um' :

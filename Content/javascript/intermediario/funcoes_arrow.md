@@ -4,7 +4,7 @@ Funções arrow foram introduzidas em ES6, para ser uma maneira mais simples de 
 
 O exemplo mais simples de uma função arrow é:
 
-```js
+```javascript
 var soma = (a, b) => { return a + b };
 
 soma(1, 2);
@@ -13,7 +13,7 @@ soma(1, 2);
 
 Se a função possuir apenas um parâmetro, o parênteses podem ser omitidos:
 
-```js
+```javascript
 var quadrado = a => { return a * a };
 
 quadrado(2);
@@ -22,7 +22,7 @@ quadrado(2);
 
 Se a função for composta apenas do retorno, sem nenhum operação adicional, pode-se omitir as chaves e a palavra `return`:
 
-```js
+```javascript
 var quadrado = a => a * a;
 
 quadrado(5);
@@ -31,7 +31,7 @@ quadrado(5);
 
 ## Outros Exemplos
 
-```js
+```javascript
 // Funções simples
 var maximo = (a, b) => a > b ? a : b;
 

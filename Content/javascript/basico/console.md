@@ -12,7 +12,7 @@ Algumas das aplicações do objeto `console` são:
 
 Pode ser usado para exibir o valor de qualquer tipo de dado, incluindo strings, números, objetos, arrays, etc.
 
-```js
+```javascript
 console.log('Hello World');
 console.log(123);
 console.log({ name: 'João', age: 18 });
@@ -37,7 +37,7 @@ Funcionam como `console.log()` mas servem para exibir mensagens de informação,
 
 É usado para medir o tempo de execução de um determinado bloco de código entre duas chamadas de `console.time()` e `console.timeEnd()`.
 
-```js
+```javascript
 console.time('Timer');
 
 // Código que demora 1 segundo
@@ -50,7 +50,7 @@ console.timeEnd('Timer');
 
 É possível até usar nomes diferentes para os timers, permitindo ter mais de um timer ao mesmo tempo.
 
-```js
+```javascript
 console.time('Timer 1');
 
 // Código que demora 1 segundo
@@ -71,7 +71,7 @@ console.timeEnd('Timer 2');
 
 É usado para exibir uma tabela com os dados de um objeto.
 
-```js
+```javascript
 console.table({ name: 'João', age: 18 });
 
 // Resultado:
@@ -87,7 +87,7 @@ console.table({ name: 'João', age: 18 });
 
 É usado para contar o número de vezes que um determinado comando foi executado.
 
-```js
+```javascript
 console.count('Hello World');
 console.count('Hello World');
 console.count('Hello World');
