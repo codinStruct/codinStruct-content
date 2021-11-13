@@ -29,7 +29,6 @@ console.log([1, 2, 3, 4]);
 
 Funcionam como `console.log()` mas servem para exibir mensagens de informação, avisos ou erros, respectivamente. O navegador exibe essas mensagens de cores diferentes, dependendo do tipo de mensagem. Além disso é possível escolher o nível de mensagem que será exibida no menu do navegador, de forma que, por exemplo, se escolhermos o nível `error`, apenas mensagens de erro serão exibidas.
 
-
 ## `console.clear()`
 
 É usado para limpar completamente o console. Os comandos que foram executados anteriormente não são apagados mas apenas deixam de ser exibidos.
@@ -99,6 +98,6 @@ console.count('Hello World');
 // Hello World: 3
 ```
 
-# Referências
+## Referências
 
 - Mozilla Foundation ([Console](https://developer.mozilla.org/pt-BR/docs/Web/API/console))

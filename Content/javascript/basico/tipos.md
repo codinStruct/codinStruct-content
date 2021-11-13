@@ -6,14 +6,14 @@ De acordo com a especificação ECMAScript 2022 existem 8 tipos primitivos:
 
 |          Tipo | Descrição                                                    |
 | ------------: | :----------------------------------------------------------- |
-| **number**    | Números inteiros e reais (`1`, `2.5`, `-3`, `-4.5`).         |
-| **string**    | Um texto qualquer (`"codinStruct"`, `"João Moreira Silva"`). |
-| **boolean**   | Verdadeiro ou Falso (`true`, `false`).                       |
+| **Number**    | Números inteiros e reais (`1`, `2.5`, `-3`, `-4.5`).         |
+| **String**    | Um texto qualquer (`"codinStruct"`, `"João Moreira Silva"`). |
+| **Boolean**   | Verdadeiro ou Falso (`true`, `false`).                       |
 | **null**      | Um valor inexistente (`null`).                               |
 | **undefined** | Valor de uma variável que não foi declarada (`undefined`).   |
-| **symbol**    | Um identificador único (`Symbol(id)`).                       |
-| **object**    | Um objeto (`{}`).                                            |
-| **function**  | Uma função (`function() {}`).                                |
+| **Symbol**    | Um identificador único (`Symbol(id)`).                       |
+| **Object**    | Um objeto (`{}`).                                            |
+| **BigInt**    | Números inteiros grandes (`3141592653589793238462643n`)      |
 
 ## Referências
 

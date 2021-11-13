@@ -32,5 +32,8 @@
             <page title="Funções" path="funcoes"></page>
             <page title="Console" path="console"></page>
         </category>
+        <category title="Intermediário" path="intermediario">
+            <page title="Funções Arrow" path="funcoes_arrow"></page>
+        </category>
     </language>
 </main>
