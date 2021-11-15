@@ -152,7 +152,10 @@ console.log(array); // Resultado: [1, 3, 6, 11, 12, 7, 8]
 
 ### `slice()`
 
-Retorna um novo array com os elementos do array original. O primeiro número passado à função é a posição do primeiro elemento que será retornado. O segundo número passado é a posição do último elemento que será retornado. Esse método não altera o array original.
+Retorna um novo array com os elementos do array original. O primeiro número
+passado à função é a posição do primeiro elemento que será retornado. O segundo
+número passado é a posição do último elemento que será retornado. Esse método
+não altera o array original.
 
 ```javascript
 var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -161,14 +164,6 @@ console.log(array.slice(0, 5)); // Resultado: [1, 2, 3, 4, 5]
 console.log(array.slice(5)); // Resultado: [6, 7, 8, 9, 10]
 ```
 
-### `concat()`
-
-Retorna um novo array com os elementos do array original e os elementos passados
-
-```javascript
-[1, 2, 3].concat([4, 5, 6]);
-// Resultado: [1,2,3,4,5,6]
-```
 
 ### `indexOf()`
 
@@ -182,7 +177,10 @@ console.log(array.indexOf(5)); // Resultado: 4
 
 ### `sort()`
 
-Ordena os elementos do array usando a função de comparação passada como parâmetro. A função de comparação deve conter dois parâmetros e retornar um número negativo, zero ou positivo dependendo do que o primeiro parâmetro seja menor, igual ou maior que o segundo parâmetro, respectivamente.
+Ordena os elementos do array usando a função de comparação passada como
+parâmetro. A função de comparação deve conter dois parâmetros e retornar um
+número negativo, zero ou positivo dependendo do que o primeiro parâmetro seja
+menor, igual ou maior que o segundo parâmetro, respectivamente.
 
 ```javascript
 var array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
@@ -191,6 +189,20 @@ var array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
 array.sort((a, b) => a - b);
 
 console.log(array); // Resultado: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+```
+
+### `forEach()`
+
+Executa uma função de callback para cada elemento do array. A função opcionalmente pode ter como parâmetro o elemento atual, o índice do elemento e o próprio array.
+
+```javascript
+var array = [1, 2, 3];
+
+array.forEach((elemento, indice, array) => {
+  console.log(elemento); // Resultado: 1, 2, 3
+  console.log(indice); // Resultado: 0, 1, 2
+  console.log(array); // Resultado: [1, 2, 3], [1, 2, 3], [1, 2, 3]
+});
 ```
 
 ## Referências
