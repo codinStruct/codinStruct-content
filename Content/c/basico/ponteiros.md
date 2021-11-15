@@ -25,7 +25,7 @@ c = &C; // c agora se refere à variável C
 d = &D; // d agora se refere à variável D
 ```
 
-## Operador de indireção
+## Operador de Indireção
 
 O símbolo `*` é comumente o operador "produto" e realiza multiplicação, mas
 quando precede um ponteiro esse mesmo símbolo é o operador "indireção". A
@@ -48,7 +48,7 @@ printf("%d\n", *p); // Exibe 12
 Como pode ser observado acima, a indireção de um ponteiro é análoga ao objeto a
 que ele se refere. I.e., `*p = 2` é efetivamente `i = 2`.
 
-## Ponteiros como parâmetros
+## Ponteiros como Parâmetros
 
 Até agora vimos o que ponteiros fazem, mas não um motivo para usá-los. Um caso
 em que ponteiros são úteis é uma função que deve modificar o valor de seus
