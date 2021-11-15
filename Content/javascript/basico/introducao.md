@@ -1,6 +1,6 @@
 # Introdução
 
-Javascript é atualmente uma das linguagens de programação que mais tem crescido
+JavaScript é atualmente uma das linguagens de programação que mais tem crescido
 recentemente, e é fácil saber o porque. Ele é a linguagem utilizada por toda a
 internet para tornar a web dinâmica e interativa. Além disso, atualmente ela vem
 sendo aplicada em outras áreas de desenvolvimento como servidores, web design e

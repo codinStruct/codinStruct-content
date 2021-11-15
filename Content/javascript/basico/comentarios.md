@@ -3,7 +3,7 @@
 Comentários são utilizados para adicionar uma observação em um código de tal
 forma a não impedir ou atrapalhar a execução de tal código. Ao chegar em
 comentário o processador de JavaScript simplesmente o ignorará e continuará
-seguindo o código. Em Javascript existem dois tipos de comentários: De linha e
+seguindo o código. Em JavaScript existem dois tipos de comentários: De linha e
 de bloco.
 
 Comentários de linha ignoram apenas uma linha por vez e servem para adicionar

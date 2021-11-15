@@ -1,6 +1,6 @@
 # Variáveis
 
-Javascript é uma linguagem tipada dinamicamente, ou seja, embora haja as
+JavaScript é uma linguagem tipada dinamicamente, ou seja, embora haja as
 variáveis terem um tipo de dados associada a seu valor, as variáveis em si podem
 guardar qualquer tipo sem a necessidade de especificar um tipo àquela variável.
 

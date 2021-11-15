@@ -1,6 +1,6 @@
 # Tipos
 
-Javascript tem uma tipagem dinâmica, ou seja, não é necessário declarar o tipo
+JavaScript tem uma tipagem dinâmica, ou seja, não é necessário declarar o tipo
 de uma variável antes de atribuí-la. Além disso uma variável já declarada e com
 valor atribuído pode ser atribuido outro valor de outro tipo.
 
