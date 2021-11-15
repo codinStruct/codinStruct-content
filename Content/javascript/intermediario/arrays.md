@@ -164,7 +164,6 @@ console.log(array.slice(0, 5)); // Resultado: [1, 2, 3, 4, 5]
 console.log(array.slice(5)); // Resultado: [6, 7, 8, 9, 10]
 ```
 
-
 ### `indexOf()`
 
 Encontra o índice do primeiro elemento do array que é igual ao valor passado.
@@ -193,7 +192,9 @@ console.log(array); // Resultado: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 ### `forEach()`
 
-Executa uma função de callback para cada elemento do array. A função opcionalmente pode ter como parâmetro o elemento atual, o índice do elemento e o próprio array.
+Executa uma função de callback para cada elemento do array. A função
+opcionalmente pode ter como parâmetro o elemento atual, o índice do elemento e o
+próprio array.
 
 ```javascript
 var array = [1, 2, 3];

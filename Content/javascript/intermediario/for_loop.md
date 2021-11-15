@@ -2,8 +2,8 @@
 
 O for loop é uma estrutura de repetição que executa um bloco de código um
 determinado número de vezes baseado em uma condição. Em JavaScript, o for loop é
-implementado com a palavra-chave `for` e contém 3 variantes: O `for`, o `for in` e
-o `for of`.
+implementado com a palavra-chave `for` e contém 3 variantes: O `for`, o `for in`
+e o `for of`.
 
 ## For
 
@@ -15,8 +15,7 @@ for (inicialização; condição; expressão) {
 }
 ```
 
-- `inicialização`: é o que será executado apenas uma vez no início de cada
-  loop.
+- `inicialização`: é o que será executado apenas uma vez no início de cada loop.
 - `condição`: é a condição que será avaliada para verificar se o loop deve
   continuar ou não.
 - `expressão`: é o que será executado após cada iteração do loop.
@@ -61,14 +60,15 @@ for (;;) {
 
 ## For Of
 
-O for of é uma forma de iterar sobre qualquer objeto iterável, como um array ou string.
+O for of é uma forma de iterar sobre qualquer objeto iterável, como um array ou
+string.
 
 ```javascript
 var array = [1, 2, 3, 4, 5];
 var string = "Hello World";
 var objeto = {
   nome: "João",
-  sobrenome: "Silva"
+  sobrenome: "Silva",
 };
 
 for (var item of array) {
@@ -82,12 +82,13 @@ for (var char of string) {
 
 ## For In
 
-O for in é uma forma de iterar sobre as propriedades de um objeto. A iteração é feita na ordem em que as propriedades aparecem no objeto.
+O for in é uma forma de iterar sobre as propriedades de um objeto. A iteração é
+feita na ordem em que as propriedades aparecem no objeto.
 
 ```javascript
 var objeto = {
   nome: "João",
-  sobrenome: "Silva"
+  sobrenome: "Silva",
 };
 
 for (var propriedade in objeto) {
