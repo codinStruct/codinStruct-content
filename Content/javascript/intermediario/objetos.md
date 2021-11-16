@@ -1,13 +1,13 @@
 # Objetos
 
 JavaScript é uma linguagem de programação que suporta o paradigma de programação
-orientada a objetos, portanto é, possível criar objetos e manipular seus
+orientada a objetos, portanto é possível criar objetos e manipular seus
 atributos e métodos. Um objeto simples é representado por uma série de chaves e
 valores, onde o nome da chave é o nome do atributo e o valor é o valor do
 atributo. É possível criar objetos com atributos de qualquer tipo, inclusive de
 arrays, outros objetos e funções (chamadas de métodos).
 
-Para criar um objeto pode ser usar o comando `new Object()` ou ainda `{}` e usar
+Para criar um objeto pode-se usar o comando `new Object()` ou ainda `{}` e usar
 `:` para criar o objeto com atributos já definidos.
 
 ```javascript

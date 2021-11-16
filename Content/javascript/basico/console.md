@@ -1,9 +1,9 @@
 # Console
 
-O console JavaScript é uma ferramenta presentes em todos os navegadores
-modernos, que permite executar comandos de forma rápida e fácil e visualizar o
-resultado desses comandos. Todos os códigos aqui apresentados podem ser
-executados no console para fins de teste.
+O console JavaScript é uma ferramenta presente em todos os navegadores modernos,
+que permite executar comandos de forma rápida e fácil e visualizar o resultado
+desses comandos. Todos os códigos aqui apresentados podem ser executados no
+console para fins de teste.
 
 Para acessar o console no Chrome ou no Edge basta apertar a tecla `F12`.
 
@@ -52,7 +52,7 @@ duas chamadas de `console.time()` e `console.timeEnd()`.
 ```javascript
 console.time("Timer");
 
-// Código que demora 1 segundo
+/* Código que demora 1 segundo ... */
 
 console.timeEnd("Timer");
 
@@ -66,11 +66,11 @@ timer ao mesmo tempo.
 ```javascript
 console.time("Timer 1");
 
-// Código que demora 1 segundo
+/* Código que demora 1 segundo ... */
 
 console.time("Timer 2");
 
-// Código que demora 1 segundo
+/* Código que demora 1 segundo ... */
 
 console.timeEnd("Timer 1");
 console.timeEnd("Timer 2");

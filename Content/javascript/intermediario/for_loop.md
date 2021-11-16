@@ -1,13 +1,13 @@
 # For Loop
 
-O for loop é uma estrutura de repetição que executa um bloco de código um
-determinado número de vezes baseado em uma condição. Em JavaScript, o for loop é
-implementado com a palavra-chave `for` e contém 3 variantes: O `for`, o `for in`
-e o `for of`.
+O _for loop_ é uma estrutura de repetição que executa um bloco de código um
+determinado número de vezes baseado em uma condição. Em JavaScript, o _for loop_
+é implementado com a palavra-chave `for` e contém 3 variantes: O `for`, o
+`for in` e o `for of`.
 
 ## For
 
-O for loop simples é composto por 4 partes:
+O _for loop_ simples é composto por 4 partes:
 
 ```javascript
 for (inicialização; condição; expressão) {
@@ -21,7 +21,7 @@ for (inicialização; condição; expressão) {
 - `expressão`: é o que será executado após cada iteração do loop.
 - `declaração`: é o que será executado em cada iteração do loop.
 
-Um exemplo de como se pode utilizar um for loop para iterar sobre um array:
+Um exemplo de como se pode utilizar um _for loop_ para iterar sobre um array:
 
 ```javascript
 var array = [1, 2, 3, 4, 5];
@@ -40,7 +40,7 @@ exemplo acima, o loop será executado 5 vezes, sendo que cada iteração irá
 imprimir o valor de `array[i]`. Somente quando o valor de `i` atingir o tamanho
 do array, o loop será finalizado.
 
-No for loop todas as partes são opcionais, mas é importante saber que caso a
+No _for loop_ todas as partes são opcionais, mas é importante saber que caso a
 condição não exista o loop será executado infinitamente, a menos que se utilize
 a palavra-chave `break`.
 
@@ -60,8 +60,8 @@ for (;;) {
 
 ## For Of
 
-O for of é uma forma de iterar sobre qualquer objeto iterável, como um array ou
-string.
+O _for of_ é uma forma de iterar sobre qualquer objeto iterável, como um array
+ou string.
 
 ```javascript
 var array = [1, 2, 3, 4, 5];
@@ -82,8 +82,8 @@ for (var char of string) {
 
 ## For In
 
-O for in é uma forma de iterar sobre as propriedades de um objeto. A iteração é
-feita na ordem em que as propriedades aparecem no objeto.
+O _for in_ é uma forma de iterar sobre as propriedades de um objeto. A iteração
+é feita na ordem em que as propriedades aparecem no objeto.
 
 ```javascript
 var objeto = {

@@ -1,7 +1,7 @@
 # Arrays
 
 Em JavaScript os arrays são estruturas de dados do tipo lista que armazenam
-vários valores em uma única variável. Os arrays não tem um tamanho fixo, assim o
+vários valores em uma única variável. Os arrays não têm um tamanho fixo, assim o
 número de elementos que podem ser armazenados é dinâmico. Além disso os arrays
 podem armazenar qualquer tipo de dado, inclusive armazenar outros arrays e
 valores de tipos diferentes ao mesmo tempo.
@@ -64,7 +64,7 @@ console.log(array); // Resultado: [1, 2]
 
 ### `push()`
 
-Adiciona um elemento no final do array.
+Adiciona um ou mais elementos no final do array.
 
 ```javascript
 var array = [1, 2, 3];
@@ -76,7 +76,7 @@ console.log(array); // Resultado: [1, 2, 3, 4, 5]
 
 ### `pop()`
 
-Remove o último elemento do array, retornando o último valor.
+Remove o último elemento do array, retornando o valor removido.
 
 ```javascript
 var array = [1, 2, 3];
@@ -89,7 +89,7 @@ console.log(ultimo); // Resultado: 3
 
 ### `shift()`
 
-Remove o primeiro elemento do array, retornando o primeiro valor.
+Remove o primeiro elemento do array, retornando o valor removido.
 
 ```javascript
 var array = [1, 2, 3];
@@ -115,8 +115,8 @@ console.log(array); // Resultado: [4, 5, 1, 2, 3]
 ### `splice()`
 
 Remove ou adiciona em qualquer posição do array. Pode remover 1 ou mais
-elementos e retorna outro array com os elementos removidos. Além disso ele pode
-adicionar elementos no array. Esse método altera o array original.
+elementos e retorna outro array com os elementos removidos. Esse método altera o
+array original.
 
 O primeiro número passado à função é a posição do elemento que será removido. O
 segundo número passado é o número de elementos que serão removidos. Se não for
