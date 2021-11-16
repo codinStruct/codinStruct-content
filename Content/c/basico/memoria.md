@@ -90,7 +90,7 @@ e `sizeof ponteiro: 8`, embora ambos possam acessar 100 `int`s com o operador
 Toda a memória alocada por `malloc` continua alocada até ser manualmente
 liberada. Isso é feito aplicando a função `free` ao ponteiro que foi retornado
 por `malloc`. O ponteiro retornado pela nossa função `FabricarArray` é alocado
-por `malloc` portanto esse procedimento deve ser feito.
+por `malloc`, portanto esse procedimento deve ser feito.
 
 ```c
 int main(void)
