@@ -3,7 +3,7 @@
 No JavaScript um gerador é uma função que retorna uma lista de valores, só que
 um por vez. Para conseguirmos o próximo valor, usamos a função `next()` que
 retorna um objeto com o atributo `value` que é o próximo valor e o atributo
-`done` que indica se a gerador terminou. Alé disso é necessário um asterisco `*`
+`done` que indica se a gerador terminou. Além disso é necessário um asterisco `*`
 na frente da função.
 
 Quando um gerador atinge a palavra-chave `yield`, ele pausa e retorna o valor
