@@ -24,9 +24,9 @@ int *AlocarInt(void)
 
 int main(void)
 {
-    int *a = alocarInt(),
-        *b = alocarInt(),
-        *c = alocarInt();
+    int *a = AlocarInt(),
+        *b = AlocarInt(),
+        *c = AlocarInt();
 
     *a = 1;
     *b = 2;
