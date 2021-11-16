@@ -1,6 +1,6 @@
-# Seleção genérica
+# Seleção Genérica
 
-## Funções genéricas tradicionais
+## Funções Genéricas Tradicionais
 
 Funções genéricas são um ponto fraco do C. Quando queremos que uma função
 funcione com parâmetros de qualquer tipo, é comum recebê-los com o tipo

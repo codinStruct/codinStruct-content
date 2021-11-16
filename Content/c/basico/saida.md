@@ -1,4 +1,4 @@
-# Saída básica
+# Saída Básica
 
 As funções de saída do C permitem ao programa interagir com o usuário exibindo
 informações. Algumas funções para isso são `puts`, `putchar` e `printf`—todas

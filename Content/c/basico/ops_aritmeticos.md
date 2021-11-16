@@ -1,4 +1,4 @@
-# Operadores aritméticos básicos
+# Operadores Aritméticos Básicos
 
 Virtualmente toda manipulação de dados em um programa C é feita por operadores,
 que são tokens que indicam ações a serem realizadas com seus operandos (valores
@@ -12,7 +12,7 @@ binária quando tem aridade 2.
 No C é possível separar os operadores em grupos de acordo com a aridade de cada
 um, e vamos fazer isso agora.
 
-## Operadores binários
+## Operadores Binários
 
 Todos os operadores binários no C recebem um operando de cada lado, no formato
 `<operando> <operador> <operando>` (o número de espaços não importa, podendo ser
@@ -22,6 +22,22 @@ até mesmo zero).
 
 O operador binário `+` funciona igual na matemática: o valor da operação é a
 soma dos dois operandos. `5 + 3`, por exemplo, é uma expressão de valor 8.
+
+Como exemplo, aqui está um programa que soma dois números que o usuário digitar:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int a, b;
+    printf("Digite dois números: ");
+    scanf("%d%d", &a, &b); // "%d %d" pode ser mais legível
+    printf("%d\n", a + b);
+
+    return 0;
+}
+```
 
 ### `-` binário
 
@@ -57,7 +73,7 @@ Mais alguns exemplos:
 | `40 % 7`  |   5   | `40 / 7` é igual a 5, `7 * 5` é igual a 35 e `40 - 35` é 5       |
 | `-10 % 3` |  -1   | `-10 / 3` é igual a -3, `3 * -3` é igual a -9 e `-10 -(-9)` é -1 |
 
-## Operadores unários
+## Operadores Unários
 
 Todos os operadores unários ficam à esquerda do operando, no formato
 `<operador> <operando>` (o número de espaços geralmente não importa).
@@ -81,6 +97,24 @@ de seu operando, transformando 50 em -50, -25 em 25, etc.
 Ele pode ser no-op quando seu operando possui valor zero, mas em alguns sistemas
 é possível distinguir entre zero positivo e zero negativo. Não se preocupe muito
 com isso, pois o sinal do zero raramente altera o comportamento de um programa.
+
+Como exemplo de uso do `-` unário, aqui está um programa que inverte o número
+que o usuário digitar:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int num;
+
+    printf("Digite um número: ");
+    scanf("%d", &num);
+    printf("%d\n", -num);
+
+    return 0;
+}
+```
 
 ## Precedência
 
