@@ -45,7 +45,7 @@ forma de simular o retorno de array é alocar um array com `malloc` e retornar u
 ponteiro para ele. Como exemplo, vejamos uma função abaixo.
 
 ```c
-// Retorna um  array de qtd ints com valor val
+// Retorna um array de qtd ints com valor val
 int *FabricarArray(size_t qtd, int val)
 {
     int *array = malloc(sizeof(int[qtd]));
