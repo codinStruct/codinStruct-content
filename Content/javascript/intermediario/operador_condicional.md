@@ -12,7 +12,7 @@ Quando esse operador é chamado, primeiro é analisado a condição, e se o
 resultado for verdadeiro a expressão `valor_se_verdadeiro` é calculada e
 retornada, senão a expressão `valor_se_falso` é calculada e retornada.
 
-Esse operador também é comumente chamado como **ternário** pois é formado por
+Esse operador também é comumente chamado como **ternário**, pois é formado por
 três partes.
 
 ## Exemplos

@@ -1,7 +1,7 @@
 # Objetos
 
 JavaScript é uma linguagem de programação que suporta o paradigma de programação
-orientada a objetos, portanto é possível criar objetos e manipular seus
+orientada a objetos, portanto é, possível criar objetos e manipular seus
 atributos e métodos. Um objeto simples é representado por uma série de chaves e
 valores, onde o nome da chave é o nome do atributo e o valor é o valor do
 atributo. É possível criar objetos com atributos de qualquer tipo, inclusive de
@@ -44,7 +44,7 @@ carro.buzinar(); // Beep!
 Outra maneira de acessar os atributos de um objeto é usando o operador `[]` e o
 nome do atributo na forma de uma string. Por causa disso também é possível
 associar qualquer tipo de dados que possa ser convertido em string a um
-atributo. Entretanto vale notar que o valor que realmente será armazenado no
+atributo. Entretanto, vale notar que o valor que realmente será armazenado no
 objeto será o valor convertido para string.
 
 ```javascript

@@ -15,7 +15,7 @@ soma(1, 2);
 // Resultado: 3
 ```
 
-Se a função possuir apenas um parâmetro, o parênteses podem ser omitidos:
+Se a função possuir apenas um parâmetro, os parênteses podem ser omitidos:
 
 ```javascript
 var quadrado = (a) => {
@@ -26,7 +26,7 @@ quadrado(2);
 // Resultado: 4
 ```
 
-Se a função for composta apenas do retorno, sem nenhum operação adicional,
+Se a função for composta apenas do retorno, sem nenhuma operação adicional,
 pode-se omitir as chaves e a palavra `return`:
 
 ```javascript
