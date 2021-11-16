@@ -13,7 +13,7 @@ As regras para nomear uma variável são as seguintes:
 - Letras do ISO 8859-1, como `ü` e `è` também pode ser utilizados
 - Não pode ser uma palavra reservada da linguagem (`var`, `function`, `if`, etc)
 
-Para se declarar uma variável pode-se utilizar a palavra chave `var` e a
+Para se declarar uma variável pode-se utilizar a palavra-chave `var` e a
 variável pode opcionalmente ter valor atribuido na declaração ou mais à frente
 no código.
 

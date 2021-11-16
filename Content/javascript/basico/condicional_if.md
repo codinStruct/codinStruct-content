@@ -12,7 +12,7 @@ if (condição) {
 }
 ```
 
-O condicional ainda pode vir acompanhado da palavra chave `else` e de um bloco
+O condicional ainda pode vir acompanhado da palavra-chave `else` e de um bloco
 de código que será executado caso a condição seja falsa:
 
 ```javascript
