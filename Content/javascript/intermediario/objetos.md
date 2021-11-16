@@ -15,7 +15,7 @@ var objeto1 = new Object();
 var objeto2 = {};
 var objeto3 = {
   atributo1: "valor1",
-  atributo2: "valor2"
+  atributo2: "valor2",
 };
 ```
 
@@ -117,11 +117,12 @@ Quando utilizamos uma função construtora, é preciso utilizar a palavra-chave
 `this` para definir os atributos do objeto e a palavra-chave `new` para criar o
 objeto.
 
-***
+---
 
-_**É muito importante perceber que a função construtora não é uma classe, apesar de funcionar de maneira semelhante.**_
+_**É muito importante perceber que a função construtora não é uma classe, apesar
+de funcionar de maneira semelhante.**_
 
-***
+---
 
 ```javascript
 // É de costume que o nome da função construtora comece com letra maiúscula

@@ -88,10 +88,11 @@ console.timeEnd("Timer 2");
 console.table({ name: "João", age: 18 });
 
 // Resultado:
-// +--------+-------+
-// | Índice | Valor |
+//          +-------+
+//          | Valor |
 // +--------+-------+
 // | name   | João  |
+// +--------+-------+
 // | age    | 18    |
 // +--------+-------+
 ```
