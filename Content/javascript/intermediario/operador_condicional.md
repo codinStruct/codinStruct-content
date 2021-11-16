@@ -8,7 +8,7 @@ operador é:
 resultado = condicao ? valor_se_verdadeiro : valor_se_falso;
 ```
 
-Quando esse operador é chamado, primeiro é analisado a condição, e se o
+Quando esse operador é chamado, primeiro é analisada a condição, e se o
 resultado for verdadeiro a expressão `valor_se_verdadeiro` é calculada e
 retornada, senão a expressão `valor_se_falso` é calculada e retornada.
 

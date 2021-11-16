@@ -54,7 +54,7 @@ console.table(tabuleiro);
 // +---+---+---+---+
 ```
 
-Se quisermos criar um array bidimensional dinamicamente usamos o for loop:
+Se quisermos criar um array bidimensional dinamicamente usamos o _for loop_:
 
 ```javascript
 var tabuleiro = [];
