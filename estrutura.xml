@@ -44,6 +44,7 @@
         </category>
         <category title="Avançado" path="avancado">
             <page title="Parâmetros Rest" path="parametros_rest"></page>
+            <page title="Geradores" path="geradores"></page>
         </category>
     </language>
 </main>
