@@ -20,11 +20,11 @@ chamada Mocha, para ser renomeada para LiveScript e atualmente JavaScript.
 
 Em 1996 Microsoft lançou o Internet Explorer 3 com sua própria implementação do
 JavaScript, chamada JScript, em uma tentativa de competir com o Netscape. Isso
-gerou um problema porque as duas implementações da linguagem eram incompatíveis
-e geraria problemas de compatibilidade caso não ela não fosse normalizada.
+gerou um dilema porque as duas implementações da linguagem eram incompatíveis e
+isso causaria problemas no futuro caso elas não fossem normalizadas.
 
 Por causa disso Netscape entrou em contato com Ecma International para criar um
 padrão da linguagem. Em 1997 foi criado o ECMAScript pelo padrão ECMA-262 cuja
-especificações poderiam ser usados por diferentes navegadores para universalizar
+especificações poderiam ser usadas por diferentes navegadores para universalizar
 a linguagem. Desde então a Mozilla Foundation (sucessora do Netscape) e Ecma
 international vêm atualizando a especificação.
