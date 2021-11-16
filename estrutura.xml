@@ -34,6 +34,7 @@
             <page title="Condicional If" path="condicional_if"></page>
         </category>
         <category title="Intermediário" path="intermediario">
+            <page title="Objetos" path="objetos"></page>
             <page title="Funções Arrow" path="funcoes_arrow"></page>
             <page title="Arrays" path="arrays"></page>
             <page title="For Loop" path="for_loop"></page>
