@@ -27,7 +27,7 @@ ou:
 numero = int(input("Digite o número"))
 ```
 
-Dessa forma, transformamos o tipo da variável `numero` em int (numero inteiros)
+Dessa forma, transformamos o tipo da variável `numero` em int (número inteiro)
 
 O mesmo vale para os outros tipos:
 

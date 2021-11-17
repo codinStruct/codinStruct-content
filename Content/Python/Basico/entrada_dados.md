@@ -23,4 +23,3 @@ n1 = input("Digite o Primeiro número")
 
 n2 = input("Digite o Segundo número")
 ```
-

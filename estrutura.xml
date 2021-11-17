@@ -37,5 +37,12 @@
             <page title="Operações Aritméticas" path="operacoes_aritmeticas"></page>
             <page title="Comentarios" path="comentario"></page>
         </category>
+        <category title="Intermediário" path="intermediario">
+            <page title="Listas" path="listas"></page>
+            <page title="Tuplas" path="tuplas"></page>
+            <page title="Conjuntos" path="conjuntos"></page>
+            <page title="Dicionários" path="dicionarios"></page>
+            <page title="Coleções" path="colecoes"></page>
+        </category>
     </language>
 </main>

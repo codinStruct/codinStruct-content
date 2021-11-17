@@ -8,4 +8,4 @@ Então, vamos começar. Para exibir algo na tela, basta digitar o comando `print
 print ("Hello Word!")
 ```
 
-Ufa! Agora que nos livramos da maldição do Hello Word, vamos explorar um pouco mais essa linguagem
+Ufa! Agora que nos livramos da maldição do Hello Word, vamos explorar um pouco mais essa linguagem.

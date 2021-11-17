@@ -2,9 +2,10 @@
 
 ## O que é?
 
-Basiscamente, variável é um espaço que é reservado na memória do seu computador para que você guarde alguma informação. Suponhamos que você tenha uma gaveta, e essa gaveta seria seu espaço na memória. Quando é feito o que chamamos de `Declarar uma variável`, você está dizendo para seu guarda-roupas (ou seja lá o móvel que você tenha uma gaveta) que você vai usar aquela gaveta, que você dará um nome, e guardará nela algo, que será o valor.
+Basicamente, variável é um espaço que é reservado na memória do seu computador para que você guarde alguma informação. Suponhamos que você tenha uma gaveta, e essa gaveta seria seu espaço na memória. Quando é feito o que chamamos de `Declarar uma variável`, você está dizendo para seu guarda-roupas (ou seja, lá o móvel que você tenha uma gaveta) que você vai usar aquela gaveta, que você dará um nome, e guardará nela algo, que será o valor.
 
 ## Criação
+
 A sintaxe de declaração de uma variável seria:
 
 ```python
@@ -12,7 +13,9 @@ nomeVariavel = valor
 ```
 
 Você pode dar o nome que quiser a sua variável, desde que essa não seja uma palavra reservada. Palavra reservada, diz respeito a palavras que tem alguma utilidade no Python, como o exemplo da função `print` que usamos em uma aula passada.
+
 ## Palavras reservadas
+
 Algumas dessas palavras reservadas são:
 
 ```python
@@ -24,10 +27,9 @@ and, as, assert, break, class, continue
 ,yield, True, False, None
 ```
 
-Não se preocupe com elas, pois no decorrer do curso, iremos explicar a função de cada uma!
+Não se preocupe com elas, pois, no decorrer do curso, iremos explicar a função de cada uma!
 
 ## Tipos de variáveis
-
 
 Mesmo os tipos não sendo declarados explicitamente (algumas linguagens utilizam o que chamamos de tipagem estática, onde o programador define o tipo daquela variável, por exemplo `int numero = 10`), eles sempre irão assumir um tipo de dado. Abaixo, exemplos de retornos de tipos:
 
