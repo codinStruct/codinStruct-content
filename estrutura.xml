@@ -2,6 +2,7 @@
 
 <main>
     <language title="C" path="c">
+        <description>C é uma linguagem de programação imperativa conhecida por sua simplicidade e relativo baixo nível. É uma das escolhas mais populares para introdução à programação, mas é também relevante no mercado e utilizada por muitas outras linguagens e ferramentas.</description>
         <category title="Básico" path="basico">
             <page title="Introdução" path="introducao"></page>
             <page title="Primeiro Programa" path="primeiro_programa"></page>
@@ -28,6 +29,7 @@
         </category>
     </language>
     <language title="JavaScript" path="javascript">
+        <description>JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional). Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.</description>
         <category title="Básico" path="basico">
             <page title="Introdução" path="introducao"></page>
             <page title="Tipos" path="tipos"></page>
