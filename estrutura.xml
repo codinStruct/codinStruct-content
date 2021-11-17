@@ -27,8 +27,8 @@
             <page title="Seleção Genérica" path="selecao_generica"></page>
         </category>
     </language>
-    <language title="Python" path="Python">
-        <category title="Básico" path="Basico">
+    <language title="Python" path="python">
+        <category title="Básico" path="basico">
             <page title="Sobre" path="sobre"></page>
             <page title="Primeiros Passos" path="primeiros_passos"></page>
             <page title="Primeiro Programa" path="primeiro_programa"></page>
