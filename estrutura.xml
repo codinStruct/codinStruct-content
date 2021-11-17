@@ -14,6 +14,7 @@
             <page title="Saída Básica" path="saida"></page>
             <page title="Entrada Básica" path="entrada"></page>
             <page title="Operadores Aritméticos Básicos" path="ops_aritmeticos"></page>
+            <page title="Operadores de Incremento e Decremento" path="ops_incremento_decremento"></page>
             <page title="Operadores Lógicos e Relacionais" path="ops_logicos_relacionais"></page>
             <page title="Controle de Fluxo" path="controle_de_fluxo"></page>
             <page title="Arrays" path="arrays"></page>
