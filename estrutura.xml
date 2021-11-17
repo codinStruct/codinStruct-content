@@ -20,6 +20,7 @@
             <page title="Instrução while" path="while"></page>
             <page title="Instrução for" path="for"></page>
             <page title="Ponteiros" path="ponteiros"></page>
+            <page title="Operador sizeof" path="sizeof"></page>
         </category>
         <category title="Intermediário" path="intermediario">
             <page title="Conversões Implícitas" path="conversoes_implicitas"></page>
