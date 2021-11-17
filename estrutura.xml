@@ -55,4 +55,23 @@
             <page title="Geradores" path="geradores"></page>
         </category>
     </language>
+    <language title="Python" path="python">
+        <description>Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991. Atualmente, possui um modelo de desenvolvimento comunitário, aberto e gerenciado pela organização sem fins lucrativos Python Software Foundation. Apesar de várias partes da linguagem possuírem padrões e especificações formais, a linguagem, como um todo, não é formalmente especificada. O padrão de facto é a implementação CPython.</description>
+        <category title="Básico" path="basico">
+            <page title="Sobre" path="sobre"></page>
+            <page title="Primeiros Passos" path="primeiros_passos"></page>
+            <page title="Primeiro Programa" path="primeiro_programa"></page>
+            <page title="Entrada de Dados" path="entrada_dados"></page>
+            <page title="Tipos de Dados" path="tipagem"></page>
+            <page title="Operações Aritméticas" path="operacoes_aritmeticas"></page>
+            <page title="Comentarios" path="comentario"></page>
+        </category>
+        <category title="Intermediário" path="intermediario">
+            <page title="Listas" path="listas"></page>
+            <page title="Tuplas" path="tuplas"></page>
+            <page title="Conjuntos" path="conjuntos"></page>
+            <page title="Dicionários" path="dicionarios"></page>
+            <page title="Coleções" path="colecoes"></page>
+        </category>
+    </language>
 </main>
