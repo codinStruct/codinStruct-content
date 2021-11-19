@@ -12,7 +12,7 @@ Pode ser implementado em diversas áreas, como: Criação de Scripts, desenvolvi
 
 Data Science, aplicações web, desenvolvimento Back-End, criação de jogos e scripts.
 
-Atualmente(2021), Python é considerada a linguagem mais utilizada no mundo, segundo alguns sites como `tecmundo` e `statisticstimes`.
+Em novembro de 2021, Python é considerada a linguagem mais popular no mundo segundo o [TIOBE Index](https://www.tiobe.com/tiobe-index/).
 
 ## Características
 
