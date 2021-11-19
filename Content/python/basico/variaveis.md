@@ -1,84 +1,31 @@
 # Variáveis
 
-## O que é?
+## O Que São?
 
-Basicamente, variável é um espaço que é reservado na memória do seu computador para que você guarde alguma informação. Suponhamos que você tenha uma gaveta, e essa gaveta seria seu espaço na memória. Quando é feito o que chamamos de `Declarar uma variável`, você está dizendo para seu guarda-roupas (ou seja, lá o móvel que você tenha uma gaveta) que você vai usar aquela gaveta, que você dará um nome, e guardará nela algo, que será o valor.
+Uma definição básica para variável é um objeto nomeado que armazena alguma
+informação. Uma variável seria como uma caixa que possui um nome (formalmente
+identificador). Nessa caixa é possível armazenar diversas coisas, e ela pode ser
+acessada para revelar o que está contido nela.
 
 ## Criação
 
-A sintaxe de declaração de uma variável seria:
+Para criar uma variável, podemos utilizar a sintaxe `<nome> = <valor inicial>`.
+O `<nome>` possui algumas regras, e.g. não pode começar com números e não pode
+ser uma palavra reservada.
 
-```python
-nomeVariavel = valor
-```
+Palavras reservadas são palavras que já tem algum significado específico no
+código, ou estão, como o nome sugere, reservadas para uso futuro. Algumas
+palavras reservadas são:
 
-Você pode dar o nome que quiser a sua variável, desde que essa não seja uma palavra reservada. Palavra reservada, diz respeito a palavras que tem alguma utilidade no Python, como o exemplo da função `print` que usamos em uma aula passada.
+_and_, _as_, _assert_, _break_, _class_, _continue_, _def_, _del_, _elif_,
+_else_, _except_, _exec_, _finally_, _for_, _from_, _global_, _if_, _import_,
+_in_, _is_, _lambda_, _nonlocal_, _not_, _or_, _pass_, _raise_, _return_, _try_,
+_while_, _with_, _yield_, _True_, _False_ e _None_.
 
-## Palavras reservadas
+Não é necessário conhecer o significado de cada uma delas no momento.
 
-Algumas dessas palavras reservadas são:
+## Uso
 
-```python
-and, as, assert, break, class, continue
-,def, del, elif, else, except, exec
-,finally, for, from, global, if, import
-,in, is, lambda, nonlocal, not, or
-,pass, raise, return, try, while, with
-,yield, True, False, None
-```
-
-Não se preocupe com elas, pois, no decorrer do curso, iremos explicar a função de cada uma!
-
-## Tipos de variáveis
-
-Mesmo os tipos não sendo declarados explicitamente (algumas linguagens utilizam o que chamamos de tipagem estática, onde o programador define o tipo daquela variável, por exemplo `int numero = 10`), eles sempre irão assumir um tipo de dado. Abaixo, exemplos de retornos de tipos:
-
-- Tipo String:
-
-Servem para guardar uma cadeia de caracteres:
-
-```python
->>> a = 'CodinStruct'
->>> type(a)
-<type 'str'>
-```
-
-- Tipo inteiro:
-
-Servem para guardar números inteiros:
-
-```python
->>> a = 1
->>> type(a)
-<type 'int'>
-```
-
-- Tipo ponto flutuante:
-
-Servem para guardar números reais:
-
-```python
->>> a = 1.0
->>> type(a)
-<type 'float'>
-```
-
-- Tipo booleano:
-
-Servem para guardar valores lógicos (`True` ou `False`):
-
-```python
->>> a = True
->>> type(a)
-<type 'bool'>
-```
-
-- Tipo complexo:
-
-Servem para guardar a combinação de um número real com um número imaginário:
-
-```python
->>> a = 4+3j
->>> type(a)
-<type 'complex'>
-```
+Uma variável serve como apelido para o valor que ela armazena. Isso significa
+que após `a = 5`, `b = a` é equivalente a `b = 5`. Se o valor de `a` for
+alterado futuramente, o valor de `b` permanecerá o mesmo.

@@ -1,25 +1,33 @@
 # Entrada de Dados
 
-Certo, agora que já aprendemos com exibir algo na tela e sobre variáveis, vamos aprender como "pegar" dados de um usuário.
+Agora que já aprendemos como exibir algo na tela e sobre variáveis, vamos
+aprender como "pegar" dados de um usuário.
 
-Digamos que você queira fazer uma calculadora, então, para que seja calculado os valores, seria necessário pegar esses valores de quem deseja fazer o cálculo, certo?
+Digamos que você queira fazer uma calculadora. Para que sejam realizadas as
+operações, é necessário ler valores informados pelo usuário.
 
-Temos então, uma função para isso, chamada `input`. Com ela, você pega a informação do usuário, veja como funciona:
-
-```python
-input("Mensagem Que irá aparecer")
-```
-
-Como visto, você deve digitar entre as `""` a mensagem que você quer que a pessoa leia, no nosso exemplo da calculadora, seria:
+Para isso temos a função `input`, que permite, você ler dados inseridos pelo
+usuário. Veja um exemplo:
 
 ```python
-input("Digite o primeiro número para ser calculado")
+input("Pedindo entrada do usuário")
 ```
 
-Porém, da forma como está, o programa simplesmente irá pegar o valor do usuário, e não irá armazenar em lugar nenhum, para isso, usamos as variáveis!
+Como visto, aspas duplas denotam um literal string—um pedaço de texto—que será
+exibido na tela durante a execução da função. No caso de nossa calculadora ,
+podemos utilizar:
 
 ```python
-n1 = input("Digite o Primeiro número")
-
-n2 = input("Digite o Segundo número")
+input("Digite o primeiro operando: ")
 ```
+
+Essa invocação de `input` apenas lê o que o usuário digitar mas esse valor não é
+armazenado em lugar algum. Podemos dar um nome a esse valor, assim ele não é
+descartado:
+
+```python
+n1 = input("Digite o primeiro operando: ")
+```
+
+No caso acima, a entrada do usuário será armazenada e acessível na variável
+`n1`.

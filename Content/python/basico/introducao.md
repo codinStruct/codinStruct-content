@@ -1,23 +1,28 @@
 # Introdução
 
-## Quando e como surgiu?
-
-A linguagem de programação `Python` foi implementado em 1989 por Guido van Rossum no Centro de Matemática e Tecnológia da Informação (CWI), na Holanda. Foi um sucessor da linguagem conhecida como `ABC`, foi criada inicialmente para ser usada no Sistema Operacional `Amoeba`.
-
 ## Sobre
 
-Por se tratar de uma linguagem de programação de fácil aprendizagem, tendo uma codificação mais "Clear", `Python` é muito usada como primeira linguagem, e como inicio de estudos em diversas faculdades.
+Por ser uma linguagem de programação relativamente simples e de alto nível,
+Python é muito usada como primeira linguagem e inicio de estudos em diversas
+universidades.
 
-Pode ser implementado em diversas áreas, como: Criação de Scripts, desenvolvimento Back-End, criação de jogos, aplicações Web, Data Sciencie, entre outros.
+Python é utilizado em diversas áreas, como criação de scripts, desenvolvimento
+back-end, criação de jogos, aplicações web e ciência de dados.
 
-Data Science, aplicações web, desenvolvimento Back-End, criação de jogos e scripts.
-
-Em novembro de 2021, Python é considerada a linguagem mais popular no mundo segundo o [TIOBE Index](https://www.tiobe.com/tiobe-index/).
+Em novembro de 2021, Python é considerada a linguagem mais popular no mundo
+segundo o [TIOBE Index](https://www.tiobe.com/tiobe-index/).
 
 ## Características
 
-Python é uma linguagem interpretada, ou seja, ela usa um interpretador para traduzir o código analisado e o executa
+Python é uma linguagem interpretada—utiliza um interpretador para analisar e
+executar código.
 
-Por ser open source, e ser uma linguagem bastante utilizada, a comunidade acabou criando diversas bibliotecas e scripts, o que faz com que você tenha diversas possibilidades.
+Também é um software de código aberto, e ser uma linguagem bastante popular há
+muitas bibliotecas de terceiros.
 
-Sem mais enrolação, vamos conhecer essa linguagem!
+## Quando e Como Surgiu?
+
+O início da implementação da linguagem Python se deu em 1989 por Guido van
+Rossum no Centro de Matemática e Tecnologia da Informação (CWI), na Holanda. Foi
+criada inicialmente para uso no sistema operacional Amoeba, sucedendo a
+linguagem de programação ABC.

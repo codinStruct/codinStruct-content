@@ -1,38 +1,63 @@
 # Tipagem dinâmica
 
-Quando falamos sobre variáveis, houve uma citação dizendo que algumas linguagens usam a tipagem estática, onde é especificado o tipo de dados que determinada variável terá.
+Python utiliza o conceito de tipagem dinâmica, ou seja, o tipos dos objetos em
+um programa podem variar durante a execução.
 
-Python, usa um conceito diferente que seria a tipagem dinâmica, ou seja, o tipo da variável será "revelado" de acordo com a execução do programa.
+Ao fazemos uma entrada, como `n = input("Digite um número: ")` Estamos
+simplesmente lendo um valor e inserindo na variável `n`. Embora a mensagem
+sugira que `n` receberá um número, a função `input` retorna uma _string_
+(sequência de caracteres). `n`, então, é inicialmente uma _string_. Isso pode
+ser verificado com a função `type`: `type(n)`.
 
-Quando fazemos uma entrada visto no tópico passado:
-
-```python
-numero = input("Digite um número")
-```
-
-Estamos simplesmente pegando algo do usuário e inserindo na variável `numero`, que não é necessariamente um número, pois, da forma como é feito, a variável é uma string (isso por ser verificado através da função `type(numero)` )
-
-Portanto, se quisermos forçar que o usuário digite um número, devemos fazer o que chamamos de `cast`
-
-Temos duas formas de fazer, que são:
+Se quisermos forçar que a entrada seja interpretada como um número, devemos
+converter seu tipo utilizando um construto chamado _cast_. No nosso caso o
+_cast_ será feito utilizando a função `int`, que retorna um número inteiro a
+partir de uma _string_:
 
 ```python
-numero = input("Digite o número")
-numero = int(numero)
+n = int(input("Digite um número: "))
 ```
 
-ou:
+Dessa forma, a _string_ retornada é transformada em um número inteiro; assim,
+`n` agora é um inteiro.
 
-```python
-numero = int(input("Digite o número"))
-```
+Além da função `int`, há funções similares como `str` (produz uma _string_) e
+`float` (produz um número real).
 
-Dessa forma, transformamos o tipo da variável `numero` em int (número inteiro)
+## Tipos
 
-O mesmo vale para os outros tipos:
+Alguns dos tipos preexistentes no Python são os seguintes.
 
-```python
-int()
-str()
-float()
-```
+- `str` (popularmente _string_): Representa uma cadeia de caracteres, como
+  `"abc"`:
+
+  ```python
+  >>> a = 'codinStruct'
+  >>> type(a)
+  <type 'str'>
+  ```
+
+- `int`: Representa um número inteiro, como `59`:
+
+  ```python
+  >>> a = 1
+  >>> type(a)
+  <type 'int'>
+  ```
+
+- `float`: Representa um número real, como `3,14`:
+
+  ```python
+  >>> a = 1.0
+  >>> type(a)
+  <type 'float'>
+  ```
+
+- `bool`: Pode alternar entre os valores lógicos `True` (verdade) e `False`
+  (falsidade).
+
+  ```python
+  >>> a = True
+  >>> type(a)
+  <type 'bool'>
+  ```
