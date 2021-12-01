@@ -1,11 +1,13 @@
 <!-- Our root node -->
 <!ELEMENT main (language*)>
 <!-- Represents a programming language -->
-<!ELEMENT language (category*)>
+<!ELEMENT language (description,category*)>
 <!ATTLIST language
     title CDATA #REQUIRED
     path CDATA #REQUIRED
 >
+<!-- A language's description -->
+<!ELEMENT description (#PCDATA)>
 <!-- Category belonging to a language -->
 <!ELEMENT category (page*)>
 <!ATTLIST category

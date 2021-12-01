@@ -2,6 +2,7 @@
 
 <main>
     <language title="C" path="c">
+        <description>C é uma linguagem de programação imperativa conhecida por sua simplicidade e relativo baixo nível. É uma das escolhas mais populares para introdução à programação, mas é também relevante no mercado e utilizada por muitas outras linguagens e ferramentas.</description>
         <category title="Básico" path="basico">
             <page title="Introdução" path="introducao"></page>
             <page title="Primeiro Programa" path="primeiro_programa"></page>
@@ -13,19 +14,66 @@
             <page title="Saída Básica" path="saida"></page>
             <page title="Entrada Básica" path="entrada"></page>
             <page title="Operadores Aritméticos Básicos" path="ops_aritmeticos"></page>
+            <page title="Operadores de Incremento e Decremento" path="ops_incremento_decremento"></page>
             <page title="Operadores Lógicos e Relacionais" path="ops_logicos_relacionais"></page>
             <page title="Controle de Fluxo" path="controle_de_fluxo"></page>
             <page title="Arrays" path="arrays"></page>
             <page title="Instrução while" path="while"></page>
             <page title="Instrução for" path="for"></page>
             <page title="Ponteiros" path="ponteiros"></page>
+            <page title="Operador sizeof" path="sizeof"></page>
             <page title="Aritmética de Ponteiros" path="ponteiros_aritmetica"></page>
+            <page title="Gerenciamento de Memória" path="memoria"></page>
         </category>
         <category title="Intermediário" path="intermediario">
             <page title="Conversões Implícitas" path="conversoes_implicitas"></page>
         </category>
         <category title="Avançado" path="avancado">
             <page title="Seleção Genérica" path="selecao_generica"></page>
+        </category>
+    </language>
+    <language title="JavaScript" path="javascript">
+        <description>JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional). Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.</description>
+        <category title="Básico" path="basico">
+            <page title="Introdução" path="introducao"></page>
+            <page title="Tipos" path="tipos"></page>
+            <page title="Comentários" path="comentarios"></page>
+            <page title="Variáveis" path="variaveis"></page>
+            <page title="Funções" path="funcoes"></page>
+            <page title="Console" path="console"></page>
+            <page title="Condicional If" path="condicional_if"></page>
+        </category>
+        <category title="Intermediário" path="intermediario">
+            <page title="Objetos" path="objetos"></page>
+            <page title="Funções Arrow" path="funcoes_arrow"></page>
+            <page title="Arrays" path="arrays"></page>
+            <page title="Arrays Multidimensionais" path="arrays_multidimensionais"></page>
+            <page title="For Loop" path="for_loop"></page>
+            <page title="Condicional Switch" path="condicional_switch"></page>
+            <page title="Operador Condicional (Ternário)" path="operador_condicional"></page>
+        </category>
+        <category title="Avançado" path="avancado">
+            <page title="Parâmetros Rest" path="parametros_rest"></page>
+            <page title="Geradores" path="geradores"></page>
+        </category>
+    </language>
+    <language title="Python" path="python">
+        <description>Python é uma linguagem de programação de alto nível, interpretada de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte. Foi lançada por Guido van Rossum em 1991. Atualmente, possui um modelo de desenvolvimento comunitário, aberto e gerenciado pela organização sem fins lucrativos Python Software Foundation. Apesar de várias partes da linguagem possuírem padrões e especificações formais, a linguagem, como um todo, não é formalmente especificada. O padrão de facto é a implementação CPython.</description>
+        <category title="Básico" path="basico">
+            <page title="Introdução" path="introducao"></page>
+            <page title="Primeiros Passos" path="primeiros_passos"></page>
+            <page title="Primeiro Programa" path="primeiro_programa"></page>
+            <page title="Entrada de Dados" path="entrada_dados"></page>
+            <page title="Tipos de Dados" path="tipagem"></page>
+            <page title="Operações Aritméticas" path="operacoes_aritmeticas"></page>
+            <page title="Comentários" path="comentario"></page>
+        </category>
+        <category title="Intermediário" path="intermediario">
+            <page title="Listas" path="listas"></page>
+            <page title="Tuplas" path="tuplas"></page>
+            <page title="Conjuntos" path="conjuntos"></page>
+            <page title="Dicionários" path="dicionarios"></page>
+            <page title="Coleções" path="colecoes"></page>
         </category>
     </language>
 </main>
