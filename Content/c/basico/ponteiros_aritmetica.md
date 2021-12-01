@@ -37,7 +37,7 @@ array seria disposto como na tabela abaixo.
 
 Perceba que os elementos são contíguos na memória, i.e. um vem imediatamente
 após o outro. Na tabela acima `10` ocupa X até X + 3, `5` ocupa X + 4 até X + 7,
-`9` ocupa X + 8 até X + 11 etc. Isso significa que se um ponteiro aponta para o
+`9` ocupa X + 8 até X + 11, etc. Isso significa que se um ponteiro aponta para o
 endereço de `10`, esse **endereço** somado com 4 (`sizeof(int)`) será o endereço
 de `5`.
 
@@ -49,7 +49,7 @@ referencia `arr[0]`.
 
 Voltemos para a tabela acima. Um ponteiro para X, somado com 1 apontará para X +
 4 e somado com 2 apontará para X + 8. Isso pode parecer contraintuitivo a
-princípio porém é conveniente: Para acessar o próximo elemento contíguo basta
+princípio, porém é conveniente: Para acessar o próximo elemento contíguo basta
 somar 1 ao ponteiro independentemente de seu tipo.
 
 ```c
