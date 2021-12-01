@@ -7,7 +7,7 @@ compreender como arrays são armazenados na memória.
 ## Somando e Subtraindo Inteiros
 
 Imaginemos um array de `char`s `{'a', 'f', 'c', 'k', 'b'}`. O array seria
-disposto na memória como na tabela abaixo.
+disposto na memória como na tabela abaixo. Cada endereço se refere a um byte.
 
 | Endereço | Valor |
 | -------- | ----- |
@@ -17,9 +17,15 @@ disposto na memória como na tabela abaixo.
 | X + 3    | `'k'` |
 | X + 4    | `'b'` |
 
-Cada endereço se refere a um byte. No caso de um array
-`int arr[] = {10, 5, 9, 2, 1};` com `int`s de 4 bytes (4 bytes é apenas uma
-suposição!), o array seria disposto como na tabela abaixo.
+---
+
+Para facilitar a compreensão, estamos supondo que um `int` possui 4 bytes em
+qualquer sistema.
+
+---
+
+No caso de um array `int arr[] = {10, 5, 9, 2, 1};` com `int`s de 4 bytes, o
+array seria disposto como na tabela abaixo.
 
 | Endereço | Valor |
 | -------- | ----- |
