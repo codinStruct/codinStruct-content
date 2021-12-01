@@ -22,6 +22,7 @@
             <page title="Instrução for" path="for"></page>
             <page title="Ponteiros" path="ponteiros"></page>
             <page title="Operador sizeof" path="sizeof"></page>
+            <page title="Aritmética de Ponteiros" path="ponteiros_aritmetica"></page>
             <page title="Gerenciamento de Memória" path="memoria"></page>
         </category>
         <category title="Intermediário" path="intermediario">
