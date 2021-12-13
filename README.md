@@ -25,11 +25,11 @@ tudo; a noção da exisência de um conceito é suficiente na maioria dos casos.
 <h2 align="center">Como isso está sendo utilizado?</h2>
 
 Esse conteúdo é dedicado para uso no
-[codinStruct](https://github.com/codinStruct/codinStruct), mas pode ser
-utilizado e adaptado independentemente para quaisquer fins que estejam de acordo
-com a licença
-[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR). Um
-arquivo XML contém as informações relacionadas à estruturação e ordem das
+[codinStruct](http://codinstruct-pi4.herokuapp.com/) (site provisório, pode
+estar offline ou demorar a iniciar), mas pode ser utilizado e adaptado
+independentemente para quaisquer fins que estejam de acordo com a licença
+[CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR).
+Um arquivo XML contém as informações relacionadas à estruturação e ordem das
 categorias e páginas.
 
 <h2 align="center">Acredita que algo está errado?</h2>

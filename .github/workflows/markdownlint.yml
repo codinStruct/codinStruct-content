@@ -22,8 +22,7 @@ jobs:
         id: changed-files
         uses: tj-actions/changed-files@v11.5
         with:
-          path: Content
-          files: \.md$
+          files: Content\/.*\.md
 
       - name: markdownlint-cli
         uses: nosborn/github-action-markdown-cli@v2.0.0
