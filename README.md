@@ -27,8 +27,7 @@ tudo; a noção da exisência de um conceito é suficiente na maioria dos casos.
 Esse conteúdo é dedicado para uso no
 [codinStruct](http://codinstruct-pi4.herokuapp.com/) (site provisório, pode
 estar offline ou demorar a iniciar), mas pode ser utilizado e adaptado
-independentemente para
-quaisquer fins que estejam de acordo com a licença
+independentemente para quaisquer fins que estejam de acordo com a licença
 [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.pt_BR).
 Um arquivo XML contém as informações relacionadas à estruturação e ordem das
 categorias e páginas.
