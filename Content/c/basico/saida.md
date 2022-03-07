@@ -160,7 +160,7 @@ printf("Você já ouviu %s tragédia de Darth Plagueis, o sábio?", "falar da");
 
 // %f é substituído pelo valor da expressão acos(-1), função de <math.h>.
 // Isso exibirá um valor aproximado de π com 6 casas decimais, e pode variar
-//  conforme seu sistema. Teste você mesmo.
+//  conforme o seu sistema. Teste você mesmo.
 printf("O valor de pi é %f", acos(-1));
 
 // %c é substituído pelo caractere "+".
