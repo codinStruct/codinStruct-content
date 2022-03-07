@@ -1,6 +1,6 @@
 # Entrada Básica
 
-As funções de saída do C permitem ao programa interagir com o usuário lendo
+As funções de entrada do C permitem ao programa interagir com o usuário lendo
 informações. A função principal que usaremos pra isso é a função `scanf` de
 `<stdio.h>`.
 
@@ -70,7 +70,7 @@ int main(void)
 ```
 
 Execute o código acima e tente fazê-lo produzir um resultado incorreto. A
-leitura do número pode dar errado de várias formas:
+leitura do número pode dar errado de várias formas, incluindo:
 
 - A entrada não é um número. Nesse caso o `scanf` não modifica a entrada (exceto
   por descartar caracteres white-space iniciais) e ela pode ser lida
