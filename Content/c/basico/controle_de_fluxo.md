@@ -73,11 +73,13 @@ Agora, em vez de exibir `1` ou `0`, o programa é mais descritivo. Infelizmente,
 ele não exibe nada se os números não estiverem ordenados. Para isso existe a
 instrução `else`.
 
-## Instrução `else`
+## Palavra-chave `else`
 
-A instrução `else` só pode aparecer após uma instrução `if`. Assim como `if`,
-`else` condicionalmente executa uma instrução; porém apenas se a condição do
-`if` precedente for falsa.
+Formalmente, `else` não é uma instrução e sim uma palavra-chave que produz uma
+forma alternativa da instrução `if`. A palavra-chave `else` só pode aparecer
+após o "corpo" (a instrução seguinte) de um `if`. Assim como `if`, `else`
+condicionalmente executa uma instrução; porém apenas se a condição do `if`
+precedente for falsa.
 
 Uma forma simples de visualizar isso é adicionando um `else` em nosso código
 anterior:
@@ -92,8 +94,8 @@ else
 O segundo `puts` só executa se a condição `Ordenados(a, b, c, d, e)` for falsa,
 e assim nosso programa finalmente gera saídas apropriadas para ambos os casos.
 
-Um `if` e seu "corpo" (a instrução seguinte) são considerados uma só instrução,
-portanto é possível encadear um `if` após um `else`:
+Um `if`, seu corpo e quaisquer `else`s seguintes são considerados uma só
+instrução, portanto é possível encadear vários `if` e `else`:
 
 ```c
 if (Ordenados(a, b, c, d, e))
