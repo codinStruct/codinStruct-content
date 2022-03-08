@@ -1,0 +1,7 @@
+[book]
+language = "pt-BR"
+multilingual = false
+src = "../Content/python"
+
+[build]
+build-dir = "build/python"

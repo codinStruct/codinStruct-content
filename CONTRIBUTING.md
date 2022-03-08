@@ -23,12 +23,15 @@ alteração. Isso pode deixar as mensagens mais concisas.
 |  🔥   | Arquivo removido                  |
 |  💥   | Grandes mudanças                  |
 
+### Livro e XML
+
+Sempre que alguma página em `Content` for adicionada/removida, ordem das páginas
+for alterada e/ou o cabeçalho nível 1 de uma página for modificado, as mudanças
+devem ser refletidas nos arquivos `book/SUMMARY-<lang>.md` e `estrutura.xml`.
+
 ### Markdown
 
 #### Formatação
-
-O primeiro e único cabeçalho nível 1 de um documento deve conter o mesmo título
-que seu respectivo elemento XML `page`.
 
 Utilize o formatador [Prettier](https://prettier.io/) com as configurações
 padrão, exceto:

@@ -1,0 +1,7 @@
+[book]
+language = "pt-BR"
+multilingual = false
+src = "../Content/javascript"
+
+[build]
+build-dir = "build/javascript"
