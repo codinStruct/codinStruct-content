@@ -1,0 +1,1398 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="basico/introducao.html"><strong aria-hidden="true">1.</strong> Básico</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basico/introducao.html"><strong aria-hidden="true">1.1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="basico/tipos.html"><strong aria-hidden="true">1.2.</strong> Tipos</a></li><li class="chapter-item expanded "><a href="basico/comentarios.html"><strong aria-hidden="true">1.3.</strong> Comentários</a></li><li class="chapter-item expanded "><a href="basico/variaveis.html"><strong aria-hidden="true">1.4.</strong> Variáveis</a></li><li class="chapter-item expanded "><a href="basico/funcoes.html"><strong aria-hidden="true">1.5.</strong> Funções</a></li><li class="chapter-item expanded "><a href="basico/console.html"><strong aria-hidden="true">1.6.</strong> Console</a></li><li class="chapter-item expanded "><a href="basico/condicional_if.html"><strong aria-hidden="true">1.7.</strong> Condicional If</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Intermediário</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="intermediario/objetos.html"><strong aria-hidden="true">2.1.</strong> Objetos</a></li><li class="chapter-item expanded "><a href="intermediario/funcoes_arrow.html"><strong aria-hidden="true">2.2.</strong> Funções Arrow</a></li><li class="chapter-item expanded "><a href="intermediario/arrays.html"><strong aria-hidden="true">2.3.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="intermediario/arrays_multidimensionais.html"><strong aria-hidden="true">2.4.</strong> Arrays Multidimensionais</a></li><li class="chapter-item expanded "><a href="intermediario/for_loop.html"><strong aria-hidden="true">2.5.</strong> For Loop</a></li><li class="chapter-item expanded "><a href="intermediario/condicional_switch.html"><strong aria-hidden="true">2.6.</strong> Condicional Switch</a></li><li class="chapter-item expanded "><a href="intermediario/operador_condicional.html"><strong aria-hidden="true">2.7.</strong> Operador Condicional (Ternário)</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Avançado</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="avancado/parametros_rest.html"><strong aria-hidden="true">3.1.</strong> Parâmetros Rest</a></li><li class="chapter-item expanded "><a href="avancado/geradores.html"><strong aria-hidden="true">3.2.</strong> Geradores</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introdução"><a class="header" href="#introdução">Introdução</a></h1>
+<p>JavaScript é atualmente uma das linguagens de programação que mais tem crescido
+recentemente, e é fácil saber o porquê. Ele é a linguagem utilizada por toda a
+internet para tornar a web dinâmica e interativa. Além disso, atualmente ela vem
+sendo aplicada em outras áreas de desenvolvimento como servidores, web design e
+aplicativos mobile.</p>
+<h2 id="origem"><a class="header" href="#origem">Origem</a></h2>
+<p>Na década de 90 o navegador web mais popular era o Netscape, mas essa ainda é a
+época em que as páginas web eram estáticas, sem nenhum tipo de interação.</p>
+<p>Em 1995, para tornar a web mais dinâmica e interativa, Netscape empregou a
+Brendan Eich o trabalho de desenvolver uma linguagem de scripting para o
+navegador baseada na popular linguagem Java. Originalmente essa linguagem fora
+chamada Mocha, para ser renomeada para LiveScript e atualmente JavaScript.</p>
+<h2 id="standards"><a class="header" href="#standards">Standards</a></h2>
+<p>Em 1996 Microsoft lançou o Internet Explorer 3 com sua própria implementação do
+JavaScript, chamada JScript, em uma tentativa de competir com o Netscape. Isso
+gerou um dilema porque as duas implementações da linguagem eram incompatíveis e
+isso causaria problemas no futuro caso elas não fossem normalizadas.</p>
+<p>Por causa disso Netscape entrou em contato com Ecma International para criar um
+padrão da linguagem. Em 1997 foi criado o ECMAScript pelo padrão ECMA-262 cujas
+especificações poderiam ser usadas por diferentes navegadores para universalizar
+a linguagem. Desde então a Mozilla Foundation (sucessora do Netscape) e Ecma
+International vêm atualizando a especificação.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introdução-1"><a class="header" href="#introdução-1">Introdução</a></h1>
+<p>JavaScript é atualmente uma das linguagens de programação que mais tem crescido
+recentemente, e é fácil saber o porquê. Ele é a linguagem utilizada por toda a
+internet para tornar a web dinâmica e interativa. Além disso, atualmente ela vem
+sendo aplicada em outras áreas de desenvolvimento como servidores, web design e
+aplicativos mobile.</p>
+<h2 id="origem-1"><a class="header" href="#origem-1">Origem</a></h2>
+<p>Na década de 90 o navegador web mais popular era o Netscape, mas essa ainda é a
+época em que as páginas web eram estáticas, sem nenhum tipo de interação.</p>
+<p>Em 1995, para tornar a web mais dinâmica e interativa, Netscape empregou a
+Brendan Eich o trabalho de desenvolver uma linguagem de scripting para o
+navegador baseada na popular linguagem Java. Originalmente essa linguagem fora
+chamada Mocha, para ser renomeada para LiveScript e atualmente JavaScript.</p>
+<h2 id="standards-1"><a class="header" href="#standards-1">Standards</a></h2>
+<p>Em 1996 Microsoft lançou o Internet Explorer 3 com sua própria implementação do
+JavaScript, chamada JScript, em uma tentativa de competir com o Netscape. Isso
+gerou um dilema porque as duas implementações da linguagem eram incompatíveis e
+isso causaria problemas no futuro caso elas não fossem normalizadas.</p>
+<p>Por causa disso Netscape entrou em contato com Ecma International para criar um
+padrão da linguagem. Em 1997 foi criado o ECMAScript pelo padrão ECMA-262 cujas
+especificações poderiam ser usadas por diferentes navegadores para universalizar
+a linguagem. Desde então a Mozilla Foundation (sucessora do Netscape) e Ecma
+International vêm atualizando a especificação.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tipos"><a class="header" href="#tipos">Tipos</a></h1>
+<p>JavaScript tem uma tipagem dinâmica, ou seja, não é necessário declarar o tipo
+de uma variável antes de atribuí-la. Além disso uma variável já declarada e com
+valor atribuído pode ser atribuido outro valor de outro tipo.</p>
+<p>De acordo com a especificação ECMAScript 2022 existem 8 tipos primitivos:</p>
+<table><thead><tr><th style="text-align: right">Tipo</th><th style="text-align: left">Descrição</th></tr></thead><tbody>
+<tr><td style="text-align: right"><strong>Number</strong></td><td style="text-align: left">Números inteiros e reais (<code>1</code>, <code>2.5</code>, <code>-3</code>, <code>-4.5</code>).</td></tr>
+<tr><td style="text-align: right"><strong>String</strong></td><td style="text-align: left">Um texto qualquer (<code>&quot;codinStruct&quot;</code>, <code>&quot;João Moreira Silva&quot;</code>).</td></tr>
+<tr><td style="text-align: right"><strong>Boolean</strong></td><td style="text-align: left">Verdadeiro ou Falso (<code>true</code>, <code>false</code>).</td></tr>
+<tr><td style="text-align: right"><strong>null</strong></td><td style="text-align: left">Um valor inexistente (<code>null</code>).</td></tr>
+<tr><td style="text-align: right"><strong>undefined</strong></td><td style="text-align: left">Valor de uma variável que não foi declarada (<code>undefined</code>).</td></tr>
+<tr><td style="text-align: right"><strong>Symbol</strong></td><td style="text-align: left">Um identificador único (<code>Symbol(id)</code>).</td></tr>
+<tr><td style="text-align: right"><strong>Object</strong></td><td style="text-align: left">Um objeto (<code>{}</code>).</td></tr>
+<tr><td style="text-align: right"><strong>BigInt</strong></td><td style="text-align: left">Números inteiros grandes (<code>3141592653589793238462643n</code>)</td></tr>
+</tbody></table>
+<h2 id="referências"><a class="header" href="#referências">Referências</a></h2>
+<ul>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>6.1 ECMAScript Language Types</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="comentários"><a class="header" href="#comentários">Comentários</a></h1>
+<p>Comentários são utilizados para adicionar uma observação em um código de tal
+forma a não impedir ou atrapalhar a execução de tal código. Ao chegar em
+comentário o processador de JavaScript simplesmente o ignorará e continuará
+seguindo o código. Em JavaScript existem dois tipos de comentários: De linha e
+de bloco.</p>
+<p>Comentários de linha ignoram apenas uma linha por vez e servem para adicionar
+uma curta observação em um trecho de código. Esse tipo de comentário utiliza
+duas barras (<code>//</code>) para iniciar o comentário.</p>
+<pre><code class="language-javascript">// A variável nome recebe o valor &quot;João&quot;
+// A variável idade recebe o valor 18
+var nome = &quot;João&quot;;
+var idade = 18;
+</code></pre>
+<p>Comentários de bloco tem um início e fim bem definidos, sendo que tudo entre
+esses dois pontos será ignorado, e servem para adicionar uma observação mais
+envolvida e longa em um trecho de código. Esse tipo de comentário utiliza uma
+barra e asterisco (<code>/*</code>) para iniciar o comentário e um asterisco e barra (<code>*/</code>)
+para finalizá-lo.</p>
+<pre><code class="language-javascript">/*
+A velocidade tem 3 níveis:
+1 - Devagar
+2 - Médio
+3 - Rápido
+*/
+var velocidade = 3;
+</code></pre>
+<h2 id="referências-1"><a class="header" href="#referências-1">Referências</a></h2>
+<ul>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>12.4 Comments</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variáveis"><a class="header" href="#variáveis">Variáveis</a></h1>
+<p>JavaScript é uma linguagem tipada dinamicamente, ou seja, embora haja as
+variáveis terem um tipo de dados associado a seu valor, as variáveis em si podem
+guardar qualquer tipo sem a necessidade de especificar um tipo àquela variável.</p>
+<p>As regras para nomear uma variável são as seguintes:</p>
+<ul>
+<li>Só pode conter letras, números ou <code>_</code> e <code>$</code>;</li>
+<li>Deve começar com <code>_</code>, <code>$</code> ou uma letra;</li>
+<li>Uma capitalização diferente gera uma variável diferente (sensível à
+capitalização)</li>
+<li>Letras do ISO 8859-1, como <code>ü</code> e <code>è</code> também pode ser utilizados</li>
+<li>Não pode ser uma palavra reservada da linguagem (<code>var</code>, <code>function</code>, <code>if</code>, etc)</li>
+</ul>
+<p>Para se declarar uma variável pode-se utilizar a palavra-chave <code>var</code> e a
+variável pode opcionalmente ter valor atribuido na declaração ou mais à frente
+no código.</p>
+<p>Exemplos de declaração de variáveis podem ser:</p>
+<pre><code class="language-javascript">var _string = &quot;:)&quot;;
+var bool = true;
+var $ = 0;
+var Variável = null;
+</code></pre>
+<p>Exemplos de declaração de variáveis que geram um erro:</p>
+<pre><code class="language-javascript">var 1lugar = &quot;João&quot;;
+var #teamseas = true;
+var duas partes = 22;
+var function;
+</code></pre>
+<p>Pode-se até declarar varias variáveis ao mesmo tempo com o uso da vírgula:</p>
+<pre><code class="language-javascript">var nome = &quot;João&quot;,
+  sobrenome = &quot;Silva&quot;,
+  idade = &quot;18&quot;;
+</code></pre>
+<p>É possível também declarar variáveis mas atribuir valores a elas após a
+declaração:</p>
+<pre><code class="language-javascript">var nome; // neste momento nome tem valor undefined
+
+nome = &quot;João&quot;;
+</code></pre>
+<h2 id="referências-2"><a class="header" href="#referências-2">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Grammar_and_Types">Sintaxe e tipos</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>12.6 Names and Keywords</li>
+<li>14.3 Declarations and the Variable Statement
+<ul>
+<li>14.3.2 Variable Statement</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="funções"><a class="header" href="#funções">Funções</a></h1>
+<p>Em JavaScript funções são blocos de códigos que podem ser reutilizados quantas
+vezes quisermos para executar a mesma tarefa repetidas vezes.</p>
+<p>Existem dois conceitos sobre funções que é necessário entender: Parâmetros e
+Retorno. Uma função pode receber parâmetros quando for chamada e utilizar esses
+valores dentro do seu corpo. Uma função também pode retornar um valor que poderá
+ser utilizado em nosso programa.</p>
+<p>Como exemplo de função, vamos criar uma função que recebe um número e retorna o
+dobro desse número. A função terá um parâmetro <code>n</code> que será o número que será
+passado para a função e um retorno que será o dobro de <code>n</code>:</p>
+<pre><code class="language-javascript">var numero = 3;
+
+function dobro(n) {
+  return n * 2;
+}
+
+var b = dobro(numero); // b agora é 6
+</code></pre>
+<p>É importante notar o uso de parênteses no final da função. Isso é necessário
+para que o JavaScript entenda que a função é um comando e não uma atribuição:</p>
+<pre><code class="language-javascript">function tres() {
+  return 3;
+}
+
+var a = tres(); // a agora é 3
+var b = tres; // b agora é a função tres
+</code></pre>
+<p>Outra coisa a se notar é que o parametro <code>n</code> é apenas uma cópia da variável
+<code>numero</code>. Quando a função é chamada, o valor da variável <code>numero</code> não é
+alterado:</p>
+<pre><code class="language-javascript">var numero = 3;
+
+function quatro(n) {
+  n = 4;
+}
+
+quatro(numero);
+
+numero; // numero continua com o valor 3
+</code></pre>
+<p>Se quisermos alterar o valor de <code>numero</code> dentro da função, devemos acessar a
+variável diretamente:</p>
+<pre><code class="language-javascript">var numero = 3;
+
+function quatro() {
+  numero = 4;
+}
+
+quatro();
+
+numero; // numero agora é 4
+</code></pre>
+<ul>
+<li>Ecma International (<a href="https://tc39.es/ecma262/#sec-identifier-names">ECMA-262</a>)
+<ul>
+<li>15.2 Function Definitions</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="console"><a class="header" href="#console">Console</a></h1>
+<p>O console JavaScript é uma ferramenta presente em todos os navegadores modernos,
+que permite executar comandos de forma rápida e fácil e visualizar o resultado
+desses comandos. Todos os códigos aqui apresentados podem ser executados no
+console para fins de teste.</p>
+<p>Para acessar o console no Chrome ou no Edge basta apertar a tecla <code>F12</code>.</p>
+<p>Quando se estiver utilizando o console, você tem acesso ao objeto <code>console</code> que
+é utilizado para executar comandos relacionados aos console em si.</p>
+<p>Algumas das aplicações do objeto <code>console</code> são:</p>
+<h2 id="consolelog"><a class="header" href="#consolelog"><code>console.log()</code></a></h2>
+<p>Pode ser usado para exibir o valor de qualquer tipo de dado, incluindo strings,
+números, objetos, arrays, etc.</p>
+<pre><code class="language-javascript">console.log(&quot;Hello World&quot;);
+console.log(123);
+console.log({ name: &quot;João&quot;, age: 18 });
+console.log([1, 2, 3, 4]);
+
+// Resultado exibido no console:
+// Hello World
+// 123
+// { name: 'João', age: 18 }
+// [ 1, 2, 3, 4 ]
+</code></pre>
+<h2 id="consoleinfo-consolewarn-consoleerror"><a class="header" href="#consoleinfo-consolewarn-consoleerror"><code>console.info()</code>, <code>console.warn()</code>, <code>console.error()</code></a></h2>
+<p>Funcionam como <code>console.log()</code> mas servem para exibir mensagens de informação,
+avisos ou erros, respectivamente. O navegador exibe essas mensagens de cores
+diferentes, dependendo do tipo de mensagem. Além disso é possível escolher o
+nível de mensagem que será exibida no menu do navegador, de forma que, por
+exemplo, se escolhermos o nível <code>error</code>, apenas mensagens de erro serão
+exibidas.</p>
+<h2 id="consoleclear"><a class="header" href="#consoleclear"><code>console.clear()</code></a></h2>
+<p>É usado para limpar completamente o console. Os comandos que foram executados
+anteriormente não são apagados mas apenas deixam de ser exibidos.</p>
+<h2 id="consoletime"><a class="header" href="#consoletime"><code>console.time()</code></a></h2>
+<p>É usado para medir o tempo de execução de um determinado bloco de código entre
+duas chamadas de <code>console.time()</code> e <code>console.timeEnd()</code>.</p>
+<pre><code class="language-javascript">console.time(&quot;Timer&quot;);
+
+/* Código que demora 1 segundo ... */
+
+console.timeEnd(&quot;Timer&quot;);
+
+// Resultado exibido no console:
+// Timer: 1000.0 ms
+</code></pre>
+<p>É possível até usar nomes diferentes para os timers, permitindo ter mais de um
+timer ao mesmo tempo.</p>
+<pre><code class="language-javascript">console.time(&quot;Timer 1&quot;);
+
+/* Código que demora 1 segundo ... */
+
+console.time(&quot;Timer 2&quot;);
+
+/* Código que demora 1 segundo ... */
+
+console.timeEnd(&quot;Timer 1&quot;);
+console.timeEnd(&quot;Timer 2&quot;);
+
+// Resultado exibido no console:
+// Timer 1: 2000.0 ms
+// Timer 2: 1000.0 ms
+</code></pre>
+<h2 id="consoletable"><a class="header" href="#consoletable"><code>console.table()</code></a></h2>
+<p>É usado para exibir uma tabela com os dados de um objeto.</p>
+<pre><code class="language-javascript">console.table({ name: &quot;João&quot;, age: 18 });
+
+// Resultado:
+//          +-------+
+//          | Valor |
+// +--------+-------+
+// | name   | João  |
+// +--------+-------+
+// | age    | 18    |
+// +--------+-------+
+</code></pre>
+<h2 id="consolecount"><a class="header" href="#consolecount"><code>console.count()</code></a></h2>
+<p>É usado para contar o número de vezes que um determinado comando foi executado.</p>
+<pre><code class="language-javascript">console.count(&quot;Hello World&quot;);
+console.count(&quot;Hello World&quot;);
+console.count(&quot;Hello World&quot;);
+
+// Resultado:
+// Hello World: 1
+// Hello World: 2
+// Hello World: 3
+</code></pre>
+<h2 id="referências-3"><a class="header" href="#referências-3">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/API/console">Console</a>)</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="condicional-if"><a class="header" href="#condicional-if">Condicional If</a></h1>
+<p>O condicional <code>if</code> é usado para desviar o fluxo do programa dependendo de uma
+condição. Isso permite que o programa execute uma parte do código, caso a
+condição seja verdadeira, e outra parte do código, caso a condição seja falsa.</p>
+<p>A forma mais simples do condicional <code>if</code> contém apenas um bloco de código:</p>
+<pre><code class="language-javascript">if (condição) {
+  // código que será executado caso a condição seja verdadeira
+}
+</code></pre>
+<p>O condicional ainda pode vir acompanhado da palavra-chave <code>else</code> e de um bloco
+de código que será executado caso a condição seja falsa:</p>
+<pre><code class="language-javascript">if (condição) {
+  // código que será executado caso a condição seja verdadeira
+} else {
+  // código que será executado caso a condição seja falsa
+}
+</code></pre>
+<p>É possível ainda conectar dois condicionais para criar uma estrutura de decisão
+mais complexa:</p>
+<pre><code class="language-javascript">if (condição1) {
+  // código que será executado caso a condição1 seja verdadeira
+} else if (condição2) {
+  // código que será executado caso a condição1 seja falsa e condição2 seja verdadeira
+} else {
+  // código que será executado caso as duas condições sejam falsas
+}
+</code></pre>
+<h2 id="exemplos"><a class="header" href="#exemplos">Exemplos</a></h2>
+<pre><code class="language-javascript">var debug = true;
+
+if (debug) {
+  console.log(&quot;Debugando...&quot;);
+}
+
+// Resultado: &quot;Debugando...&quot;
+</code></pre>
+<pre><code class="language-javascript">var grande = true;
+var pesado = true;
+
+if (grande &amp;&amp; pesado) {
+  console.log(&quot;Grande e pesado!&quot;);
+} else if (grande) {
+  console.log(&quot;Grande!&quot;);
+} else if (pesado) {
+  console.log(&quot;Pesado!&quot;);
+} else {
+  console.log(&quot;Não é grande nem pesado!&quot;);
+}
+
+// Resultado: &quot;Grande e pesado!&quot;
+</code></pre>
+<pre><code class="language-javascript">function compararValores(valor1, valor2) {
+  if (valor1 &gt; valor2) {
+    return &quot;Maior&quot;;
+  } else if (valor1 &lt; valor2) {
+    return &quot;Menor&quot;;
+  } else {
+    return &quot;Iguais&quot;;
+  }
+}
+
+compararValores(10, 20);
+// Resultado: &quot;Menor&quot;
+
+compararValores(20, 10);
+// Resultado: &quot;Maior&quot;
+
+compararValores(10, 10);
+// Resultado: &quot;Iguais&quot;
+</code></pre>
+<h2 id="referências-4"><a class="header" href="#referências-4">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/if...else">if...else</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>14.6 The if Statement</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="objetos"><a class="header" href="#objetos">Objetos</a></h1>
+<p>JavaScript é uma linguagem de programação que suporta o paradigma de programação
+orientada a objetos, portanto é possível criar objetos e manipular seus
+atributos e métodos. Um objeto simples é representado por uma série de chaves e
+valores, onde o nome da chave é o nome do atributo e o valor é o valor do
+atributo. É possível criar objetos com atributos de qualquer tipo, inclusive de
+arrays, outros objetos e funções (chamadas de métodos).</p>
+<p>Para criar um objeto pode-se usar o comando <code>new Object()</code> ou ainda <code>{}</code> e usar
+<code>:</code> para criar o objeto com atributos já definidos.</p>
+<pre><code class="language-javascript">var objeto1 = new Object();
+var objeto2 = {};
+var objeto3 = {
+  atributo1: &quot;valor1&quot;,
+  atributo2: &quot;valor2&quot;,
+};
+</code></pre>
+<h2 id="acessando-atributos"><a class="header" href="#acessando-atributos">Acessando Atributos</a></h2>
+<p>É possível adicionar atributos a um objeto usando o operador <code>.</code> e o nome do
+atributo. Usando o mesmo operador é possível alterar o valor do atributo. As
+regras para o nome dos atributos são as mesmas que para os nomes de variáveis.</p>
+<pre><code class="language-javascript">var carro = {};
+
+carro.cor = &quot;vermelho&quot;;
+carro.portas = 4;
+carro.ligado = true;
+carro.buzinar = function () {
+  console.log(&quot;Beep!&quot;);
+};
+
+console.log(carro.cor); // vermelho
+console.log(carro.portas); // 4
+console.log(carro.ligado); // true
+carro.buzinar(); // Beep!
+</code></pre>
+<p>Outra maneira de acessar os atributos de um objeto é usando o operador <code>[]</code> e o
+nome do atributo na forma de uma string. Por causa disso também é possível
+associar qualquer tipo de dados que possa ser convertido em string a um
+atributo. Entretanto, vale notar que o valor que realmente será armazenado no
+objeto será o valor convertido para string.</p>
+<pre><code class="language-javascript">var carro = {
+  cor: &quot;vermelho&quot;,
+  portas: 4,
+  ligado: true,
+};
+
+carro[&quot;cor&quot;] = &quot;azul&quot;;
+
+console.log(carro.cor); // azul
+
+carro[0] = &quot;valor&quot;;
+
+console.log(carro[0]); // valor
+console.log(carro[&quot;0&quot;]); // valor
+</code></pre>
+<p>Para deletar um atributo de um objeto é possível usar o operador <code>delete</code> e o
+nome do atributo.</p>
+<pre><code class="language-javascript">var carro = {
+  cor: &quot;vermelho&quot;,
+  portas: 4,
+  ligado: true,
+};
+
+console.log(carro.cor); // vermelho
+
+delete carro.cor;
+
+console.log(carro.cor); // undefined
+</code></pre>
+<h2 id="comparação-entre-objetos"><a class="header" href="#comparação-entre-objetos">Comparação entre Objetos</a></h2>
+<p>Objetos são únicos e dessa forma uma comparação entre objetos só será verdadeira
+se eles forem o mesmo objeto, mesmo que tenham os mesmos atributos e valores.
+Assim uma atribuição de variável para outra variável que guarda um objeto é
+considerada uma atribuição de referência.</p>
+<pre><code class="language-javascript">var carro1 = {
+  cor: &quot;vermelho&quot;,
+  portas: 4,
+  ligado: true,
+};
+
+var carro2 = {
+  cor: &quot;vermelho&quot;,
+  portas: 4,
+  ligado: true,
+};
+
+var carro3 = carro1;
+
+console.log(carro1 == carro2); // false
+console.log(carro1 == carro3); // true
+</code></pre>
+<h2 id="funções-construtoras"><a class="header" href="#funções-construtoras">Funções Construtoras</a></h2>
+<p>Se quisermos utilizar um mesmo modelo de objeto para criar vários objetos
+similares é possível usar funções construtoras que retornam um objeto com os
+atributos definidos e do tipo definido pela função construtora.</p>
+<p>Quando utilizamos uma função construtora, é preciso utilizar a palavra-chave
+<code>this</code> para definir os atributos do objeto e a palavra-chave <code>new</code> para criar o
+objeto.</p>
+<hr />
+<p><em><strong>É muito importante perceber que a função construtora não é uma classe, apesar
+de funcionar de maneira semelhante.</strong></em></p>
+<hr />
+<pre><code class="language-javascript">// É de costume que o nome da função construtora comece com letra maiúscula
+function Carro(cor, portas, ligado) {
+  this.cor = cor;
+  this.portas = portas;
+  this.ligado = ligado;
+  this.buzinar = function () {
+    console.log(&quot;Beep!&quot;);
+  };
+}
+
+var carro1 = new Carro(&quot;vermelho&quot;, 4, true);
+var carro2 = new Carro(&quot;azul&quot;, 2, false);
+
+console.log(carro1); // Carro { cor: 'vermelho', portas: 4, ligado: true, buzinar: [Function] }
+console.log(carro2); // Carro { cor: 'azul', portas: 2, ligado: false, buzinar: [Function] }
+</code></pre>
+<h2 id="referências-5"><a class="header" href="#referências-5">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_objetos">Trabalhando com objetos</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>20.1 Object Objects</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="funções-arrow"><a class="header" href="#funções-arrow">Funções Arrow</a></h1>
+<p>Funções arrow foram introduzidas em ES6, para ser uma maneira mais simples de
+criar funções com poucos parâmetros, lógica simples e que retornam um valor. Por
+causa disso elas são ideais para quando se precisa de uma função de <em>callback</em>.</p>
+<p>O exemplo mais simples de uma função arrow é:</p>
+<pre><code class="language-javascript">var soma = (a, b) =&gt; {
+  return a + b;
+};
+
+soma(1, 2);
+// Resultado: 3
+</code></pre>
+<p>Se a função possuir apenas um parâmetro, os parênteses podem ser omitidos:</p>
+<pre><code class="language-javascript">var quadrado = (a) =&gt; {
+  return a * a;
+};
+
+quadrado(2);
+// Resultado: 4
+</code></pre>
+<p>Se a função for composta apenas do retorno, sem nenhuma operação adicional,
+pode-se omitir as chaves e a palavra <code>return</code>:</p>
+<pre><code class="language-javascript">var quadrado = (a) =&gt; a * a;
+
+quadrado(5);
+// Resultado: 25
+</code></pre>
+<h2 id="outros-exemplos"><a class="header" href="#outros-exemplos">Outros Exemplos</a></h2>
+<pre><code class="language-javascript">// Funções simples
+var maximo = (a, b) =&gt; (a &gt; b ? a : b);
+
+// Funções sem parâmetros
+setTimeout(() =&gt; console.log(&quot;Hello World&quot;), 1000);
+
+// Callbacks
+[1, 2, 3, 4, 5].reduce((total, valorAtual) =&gt; total + valorAtual);
+</code></pre>
+<h2 id="referências-6"><a class="header" href="#referências-6">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/Arrow_functions">Arrow Functions</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>15.3 Arrow Function Definitions</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arrays"><a class="header" href="#arrays">Arrays</a></h1>
+<p>Em JavaScript os arrays são estruturas de dados do tipo lista que armazenam
+vários valores em uma única variável. Os arrays não têm um tamanho fixo, assim o
+número de elementos que podem ser armazenados é dinâmico. Além disso os arrays
+podem armazenar qualquer tipo de dado, inclusive armazenar outros arrays e
+valores de tipos diferentes ao mesmo tempo.</p>
+<p>Para criar um array vazio em JavaScript basta declarar uma variável com o valor
+igual a <code>[]</code>. Podemos até preenchê-lo com valores iniciais usando a vírgula para
+separar cada item. Eis um exemplo:</p>
+<pre><code class="language-javascript">// Cria um array vazio
+var array1 = [];
+
+// Cria um array com valores iniciais
+var array2 = [1, &quot;string&quot;, false];
+</code></pre>
+<p>Para acessar os elementos de um array basta usar o índice do elemento (isso
+serve para tanto escrita e leitura). O índice começa em 0 e vai até o tamanho do
+array menos 1. Assim se quisermos acessar o primeiro elemento de um array basta
+usarmos o índice 0, se quisermos acessar o segundo elemento basta usar o índice
+1 e assim por diante. A sintaxe para acessar um valor em um array é a seguinte:</p>
+<pre><code class="language-javascript">var array = [1, 2, 3];
+
+console.log(array[0]); // Resultado: 1
+console.log(array[1]); // Resultado: 2
+console.log(array[2]); // Resultado: 3
+
+// Altera o valor do primeiro elemento do array
+array[0] = &quot;string&quot;;
+
+console.log(array[0]); // Resultado: &quot;string&quot;
+console.log(array[1]); // Resultado: 2
+console.log(array[2]); // Resultado: 3
+</code></pre>
+<p>Se quisermos acessar o comprimento de um array basta acessar a propriedade
+<code>length</code> do array. Essa propriedade pode ser sobrescrita, mas não é recomendado.
+Caso a propriedade <code>length</code> sobrescrita for maior que o comprimento do array, o
+array será preenchido com espaços vazios. Caso a propriedade <code>length</code>
+sobrescrita for menor que o comprimento do array, os elementos a mais serão
+removidos.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3];
+
+console.log(array.length); // Resultado: 3
+
+array.length = 5;
+
+console.log(array); // Resultado: [1, 2, 3, , ]
+
+array.length = 2;
+
+console.log(array); // Resultado: [1, 2]
+</code></pre>
+<h2 id="métodos-comuns"><a class="header" href="#métodos-comuns">Métodos Comuns</a></h2>
+<h3 id="push"><a class="header" href="#push"><code>push()</code></a></h3>
+<p>Adiciona um ou mais elementos no final do array.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3];
+
+array.push(4, 5);
+
+console.log(array); // Resultado: [1, 2, 3, 4, 5]
+</code></pre>
+<h3 id="pop"><a class="header" href="#pop"><code>pop()</code></a></h3>
+<p>Remove o último elemento do array, retornando o valor removido.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3];
+
+var ultimo = array.pop();
+
+console.log(array); // Resultado: [1, 2]
+console.log(ultimo); // Resultado: 3
+</code></pre>
+<h3 id="shift"><a class="header" href="#shift"><code>shift()</code></a></h3>
+<p>Remove o primeiro elemento do array, retornando o valor removido.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3];
+
+var primeiro = array.shift();
+
+console.log(array); // Resultado: [2, 3]
+console.log(primeiro); // Resultado: 1
+</code></pre>
+<h3 id="unshift"><a class="header" href="#unshift"><code>unshift()</code></a></h3>
+<p>Adiciona um elemento no início do array.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3];
+
+array.unshift(4, 5);
+
+console.log(array); // Resultado: [4, 5, 1, 2, 3]
+</code></pre>
+<h3 id="splice"><a class="header" href="#splice"><code>splice()</code></a></h3>
+<p>Remove ou adiciona em qualquer posição do array. Pode remover 1 ou mais
+elementos e retorna outro array com os elementos removidos. Esse método altera o
+array original.</p>
+<p>O primeiro número passado à função é a posição do elemento que será removido. O
+segundo número passado é o número de elementos que serão removidos. Se não for
+passado um segundo número, todos os elementos a partir da posição passada serão
+removidos. Parâmetros adicionais são os elementos que serão adicionados no
+array.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(array); // Resultado: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// Remove o segundo elemento
+array.splice(1, 1);
+
+console.log(array); // Resultado: [1, 3, 4, 5, 6, 7, 8, 9, 10]
+
+// Remove o terceiro e o quarto elemento
+array.splice(2, 2);
+
+console.log(array); // Resultado: [1, 3, 6, 7, 8, 9, 10]
+
+// Remove todos os elementos a partir do sexto elemento
+array.splice(5);
+
+console.log(array); // Resultado: [1, 3, 6, 7, 8]
+
+// Adiciona dois elementos após o terceiro elemento
+array.splice(3, 0, 11, 12);
+
+console.log(array); // Resultado: [1, 3, 6, 11, 12, 7, 8]
+</code></pre>
+<h3 id="slice"><a class="header" href="#slice"><code>slice()</code></a></h3>
+<p>Retorna um novo array com os elementos do array original. O primeiro número
+passado à função é a posição do primeiro elemento que será retornado. O segundo
+número passado é a posição do último elemento que será retornado. Esse método
+não altera o array original.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(array.slice(0, 5)); // Resultado: [1, 2, 3, 4, 5]
+console.log(array.slice(5)); // Resultado: [6, 7, 8, 9, 10]
+</code></pre>
+<h3 id="indexof"><a class="header" href="#indexof"><code>indexOf()</code></a></h3>
+<p>Encontra o índice do primeiro elemento do array que é igual ao valor passado.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(array.indexOf(5)); // Resultado: 4
+</code></pre>
+<h3 id="sort"><a class="header" href="#sort"><code>sort()</code></a></h3>
+<p>Ordena os elementos do array usando a função de comparação passada como
+parâmetro. A função de comparação deve conter dois parâmetros e retornar um
+número negativo, zero ou positivo dependendo do que o primeiro parâmetro seja
+menor, igual ou maior que o segundo parâmetro, respectivamente.</p>
+<pre><code class="language-javascript">var array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+
+// Ordenação crescente
+array.sort((a, b) =&gt; a - b);
+
+console.log(array); // Resultado: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+</code></pre>
+<h3 id="foreach"><a class="header" href="#foreach"><code>forEach()</code></a></h3>
+<p>Executa uma função de callback para cada elemento do array. A função
+opcionalmente pode ter como parâmetro o elemento atual, o índice do elemento e o
+próprio array.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3];
+
+array.forEach((elemento, indice, array) =&gt; {
+  console.log(elemento); // Resultado: 1, 2, 3
+  console.log(indice); // Resultado: 0, 1, 2
+  console.log(array); // Resultado: [1, 2, 3], [1, 2, 3], [1, 2, 3]
+});
+</code></pre>
+<h2 id="referências-7"><a class="header" href="#referências-7">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>23.1 Array Objects</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arrays-multidimensionais"><a class="header" href="#arrays-multidimensionais">Arrays Multidimensionais</a></h1>
+<p>Um array pode conter qualquer tipo de dados, inclusive outros arrays. Assim é
+possível criar arrays multidimensionais, onde cada elemento do array pode ser um
+array. Nesse caso para acessar qualquer elemento dessa estrutura é necessário
+usar um índice para cada dimensão do array multidimensional. Ná prática a
+maioria dos arrays multidimensionais contém apenas 2 dimensões, sendo necessário
+usar apenas 2 índices para acessar cada elemento.</p>
+<p>Um exemplo utilizando um array que guarda o tabuleiro do jogo da velha:</p>
+<pre><code class="language-javascript">var tabuleiro = [
+  [&quot; &quot;, &quot; &quot;, &quot; &quot;],
+  [&quot; &quot;, &quot; &quot;, &quot; &quot;],
+  [&quot; &quot;, &quot; &quot;, &quot; &quot;],
+];
+
+console.table(tabuleiro);
+//     +---+---+---+
+//     | 0 | 1 | 2 |
+// +---+---+---+---+
+// | 0 |   |   |   |
+// +---+---+---+---+
+// | 1 |   |   |   |
+// +---+---+---+---+
+// | 2 |   |   |   |
+// +---+---+---+---+
+
+tabuleiro[0][0] = &quot;X&quot;;
+
+console.table(tabuleiro);
+//     +---+---+---+
+//     | 0 | 1 | 2 |
+// +---+---+---+---+
+// | 0 | X |   |   |
+// +---+---+---+---+
+// | 1 |   |   |   |
+// +---+---+---+---+
+// | 2 |   |   |   |
+// +---+---+---+---+
+
+tabuleiro[1][1] = &quot;O&quot;;
+
+console.table(tabuleiro);
+//     +---+---+---+
+//     | 0 | 1 | 2 |
+// +---+---+---+---+
+// | 0 | X |   |   |
+// +---+---+---+---+
+// | 1 |   | O |   |
+// +---+---+---+---+
+// | 2 |   |   |   |
+// +---+---+---+---+
+</code></pre>
+<p>Se quisermos criar um array bidimensional dinamicamente usamos o <em>for loop</em>:</p>
+<pre><code class="language-javascript">var tabuleiro = [];
+
+for (var i = 0; i &lt; 3; i++) {
+  // Cria um array dentro do array principal
+  tabuleiro[i] = [];
+
+  for (var j = 0; j &lt; 3; j++) {
+    // Insere um elemento dentro do array criado
+    tabuleiro[i][j] = &quot; &quot;;
+  }
+}
+
+console.table(tabuleiro);
+//     +---+---+---+
+//     | 0 | 1 | 2 |
+// +---+---+---+---+
+// | 0 |   |   |   |
+// +---+---+---+---+
+// | 1 |   |   |   |
+// +---+---+---+---+
+// | 2 |   |   |   |
+// +---+---+---+---+
+</code></pre>
+<p>Um dos usos mais comuns do array multidimensional é guardar dados de uma tabela
+de dados. Por exemplo, se quiser guardar uma lista que contenha o nome de cada
+jogador e sua pontuação, podemos criar um array multidimensional como:</p>
+<pre><code class="language-javascript">var jogadores = [
+  [&quot;Jogador 1&quot;, 100],
+  [&quot;Jogador 2&quot;, 90],
+  [&quot;Jogador 3&quot;, 80],
+  [&quot;Jogador 4&quot;, 70],
+  [&quot;Jogador 5&quot;, 60],
+];
+
+console.table(jogadores);
+//     +-----------+----+
+//     | 0         | 1  |
+// +---+-----------+----+
+// | 0 | Jogador 1 | 100|
+// +---+-----------+----+
+// | 1 | Jogador 2 | 90 |
+// +---+-----------+----+
+// | 2 | Jogador 3 | 80 |
+// +---+-----------+----+
+// | 3 | Jogador 4 | 70 |
+// +---+-----------+----+
+// | 4 | Jogador 5 | 60 |
+// +---+-----------+----+
+</code></pre>
+<h2 id="referências-8"><a class="header" href="#referências-8">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>23.1 Array Objects</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="for-loop"><a class="header" href="#for-loop">For Loop</a></h1>
+<p>O <em>for loop</em> é uma estrutura de repetição que executa um bloco de código um
+determinado número de vezes baseado em uma condição. Em JavaScript, o <em>for loop</em>
+é implementado com a palavra-chave <code>for</code> e contém 3 variantes: O <code>for</code>, o
+<code>for in</code> e o <code>for of</code>.</p>
+<h2 id="for"><a class="header" href="#for">For</a></h2>
+<p>O <em>for loop</em> simples é composto por 4 partes:</p>
+<pre><code class="language-javascript">for (inicialização; condição; expressão) {
+  declaração;
+}
+</code></pre>
+<ul>
+<li><code>inicialização</code>: é o que será executado apenas uma vez no início de cada loop.</li>
+<li><code>condição</code>: é a condição que será avaliada para verificar se o loop deve
+continuar ou não.</li>
+<li><code>expressão</code>: é o que será executado após cada iteração do loop.</li>
+<li><code>declaração</code>: é o que será executado em cada iteração do loop.</li>
+</ul>
+<p>Um exemplo de como se pode utilizar um <em>for loop</em> para iterar sobre um array:</p>
+<pre><code class="language-javascript">var array = [1, 2, 3, 4, 5];
+
+for (var i = 0; i &lt; array.length; i++) {
+  console.log(array[i]);
+}
+
+// Resultado:
+// 1, 2, 3, 4, 5
+</code></pre>
+<p>O que está acontecendo aqui é que o <code>for</code> inicializa a variável <code>i</code> com o valor
+0, e a condição é verificada enquanto <code>i</code> seja menor que o tamanho do array. No
+exemplo acima, o loop será executado 5 vezes, sendo que cada iteração irá
+imprimir o valor de <code>array[i]</code>. Somente quando o valor de <code>i</code> atingir o tamanho
+do array, o loop será finalizado.</p>
+<p>No <em>for loop</em> todas as partes são opcionais, mas é importante saber que caso a
+condição não exista o loop será executado infinitamente, a menos que se utilize
+a palavra-chave <code>break</code>.</p>
+<p>Outros exemplos:</p>
+<pre><code class="language-javascript">var i = 0;
+
+for (; i &lt; 5; ) {
+  console.log(i++); // Resultado: 0, 1, 2, 3, 4
+}
+
+for (;;) {
+  console.log(1); // Resultado: 1, 1, 1, 1, 1, 1, ... (infinitamente)
+}
+</code></pre>
+<h2 id="for-of"><a class="header" href="#for-of">For Of</a></h2>
+<p>O <em>for of</em> é uma forma de iterar sobre qualquer objeto iterável, como um array
+ou string.</p>
+<pre><code class="language-javascript">var array = [1, 2, 3, 4, 5];
+var string = &quot;Hello World&quot;;
+var objeto = {
+  nome: &quot;João&quot;,
+  sobrenome: &quot;Silva&quot;,
+};
+
+for (var item of array) {
+  console.log(item); // Resultado: 1, 2, 3, 4, 5
+}
+
+for (var char of string) {
+  console.log(char); // Resultado: H, e, l, l, o, , W, o, r, l, d
+}
+</code></pre>
+<h2 id="for-in"><a class="header" href="#for-in">For In</a></h2>
+<p>O <em>for in</em> é uma forma de iterar sobre as propriedades de um objeto. A iteração
+é feita na ordem em que as propriedades aparecem no objeto.</p>
+<pre><code class="language-javascript">var objeto = {
+  nome: &quot;João&quot;,
+  sobrenome: &quot;Silva&quot;,
+};
+
+for (var propriedade in objeto) {
+  console.log(propriedade + &quot; =&gt; &quot; + objeto[propriedade]);
+}
+
+// Resultado:
+// nome =&gt; João
+// sobrenome =&gt; Silva
+</code></pre>
+<h2 id="referências-9"><a class="header" href="#referências-9">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+<ul>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for">for</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...of">for of</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/for...in">for in</a></li>
+</ul>
+</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>14.7 Iteration Statements
+<ul>
+<li>14.7.4 The for Statement</li>
+<li>14.7.5 The for-in, for-of, and for-await-of Statements</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="condicional-switch"><a class="header" href="#condicional-switch">Condicional Switch</a></h1>
+<p>O condicional <code>switch</code> (também conhecido como <em>Switch/Case</em>) é uma estrutura de
+decisão que permite que você escolha entre várias opções de acordo com o valor
+de uma expressão. Ele contém um bloco de código dividido em vários <code>case</code> que
+são testados para igualdade com o valor da expressão.</p>
+<p>Ele é muito parecido com o condicional <code>if</code>, porém, ele não possui uma condição
+de parada em cada <code>case</code>, sendo necessário o uso do comando <code>break</code>.</p>
+<p>Existe também o comando <code>default</code> que é executado quando nenhum dos <code>case</code> é
+igual ao valor da expressão.</p>
+<p>Exemplo da estrutura do condicional <code>switch</code>:</p>
+<pre><code class="language-javascript">switch (valor) {
+  case opcao1:
+    // Executa o código quando o valor da expressão for igual a opcao1
+    break;
+  case opcao2:
+    // Executa o código quando o valor da expressão for igual a opcao2
+    break;
+  default:
+    // Executa o código quando nenhuma das opções for igual ao valor da expressão
+    break;
+}
+</code></pre>
+<h2 id="exemplo"><a class="header" href="#exemplo">Exemplo</a></h2>
+<pre><code class="language-javascript">var dia = &quot;quinta&quot;;
+
+switch (dia) {
+  case &quot;segunda&quot;:
+    console.log(&quot;Hoje é segunda-feira&quot;);
+    break;
+  case &quot;terça&quot;:
+    console.log(&quot;Hoje é terça-feira&quot;);
+    break;
+  case &quot;quarta&quot;:
+    console.log(&quot;Hoje é quarta-feira&quot;);
+    break;
+  case &quot;quinta&quot;:
+    console.log(&quot;Hoje é quinta-feira&quot;);
+    break;
+  case &quot;sexta&quot;:
+    console.log(&quot;Hoje é sexta-feira&quot;);
+    break;
+  case &quot;sábado&quot;:
+    console.log(&quot;Hoje é sábado&quot;);
+    break;
+  case &quot;domingo&quot;:
+    console.log(&quot;Hoje é domingo&quot;);
+    break;
+  default:
+    console.log(&quot;Dia inválido&quot;);
+    break;
+}
+
+// Resultado: &quot;Hoje é quinta-feira&quot;
+</code></pre>
+<h2 id="uso-do-comando-break"><a class="header" href="#uso-do-comando-break">Uso do comando <code>break</code></a></h2>
+<p>Quando se usa o condicional <code>switch</code> é importante que se use o comando <code>break</code>
+para que o código não continue executando os <code>case</code> restantes que não sejam
+iguais ao valor da expressão. Exemplo:</p>
+<pre><code class="language-javascript">var dia = &quot;quinta&quot;;
+
+switch (dia) {
+  case &quot;segunda&quot;:
+    console.log(&quot;Hoje é segunda-feira&quot;);
+  case &quot;terça&quot;:
+    console.log(&quot;Hoje é terça-feira&quot;);
+  case &quot;quarta&quot;:
+    console.log(&quot;Hoje é quarta-feira&quot;);
+  case &quot;quinta&quot;:
+    console.log(&quot;Hoje é quinta-feira&quot;);
+  case &quot;sexta&quot;:
+    console.log(&quot;Hoje é sexta-feira&quot;);
+  case &quot;sábado&quot;:
+    console.log(&quot;Hoje é sábado&quot;);
+  case &quot;domingo&quot;:
+    console.log(&quot;Hoje é domingo&quot;);
+  default:
+    console.log(&quot;Dia inválido&quot;);
+}
+
+// Resultado:
+// &quot;Hoje é quinta-feira&quot;
+// &quot;Hoje é sexta-feira&quot;
+// &quot;Hoje é sábado&quot;
+// &quot;Hoje é domingo&quot;
+// &quot;Dia inválido&quot;
+</code></pre>
+<h2 id="referências-10"><a class="header" href="#referências-10">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Statements/switch">switch</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>14.12 The switch Statement</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operador-condicional-ternário"><a class="header" href="#operador-condicional-ternário">Operador Condicional (Ternário)</a></h1>
+<p>O operador é basicamente uma forma abreviada de uma expressão condicional,
+exceto que ela retorna um valor dependendo da condição. A sintaxe básica desse
+operador é:</p>
+<pre><code class="language-javascript">resultado = condicao ? valor_se_verdadeiro : valor_se_falso;
+</code></pre>
+<p>Quando esse operador é chamado, primeiro é analisada a condição, e se o
+resultado for verdadeiro a expressão <code>valor_se_verdadeiro</code> é calculada e
+retornada, senão a expressão <code>valor_se_falso</code> é calculada e retornada.</p>
+<p>Esse operador também é comumente chamado como <strong>ternário</strong>, pois é formado por
+três partes.</p>
+<h2 id="exemplos-1"><a class="header" href="#exemplos-1">Exemplos</a></h2>
+<p>Em funções que retornam um valor dependendo de uma condição:</p>
+<pre><code class="language-javascript">function maximo(a, b) {
+  // Se a for maior que b, retorna a, senão retorna b
+  return a &gt; b ? a : b;
+}
+
+maximo(10, 20); // Resultado: 20
+maximo(20, 10); // Resultado: 20
+</code></pre>
+<p>Em conjunto para simular um <em>if/else if/else</em> ou um <em>switch/case</em>:</p>
+<pre><code class="language-javascript">var numero = 2;
+
+var texto = numero == 1 ? &quot;um&quot; : numero == 2 ? &quot;dois&quot; : &quot;outro&quot;;
+
+texto;
+// Resultado: &quot;dois&quot;
+</code></pre>
+<h2 id="referências-11"><a class="header" href="#referências-11">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Conditional_Operator">Operador Condicional Ternário</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>13.14 Conditional Operator ( ? : )</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="parâmetros-rest"><a class="header" href="#parâmetros-rest">Parâmetros Rest</a></h1>
+<p>Os parâmetros rest são utilizados para passar um número indefinido de argumentos
+para uma função e poder acessar esses argumentos dentro da função. Os parâmetros
+rest são declarados com o operador <code>...</code> e sempre devem ser o último parâmetro
+da função. Dentro da função o parametro rest é um array.</p>
+<p>Exemplos de uso:</p>
+<pre><code class="language-javascript">// Soma todos os números
+function soma(...numeros) {
+  return numeros.length ? numeros.reduce((a, b) =&gt; a + b) : 0;
+}
+
+soma(1, 2, 3, 4, 5);
+// Resultado: 15
+</code></pre>
+<pre><code class="language-javascript">// Multiplica todos os números depois do primeiro pelo primeiro número e retorna o array
+function multiplicaArray(multiplicador, ...numeros) {
+  return numeros.map((numero) =&gt; numero * multiplicador);
+}
+
+multiplicaArray(2, 1, 2, 3, 4, 5);
+// Resultado: [2, 4, 6, 8, 10]
+</code></pre>
+<h2 id="operador-de-espalhamento"><a class="header" href="#operador-de-espalhamento">Operador de Espalhamento</a></h2>
+<p>Os parâmetros rest podem ser utilizados em conjunto com o operador de
+espalhamento (<code>...</code>) para passar um array para uma função que aceita parâmetros
+rest.</p>
+<pre><code class="language-javascript">// Soma todos os números
+function soma(...numeros) {
+  return numeros.length ? numeros.reduce((a, b) =&gt; a + b) : 0;
+}
+
+var array = [1, 2, 3, 4, 5];
+
+soma(...array);
+// Resultado: 15
+</code></pre>
+<h2 id="referências-12"><a class="header" href="#referências-12">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+<ul>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Functions/rest_parameters">Parâmetros Rest</a></li>
+<li><a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Operators/Spread_syntax">Sintaxe de Espalhamento</a></li>
+</ul>
+</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>15.2 Function Definitions</li>
+<li>13.2 Primary Expression
+<ul>
+<li>13.2.4 Array Initializer</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="geradores"><a class="header" href="#geradores">Geradores</a></h1>
+<p>No JavaScript um gerador é uma função que retorna uma lista de valores, só que
+um por vez. Para conseguirmos o próximo valor, usamos a função <code>next()</code> que
+retorna um objeto com o atributo <code>value</code> que é o próximo valor e o atributo
+<code>done</code> que indica se a gerador terminou. Além disso é necessário um asterisco <code>*</code>
+na frente da função.</p>
+<p>Quando um gerador atinge a palavra-chave <code>yield</code>, ele pausa e retorna o valor
+atual. Na próxima chamada, o gerador continua a partir do local onde parou.</p>
+<p>Por exemplo se quisermos criar um gerador de números de 1 a 10, podemos fazer:</p>
+<pre><code class="language-javascript">var contador = function* (n) {
+  var numero = 1;
+  while (numero &lt;= n) {
+    yield numero;
+    numero++;
+  }
+};
+
+var gerador = contador(10);
+
+while (true) {
+  var proximo = gerador.next();
+
+  // Verifica se a geração terminou
+  if (proximo.done) break;
+
+  console.log(proximo.value);
+}
+</code></pre>
+<p>Um gerador não necessariamente precisa ter um fim, podemos criar um gerador que
+vai gerar números infinitamente:</p>
+<pre><code class="language-javascript">var fibonacci = function* (n) {
+  var a = 1,
+    b = 1;
+  while (true) {
+    yield a;
+    var temp = a;
+    a = b;
+    b = temp + b;
+  }
+};
+
+var gerador = fibonacci();
+
+while (true) {
+  var proximo = gerador.next();
+
+  // Verifica se a geração terminou (nunca vai acontecer)
+  if (proximo.done) break;
+
+  console.log(proximo.value);
+}
+
+// Resultado: 1, 1, 2, 3, 5, 8, 13, ... (infinitamente)
+</code></pre>
+<p>Ainda existe a sintaxe <code>yield*</code> que serve para chamar um gerador de outro
+gerador. Por exemplo:</p>
+<pre><code class="language-javascript">var contador1 = function* (n) {
+  var numero = 1;
+  while (numero &lt;= n) {
+    yield numero;
+    numero++;
+  }
+};
+
+var contador2 = function* (n) {
+  var numero = 1;
+  while (numero &lt;= n) {
+    yield* contador1(numero);
+    numero++;
+  }
+};
+
+var gerador = contador2(4);
+
+while (true) {
+  var proximo = gerador.next();
+
+  // Verifica se a geração terminou
+  if (proximo.done) break;
+
+  console.log(proximo.value);
+}
+
+// Resultado: 1,  1, 2,  1, 2, 3,  1, 2, 3, 4
+</code></pre>
+<h2 id="referências-13"><a class="header" href="#referências-13">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Generator">Generator</a>)</li>
+<li>Ecma International (<a href="https://tc39.es/ecma262">ECMA-262</a>)
+<ul>
+<li>15.5 Generator Function Definitions</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

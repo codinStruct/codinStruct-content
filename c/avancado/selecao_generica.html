@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Seleção Genérica</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.</strong> Básico</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="../basico/primeiro_programa.html"><strong aria-hidden="true">1.2.</strong> Primeiro Programa</a></li><li class="chapter-item expanded "><a href="../basico/diretiva_include.html"><strong aria-hidden="true">1.3.</strong> Diretiva #include</a></li><li class="chapter-item expanded "><a href="../basico/funcoes.html"><strong aria-hidden="true">1.4.</strong> Funções</a></li><li class="chapter-item expanded "><a href="../basico/variaveis.html"><strong aria-hidden="true">1.5.</strong> Variáveis</a></li><li class="chapter-item expanded "><a href="../basico/tipos.html"><strong aria-hidden="true">1.6.</strong> Tipos Fundamentais Básicos</a></li><li class="chapter-item expanded "><a href="../basico/tabelas.html"><strong aria-hidden="true">1.7.</strong> Tabelas de Tipos Fundamentais</a></li><li class="chapter-item expanded "><a href="../basico/saida.html"><strong aria-hidden="true">1.8.</strong> Saída Básica</a></li><li class="chapter-item expanded "><a href="../basico/entrada.html"><strong aria-hidden="true">1.9.</strong> Entrada Básica</a></li><li class="chapter-item expanded "><a href="../basico/ops_aritmeticos.html"><strong aria-hidden="true">1.10.</strong> Operadores Aritméticos Básicos</a></li><li class="chapter-item expanded "><a href="../basico/ops_incremento_decremento.html"><strong aria-hidden="true">1.11.</strong> Operadores de Incremento e Decremento</a></li><li class="chapter-item expanded "><a href="../basico/ops_logicos_relacionais.html"><strong aria-hidden="true">1.12.</strong> Operadores Lógicos e Relacionais</a></li><li class="chapter-item expanded "><a href="../basico/controle_de_fluxo.html"><strong aria-hidden="true">1.13.</strong> Controle de Fluxo</a></li><li class="chapter-item expanded "><a href="../basico/arrays.html"><strong aria-hidden="true">1.14.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../basico/while.html"><strong aria-hidden="true">1.15.</strong> Instrução while</a></li><li class="chapter-item expanded "><a href="../basico/for.html"><strong aria-hidden="true">1.16.</strong> Instrução for</a></li><li class="chapter-item expanded "><a href="../basico/ponteiros.html"><strong aria-hidden="true">1.17.</strong> Ponteiros</a></li><li class="chapter-item expanded "><a href="../basico/sizeof.html"><strong aria-hidden="true">1.18.</strong> Operador sizeof</a></li><li class="chapter-item expanded "><a href="../basico/ponteiros_aritmetica.html"><strong aria-hidden="true">1.19.</strong> Aritmética de Ponteiros</a></li><li class="chapter-item expanded "><a href="../basico/memoria.html"><strong aria-hidden="true">1.20.</strong> Gerenciamento de Memória</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Intermediário</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../intermediario/conversoes_implicitas.html"><strong aria-hidden="true">2.1.</strong> Conversões Implícitas</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Avançado</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../avancado/selecao_generica.html" class="active"><strong aria-hidden="true">3.1.</strong> Seleção Genérica</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="seleção-genérica"><a class="header" href="#seleção-genérica">Seleção Genérica</a></h1>
+<h2 id="funções-genéricas-tradicionais"><a class="header" href="#funções-genéricas-tradicionais">Funções Genéricas Tradicionais</a></h2>
+<p>Funções genéricas são um ponto fraco do C. Quando queremos que uma função
+funcione com parâmetros de qualquer tipo, é comum recebê-los com o tipo
+<code>void *</code>. Como passar um argumento como <code>void *</code> remove as informações sobre seu
+tipo original, muitas vezes a função &quot;genérica&quot; precisa também receber outra
+função que sabe lidar com o tipo original do argumento. Aqui está a
+implementação de uma função <code>Max</code> genérica:</p>
+<pre><code class="language-c">// Recebe o endereço de dois valores e uma função comparadora, e retorna o
+//  endereço do maior entre os dois valores utilizando o comparador.
+void *Max(void *lhs, void *rhs, int cmp(void *lhs, void *rhs))
+{
+    return cmp(lhs, rhs) &lt; 0 ? rhs : lhs;
+}
+</code></pre>
+<p>Interpretar essa declaração de <code>Max</code> deve ser simples para programadores
+experientes, mas para chamar a função é necessário ter um comparador definido e
+isso pode ser contraproducente. É possível que por falta de conhecimento
+múltiplos comparadores equivalentes sejam definidos no mesmo programa,
+introduzindo redundância. Aqui está um exemplo onde há dois comparadores
+equivalentes:</p>
+<pre><code class="language-c">int CmpInt1(void *lhs, void *rhs)
+{
+    return *(int *)lhs - *(int *)rhs;
+}
+
+int CmpInt2(void *lhs, void *rhs)
+{
+    return *(int *)lhs - *(int *)rhs;
+}
+</code></pre>
+<p>Chamar <code>Max</code> com qualquer um desses comparadores terá o mesmo resultado,
+portanto ter mais de um é desnecessário. Uma maneira de evitar esse problema é
+criar um wrapper de <code>Max</code> específico para comparar dois <code>int</code> da mesma forma que
+os comparadores acima.</p>
+<pre><code class="language-c">// Comparador interno para MaxInt
+static int MaxIntCmp(void *lhs, void *rhs)
+{
+    return *(int *)lhs - *(int *)rhs;
+}
+
+int MaxInt(int lhs, int rhs)
+{
+    return *(int *)Max(&amp;lhs, &amp;rhs, MaxIntCmp);
+}
+</code></pre>
+<p>O problema de redundância foi resolvido. Não há mais necessidade de criar
+comparadores e <code>MaxInt</code> recebe e retorna valores <code>int</code> diretamente, mas temos
+outros problemas: O excesso de ponteiros e indireções pode impactar
+consideravelmente o desempenho da função, e agora temos duas funções que fazem
+essencialmente a mesma coisa: <code>Max</code> e <code>MaxInt</code>. Nesse ritmo, teremos também
+<code>MaxShort</code>, <code>MaxUnsignedShort</code>, <code>MaxUnsigned</code>, <code>MaxLong</code> etc. e digitar um nome
+diferente para realizar a mesma operação em cada tipo não agrada muitos
+desenvolvedores.</p>
+<p>Essa é uma situação comum no desenvolvimento de software: A solução de um
+problema causar mais problemas. Existe, afinal, alguma forma padrão de amenizar
+todos os problemas acima?</p>
+<h2 id="palavra-chave-_generic"><a class="header" href="#palavra-chave-_generic">Palavra-chave _Generic</a></h2>
+<p>A palavra-chave <code>_Generic</code> foi adicionada no padrão C11 e recebe uma expressão
+controladora seguida de uma lista de associações. Uma associação possui a
+sintaxe <code>tipo: expressão</code> e o compilador escolhe qual expressão avaliar com base
+no tipo da expressão controladora. Talvez você tenha morrido por dentro ao ler
+isso, mas é mais simples do que parece:</p>
+<pre><code class="language-c">int v;
+
+// O compilador transformará isso em puts(&quot;v é um int&quot;);
+_Generic(v, char:    puts(&quot;v é um char&quot;),
+            int:     puts(&quot;v é um int&quot;),
+            float:   puts(&quot;v é um float&quot;),
+            default: puts(&quot;v não é char, int, ou float&quot;));
+</code></pre>
+<p>No código acima temos a expressão controladora <code>v</code> e três associações. Se a
+expressão controladora <code>v</code> possuir o tipo <code>char</code>, a seleção genérica será
+substituída pela expressão <code>puts(&quot;v é um char&quot;);</code>. A palavra-chave <code>default</code>
+define uma associação para tipos que não se encaixam em nenhuma associação
+anterior.</p>
+<p>Você talvez tenha notado que a seleção genérica se comporta de forma similar à
+instrução <code>switch</code>, porém resolvida durante a compilação e baseada em um tipo e
+não em um valor. Esse é um ponto de vista válido, mas a seleção genérica
+apresenta um detalhe importante: Sua expressão controladora não é avaliada. Isso
+significa que a expressão controladora <code>puts(&quot;Olá, Mundo!&quot;)</code> não exibirá nada na
+tela, e a expressão controladora <code>exit(0)</code> não finalizará o programa. O
+compilador deve saber previamente tipo de retorno dessas funções, portanto não
+há necessidade de executá-las para realizar a seleção.</p>
+<p>Enfim, como utilizar isso para resolver os problemas de nossas funções <code>Max</code> e
+<code>MaxInt</code>?</p>
+<pre><code class="language-c">#define MAX(lhs, ...) _Generic(lhs, int:     MaxInt,\
+                                    default: Max)(lhs, __VA_ARGS__)
+
+void *Max(void *lhs, void *rhs, int cmp(void *lhs, void *rhs))
+{
+    return cmp(lhs, rhs) &lt; 0 ? rhs : lhs;
+}
+
+int MaxInt(int lhs, int rhs)
+{
+    return lhs &lt; rhs ? rhs : lhs;
+}
+</code></pre>
+<p>Agora não precisamos utilizar <code>Max</code> ou <code>MaxInt</code> explicitamente. Basta utilizar o
+macro <code>MAX</code> com os parâmetros desejados, e o compilador selecionará a função
+mais apropriada:</p>
+<pre><code class="language-c">// Comparador para floats
+int CmpFloat(void *lhs, void *rhs)
+{
+    return *(float *)lhs == *(float *)rhs ?  0 :
+           *(float *)lhs &lt; *(float *)rhs  ? -1 :
+                                             1;
+}
+
+int main(void)
+{
+    int ai = 5,
+        bi = 3;
+
+    float af = 5.f,
+          bf = 3.f;
+
+    // Isso se torna int vi = MaxInt(ai, bi);
+    int vi = MAX(ai, bi);
+
+    // Isso se torna float vf = *(float *)Max(&amp;af, &amp;bf, CmpFloat);
+    float vf = *(float *)MAX(&amp;af, &amp;bf, CmpFloat);
+
+    // vi agora vale 5 e vf agora vale 5.0
+
+    return 0;
+}
+</code></pre>
+<p>Como o tipo <code>float</code> não possui nenhuma associação explícita na seleção genérica,
+a função <code>Max</code> é selecionada e precisamos utilizar ponteiros (eliminando a
+possibilidade de utilizar rvalues). Para resolver isso, basta criar uma função
+para comparar valores <code>float</code>:</p>
+<pre><code class="language-c">#define MAX(lhs, ...) _Generic(lhs, int:     MaxInt,\
+                                    float:   MaxFloat,\
+                                    default: Max)(lhs, __VA_ARGS__)
+
+void *Max(void *lhs, void *rhs, int cmp(void *lhs, void *rhs))
+{
+    return cmp(lhs, rhs) &lt; 0 ? rhs : lhs;
+}
+
+int MaxInt(int lhs, int rhs)
+{
+    return lhs &lt; rhs ? rhs : lhs;
+}
+
+float MaxFloat(float lhs, float rhs)
+{
+    return lhs &lt; rhs ? rhs : lhs;
+}
+</code></pre>
+<p>Agora podemos utilizar <code>MAX</code> com valores <code>float</code> sem ponteiros:
+<code>float vf = MAX(af, bf)</code>. O uso de rvalues também se torna possível:
+<code>float vf = MAX(5.f, 3.f)</code>.</p>
+<p>Há vários meios de melhorar nossa seleção genérica. As funções <code>MaxInt</code> e
+<code>MaxFloat</code> podem ser criadas com macros, pois têm a mesma estrutura. Também há
+como aninhar palavras-chave <code>_Generic</code> para que <code>MAX</code> não precise de ponteiros
+na associação <code>default</code>. As possibilidades são incontáveis e não é difícil
+exagerar ao ponto de tornar o código virtualmente ilegível, mas se usadas
+corretamente, seleções genéricas são uma forma padronizada de lidar com diversos
+problemas.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../intermediario/conversoes_implicitas.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../intermediario/conversoes_implicitas.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

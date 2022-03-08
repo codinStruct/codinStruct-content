@@ -1,0 +1,580 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="basico/introducao.html"><strong aria-hidden="true">1.</strong> Básico</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basico/introducao.html"><strong aria-hidden="true">1.1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="basico/primeiros_passos.html"><strong aria-hidden="true">1.2.</strong> Primeiros Passos</a></li><li class="chapter-item expanded "><a href="basico/primeiro_programa.html"><strong aria-hidden="true">1.3.</strong> Primeiro Programa</a></li><li class="chapter-item expanded "><a href="basico/entrada_dados.html"><strong aria-hidden="true">1.4.</strong> Entrada de Dados</a></li><li class="chapter-item expanded "><a href="basico/tipagem.html"><strong aria-hidden="true">1.5.</strong> Tipos de Dados</a></li><li class="chapter-item expanded "><a href="basico/operacoes_aritmeticas.html"><strong aria-hidden="true">1.6.</strong> Operações Aritméticas</a></li><li class="chapter-item expanded "><a href="basico/comentario.html"><strong aria-hidden="true">1.7.</strong> Comentários</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Intermediário</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="intermediario/listas.html"><strong aria-hidden="true">2.1.</strong> Listas</a></li><li class="chapter-item expanded "><a href="intermediario/tuplas.html"><strong aria-hidden="true">2.2.</strong> Tuplas</a></li><li class="chapter-item expanded "><a href="intermediario/conjuntos.html"><strong aria-hidden="true">2.3.</strong> Conjuntos</a></li><li class="chapter-item expanded "><a href="intermediario/dicionarios.html"><strong aria-hidden="true">2.4.</strong> Dicionários</a></li><li class="chapter-item expanded "><a href="intermediario/colecoes.html"><strong aria-hidden="true">2.5.</strong> Coleções</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introdução"><a class="header" href="#introdução">Introdução</a></h1>
+<h2 id="sobre"><a class="header" href="#sobre">Sobre</a></h2>
+<p>Por ser uma linguagem de programação relativamente simples e de alto nível,
+Python é muito usada como primeira linguagem e inicio de estudos em diversas
+universidades.</p>
+<p>Python é utilizado em diversas áreas, como criação de scripts, desenvolvimento
+back-end, criação de jogos, aplicações web e ciência de dados.</p>
+<p>Em novembro de 2021, Python é considerada a linguagem mais popular no mundo
+segundo o <a href="https://www.tiobe.com/tiobe-index/">TIOBE Index</a>.</p>
+<h2 id="características"><a class="header" href="#características">Características</a></h2>
+<p>Python é uma linguagem interpretada—utiliza um interpretador para analisar e
+executar código.</p>
+<p>Também é um software de código aberto, e ser uma linguagem bastante popular há
+muitas bibliotecas de terceiros.</p>
+<h2 id="quando-e-como-surgiu"><a class="header" href="#quando-e-como-surgiu">Quando e Como Surgiu?</a></h2>
+<p>O início da implementação da linguagem Python se deu em 1989 por Guido van
+Rossum no Centro de Matemática e Tecnologia da Informação (CWI), na Holanda. Foi
+criada inicialmente para uso no sistema operacional Amoeba, sucedendo a
+linguagem de programação ABC.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introdução-1"><a class="header" href="#introdução-1">Introdução</a></h1>
+<h2 id="sobre-1"><a class="header" href="#sobre-1">Sobre</a></h2>
+<p>Por ser uma linguagem de programação relativamente simples e de alto nível,
+Python é muito usada como primeira linguagem e inicio de estudos em diversas
+universidades.</p>
+<p>Python é utilizado em diversas áreas, como criação de scripts, desenvolvimento
+back-end, criação de jogos, aplicações web e ciência de dados.</p>
+<p>Em novembro de 2021, Python é considerada a linguagem mais popular no mundo
+segundo o <a href="https://www.tiobe.com/tiobe-index/">TIOBE Index</a>.</p>
+<h2 id="características-1"><a class="header" href="#características-1">Características</a></h2>
+<p>Python é uma linguagem interpretada—utiliza um interpretador para analisar e
+executar código.</p>
+<p>Também é um software de código aberto, e ser uma linguagem bastante popular há
+muitas bibliotecas de terceiros.</p>
+<h2 id="quando-e-como-surgiu-1"><a class="header" href="#quando-e-como-surgiu-1">Quando e Como Surgiu?</a></h2>
+<p>O início da implementação da linguagem Python se deu em 1989 por Guido van
+Rossum no Centro de Matemática e Tecnologia da Informação (CWI), na Holanda. Foi
+criada inicialmente para uso no sistema operacional Amoeba, sucedendo a
+linguagem de programação ABC.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="primeiros-passos"><a class="header" href="#primeiros-passos">Primeiros Passos</a></h1>
+<h2 id="instalação-do-python"><a class="header" href="#instalação-do-python">Instalação do Python</a></h2>
+<p>Para começarmos a utilizar o Python, será necessário instalá-lo. Isso pode ser
+feito consegue fazer isso através do <a href="https://www.python.org/">site oficial</a>.</p>
+<p>No Windows, é possível instalar diretamente no terminal utilizando o gerenciador
+de pacotes do próprio sistema operacional com o comando
+<code>winget install --id=Python.Python.3</code>.</p>
+<h2 id="editor-de-código"><a class="header" href="#editor-de-código">Editor de Código</a></h2>
+<p>Para poder programar é recomendado utilizar um editor de texto apropriado, como
+<a href="https://www.jetbrains.com/pycharm/">PyCharm</a>—que é próprio para o Python—ou
+<a href="https://code.visualstudio.com/">Visual Studio Code</a>—que é mais abrangente.</p>
+<h2 id="executar"><a class="header" href="#executar">Executar</a></h2>
+<p>Existem várias formas de executar um script Python, e uma maneira simples e
+universal é utilizar o terminal. Executando o comando <code>python</code> seguido do nome
+de um arquivo com o código-fonte, o mesmo será executado. Alternativamente, é
+possível executar <code>python</code> sem argumentos; nesse caso será iniciado um
+<em>read–eval–print loop</em> no terminal, onde o código digitado será interpretado em
+tempo real.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="criando-nosso-primeiro-programa"><a class="header" href="#criando-nosso-primeiro-programa">Criando Nosso Primeiro Programa</a></h1>
+<p>Uma das funcionalidades mais simples que muitas linguagens de programação
+possuem é a exibição de texto. Para fazer isso em Python, utilizamos a função
+<code>print</code> (&quot;imprimir&quot;). Exibiremos como exemplo a frase &quot;Olá, Mundo!&quot;—superstição
+comum em programadores.</p>
+<pre><code class="language-python">print(&quot;Olá, Mundo!&quot;)
+</code></pre>
+<p>Entre os parênteses após <code>print</code> está nossa mensagem, denotada entre aspas
+duplas para que seja interpretada como tal pelo Python. Após a execução do
+código acima, será exibido &quot;Olá, Mundo!&quot;.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="entrada-de-dados"><a class="header" href="#entrada-de-dados">Entrada de Dados</a></h1>
+<p>Agora que já aprendemos como exibir algo na tela e sobre variáveis, vamos
+aprender como &quot;pegar&quot; dados de um usuário.</p>
+<p>Digamos que você queira fazer uma calculadora. Para que sejam realizadas as
+operações, é necessário ler valores informados pelo usuário.</p>
+<p>Para isso temos a função <code>input</code>, que permite, você ler dados inseridos pelo
+usuário. Veja um exemplo:</p>
+<pre><code class="language-python">input(&quot;Pedindo entrada do usuário&quot;)
+</code></pre>
+<p>Como visto, aspas duplas denotam um literal string—um pedaço de texto—que será
+exibido na tela durante a execução da função. No caso de nossa calculadora ,
+podemos utilizar:</p>
+<pre><code class="language-python">input(&quot;Digite o primeiro operando: &quot;)
+</code></pre>
+<p>Essa invocação de <code>input</code> apenas lê o que o usuário digitar mas esse valor não é
+armazenado em lugar algum. Podemos dar um nome a esse valor, assim ele não é
+descartado:</p>
+<pre><code class="language-python">n1 = input(&quot;Digite o primeiro operando: &quot;)
+</code></pre>
+<p>No caso acima, a entrada do usuário será armazenada e acessível na variável
+<code>n1</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tipagem-dinâmica"><a class="header" href="#tipagem-dinâmica">Tipagem dinâmica</a></h1>
+<p>Python utiliza o conceito de tipagem dinâmica, ou seja, o tipos dos objetos em
+um programa podem variar durante a execução.</p>
+<p>Ao fazemos uma entrada, como <code>n = input(&quot;Digite um número: &quot;)</code> Estamos
+simplesmente lendo um valor e inserindo na variável <code>n</code>. Embora a mensagem
+sugira que <code>n</code> receberá um número, a função <code>input</code> retorna uma <em>string</em>
+(sequência de caracteres). <code>n</code>, então, é inicialmente uma <em>string</em>. Isso pode
+ser verificado com a função <code>type</code>: <code>type(n)</code>.</p>
+<p>Se quisermos forçar que a entrada seja interpretada como um número, devemos
+converter seu tipo utilizando um construto chamado <em>cast</em>. No nosso caso o
+<em>cast</em> será feito utilizando a função <code>int</code>, que retorna um número inteiro a
+partir de uma <em>string</em>:</p>
+<pre><code class="language-python">n = int(input(&quot;Digite um número: &quot;))
+</code></pre>
+<p>Dessa forma, a <em>string</em> retornada é transformada em um número inteiro; assim,
+<code>n</code> agora é um inteiro.</p>
+<p>Além da função <code>int</code>, há funções similares como <code>str</code> (produz uma <em>string</em>) e
+<code>float</code> (produz um número real).</p>
+<h2 id="tipos"><a class="header" href="#tipos">Tipos</a></h2>
+<p>Alguns dos tipos preexistentes no Python são os seguintes.</p>
+<ul>
+<li>
+<p><code>str</code> (popularmente <em>string</em>): Representa uma cadeia de caracteres, como
+<code>&quot;abc&quot;</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = 'codinStruct'
+&gt;&gt;&gt; type(a)
+&lt;type 'str'&gt;
+</code></pre>
+</li>
+<li>
+<p><code>int</code>: Representa um número inteiro, como <code>59</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = 1
+&gt;&gt;&gt; type(a)
+&lt;type 'int'&gt;
+</code></pre>
+</li>
+<li>
+<p><code>float</code>: Representa um número real, como <code>3,14</code>:</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = 1.0
+&gt;&gt;&gt; type(a)
+&lt;type 'float'&gt;
+</code></pre>
+</li>
+<li>
+<p><code>bool</code>: Pode alternar entre os valores lógicos <code>True</code> (verdade) e <code>False</code>
+(falsidade).</p>
+<pre><code class="language-python">&gt;&gt;&gt; a = True
+&gt;&gt;&gt; type(a)
+&lt;type 'bool'&gt;
+</code></pre>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operações-aritméticas"><a class="header" href="#operações-aritméticas">Operações Aritméticas</a></h1>
+<p>Assim como na maioria das linguagens, para se fazer cálculos em Python, usamos
+alguns operadores, são eles:</p>
+<table><thead><tr><th style="text-align: center">Operador</th><th>Significado</th></tr></thead><tbody>
+<tr><td style="text-align: center"><code>*</code></td><td>Realiza multiplicação</td></tr>
+<tr><td style="text-align: center"><code>+</code></td><td>Realiza adição</td></tr>
+<tr><td style="text-align: center"><code>-</code></td><td>Realiza subtração</td></tr>
+<tr><td style="text-align: center"><code>/</code></td><td>Realiza divisão</td></tr>
+<tr><td style="text-align: center"><code>%</code></td><td>O resto de uma divisão</td></tr>
+</tbody></table>
+<p>Alguns exemplos de operações e seus resultados:</p>
+<pre><code class="language-python">n1 = 10
+n2 = 2
+
+resultado1 = n1 * n2 | # Resulta em 20
+resultado2 = n1 + n2 | # Resulta em 12
+resultado3 = n1 - n2 | # Resulta em 8
+resultado4 = n1 / n2 | # Resulta em 5
+resultado5 = n1 % n2 | # Resulta em 0: o resto da divisão e 10 por 2 é 0
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="comentários"><a class="header" href="#comentários">Comentários</a></h1>
+<p>Comentários em Python começam com o caractere cerquilha <code>#</code> e se estendem até o
+final da linha. Um comentário pode aparecer no início da linha ou após espaço em
+branco, ou código, mas não dentro de um literal string.</p>
+<p>Comentários devem ser usados para dar uma visão geral do código e fornecer
+informação adicional que não esteja prontamente disponível no próprio código.
+Comentários devem conter somente informações relevantes para a leitura e
+entendimento do programa.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="listas"><a class="header" href="#listas">Listas</a></h1>
+<p>Lista é um tipo de dado para armazenar coleção de dados. Apesar da simplicidade para ser usada, tem uma grande utilidade, onde é possível guardar vários tipos de dados, dentro de uma lista. Para começarmos, vamos entender como se cria uma lista:</p>
+<p>Para criarmos uma lista, usamos <code>[]</code> e os dados dentro da lista. Vale a pena lembrar que, as listas podem armazenar quaisquer tipos de dados, inclusive, listas.</p>
+<p>Vamos a alguns exemplos:</p>
+<ul>
+<li>Listas de Strings:</li>
+</ul>
+<pre><code class="language-python">lista = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;]
+print(lista)
+# O Resultado é: ['Maçã', 'Banana', 'Melancia']
+</code></pre>
+<ul>
+<li>Lista de Inteiros:</li>
+</ul>
+<pre><code class="language-python">lista = [1, 2, 3, 4]
+print(lista)
+# O Resultado é: [1, 2, 3, 4]
+</code></pre>
+<ul>
+<li>Listas de Booleans:</li>
+</ul>
+<pre><code class="language-python">lista = [True, False, True, True]
+print(lista)
+# O Resultado é: [True, False, True, True]
+</code></pre>
+<ul>
+<li>Lista de Listas:</li>
+</ul>
+<pre><code class="language-python">lista1 = [&quot;João&quot;, 21, False]
+lista2 = [1, 2, 3, 4]
+lista3 = [True, False, True, True]
+lista = [lista1, lista2, lista3]
+print(lista)
+# O Resultado é: [['João', 21, False], [1, 2, 3, 4], [True, False, True, True]]
+</code></pre>
+<h2 id="mais-sobre-listas"><a class="header" href="#mais-sobre-listas">Mais sobre listas</a></h2>
+<p>Para se acessar um valor específico de uma lista, basta acrescentar o valor do seu <code>índice</code>. Caso você não esteja familiarizado, os índices começam em 0. Vamso a um exemplo:</p>
+<pre><code class="language-python"># ÍNDICES: 0      1       2
+lista = [&quot;João&quot;, 21, &quot;Estudante&quot;]
+print(lista[2])
+# O Resultado é: ['Estudante']
+</code></pre>
+<h2 id="propriedades"><a class="header" href="#propriedades">Propriedades</a></h2>
+<p>As listas tem alguma diferenças, de outros tipos de dados usados para armazenar coleções, como por exemplo:</p>
+<ul>
+<li>Ordenado:</li>
+</ul>
+<p>A lista é ordenada, ou seja, a cada item adicionado, ele ficará na ordem em que foi adicionado.</p>
+<pre><code class="language-python">lista = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]
+print(lista)
+# Saída: ['A', 'B', 'C']
+</code></pre>
+<ul>
+<li>Mutável:</li>
+</ul>
+<p>A lista pode ser alterada, ou seja, podemos adicionar, remover ou alterar itens dela.</p>
+<pre><code class="language-python">lista = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;]
+lista[2] = 10
+print(lista)
+# Saída: ['A', 'B', 10]
+</code></pre>
+<ul>
+<li>Duplicados:</li>
+</ul>
+<p>A lista permite que se tenha valores duplicados, como ela é indexada, é possível adicionar itens duplicados tranquilamente.</p>
+<pre><code class="language-python">lista = [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;B&quot;]
+print(lista)
+# Saída: ['A', 'B', 'C', 'B']
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tuplas"><a class="header" href="#tuplas">Tuplas</a></h1>
+<p>Parecida com Listas, a Tupla também é usada para armazenar coleções de dados. Diferente das Listas, que são inicializadas com <code>[]</code>, as tuplas são iniciadas com <code>()</code>.Vejamos alguns exemplos de como funcionam as Tuplas:</p>
+<pre><code class="language-python">tupla = (&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;)
+print(tupla)
+# Saida: ('Maçã', 'Banana', 'Melancia')
+</code></pre>
+<p>Muito semelhante as Listas, as Tuplas possuem propriedades parecidas com as listas, como por exemplo, elas são ordenadas, e seus itens podem ser acessados atraves de index <code>[1]</code>:</p>
+<pre><code class="language-python">tupla = (&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;)
+print(tupla[1])
+# Saida: Banana
+</code></pre>
+<h2 id="propriedades-1"><a class="header" href="#propriedades-1">Propriedades</a></h2>
+<ul>
+<li>Ordenado:</li>
+</ul>
+<p>A tupla é ordenada, ou seja, a cada item adicionado, ele ficará na ordem em que foi adicionado.</p>
+<pre><code class="language-python">tupla = (&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+print(tupla)
+# Saída: ('A', 'B', 'C')
+</code></pre>
+<ul>
+<li>Imutável:</li>
+</ul>
+<p>Diferente da Listas, a tupla NÃO pode ser alterada, ou seja, não podemos adicionar, remover ou alterar itens após a criação dela.</p>
+<pre><code class="language-python">tupla = (&quot;A&quot;, &quot;B&quot;, &quot;C&quot;)
+tupla(2) = 10
+print(tupla)
+# Saída: ERRO
+</code></pre>
+<ul>
+<li>Duplicados:</li>
+</ul>
+<p>A tupla permite que se tenha valores duplicados, como ela é indexada, é possível adicionar itens duplicados tranquilamente.</p>
+<pre><code class="language-python">tupla = (&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;B&quot;)
+print(tupla)
+# Saída: ('A', 'B', 'C', 'B')
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conjuntos"><a class="header" href="#conjuntos">Conjuntos</a></h1>
+<p>Os conjuntos, semelhantemente a Lista e Tupla, são usados para armazenar coleções de dados. Vejamos um exemplo de sua implementação:</p>
+<pre><code class="language-python">conjuntos = {&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;}
+print(conjuntos)
+# Saída: {'Maçã', 'Banana', 'Melancia'}
+</code></pre>
+<p>Os conjuntos contém algumas diferenças de propriedades comparadas com uma Lista e uma Tupla, como por exemplo, não existe índice (Não é possível acessar um item do conjunto com <code>[1]</code>)</p>
+<pre><code class="language-python">conjunto = {&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;}
+print(conjunto[1])
+# Saida: ERRO
+</code></pre>
+<h2 id="propriedades-2"><a class="header" href="#propriedades-2">Propriedades</a></h2>
+<ul>
+<li>NÃO Ordenado:</li>
+</ul>
+<p>Os conjuntos não são ordenados, ou seja, a ordem em que eles são criados, não são a ordem que serão exibidos.</p>
+<pre><code class="language-python">conjunto = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
+print(conjunto)
+# Saída: {'C', 'A', 'B'}
+</code></pre>
+<ul>
+<li>Imutável:</li>
+</ul>
+<p>Os cojuntos NÃO podem ser alterados, ou seja, não podemos adicionar, remover ou alterar itens após a criação de um cojunto.</p>
+<pre><code class="language-python">conjunto = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;}
+conjunto[2] = 10
+print(conjunto)
+# Saída: ERRO
+</code></pre>
+<ul>
+<li>Duplicados:</li>
+</ul>
+<p>A conjunto NÃO permite valores duplicados, como não é indexada, não é possível adicionar itens duplicados.</p>
+<pre><code class="language-python">conjunto = {&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;B&quot;}
+print(conjunto)
+# Saída: {'A', 'C', 'B'}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="dicionário"><a class="header" href="#dicionário">Dicionário</a></h1>
+<p>Os dicionários, são tipos de dados também usados para armazenar coleções de dados, porém, os dicionários tem uma particularidades, onde os índices, são selecionados por quem está os criando, ou seja, se na lista temos os índices <code>[0], [1], etc</code>, nos dicionários temos índices criados da forma como queremos, por exemplo <code>[&quot;nome&quot;]</code>. Vejamos alguns exemplos:</p>
+<pre><code class="language-python">dicionario = {&quot;nome&quot;: &quot;João&quot;, &quot;idade&quot;: 21}
+print(dicionario)
+# Saída: {'nome': 'João', 'idade': 21}
+</code></pre>
+<p>Para acessarmos algum atributo específico, procuramos por sua chave:</p>
+<pre><code class="language-python">dicionario = {&quot;nome&quot;: &quot;João&quot;, &quot;idade&quot;: 21}
+print(dicionario[&quot;nome&quot;])
+# Saída: João
+print(dicionario[&quot;idade&quot;])
+# Saída: 21
+</code></pre>
+<h2 id="propriedades-3"><a class="header" href="#propriedades-3">Propriedades</a></h2>
+<ul>
+<li>Ordenados</li>
+</ul>
+<p>Quando dizemos que os dicionários estão ordenados, significa que os itens tem uma ordem definida e essa ordem não será alterada.</p>
+<pre><code class="language-python">dicionario = {&quot;nome&quot;: &quot;João&quot;,
+              &quot;idade&quot;: 21}
+print(dicionario)
+# Saída: {'nome': 'João', 'idade': 21}
+</code></pre>
+<ul>
+<li>Mutável</li>
+</ul>
+<p>Os dicionários podem ser alterados, o que significa que podemos alterar, adicionar ou remover itens após a criação do dicionário.</p>
+<pre><code class="language-python">dicionario = {&quot;nome&quot;: &quot;João&quot;,
+              &quot;idade&quot;: 21}
+dicionario[&quot;nome&quot;] = &quot;Elias&quot;
+print(dicionario)
+# Saída: {'nome': 'Elias', 'idade': 21}
+</code></pre>
+<ul>
+<li>Duplicatas</li>
+</ul>
+<p>Os dicionário não permitem chaves(índices) duplicados, ou seja, não podemos ter o seguinte caso:</p>
+<pre><code class="language-python">dicionario = {&quot;nome&quot;: &quot;João&quot;,
+              &quot;idade&quot;: 21
+              &quot;nome&quot;: &quot;Elias&quot;}
+print(dicionario)
+# Saída: ERRO
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="alteração-em-coleções"><a class="header" href="#alteração-em-coleções">Alteração em coleções</a></h1>
+<p>Temos várias coleções, e podemos fazer várias alterações, conforme já foi passado no curso, temos <code>conjuntos</code>, <code>dicionario</code>, <code>tuplas</code>, <code>listas</code>. Vamos conhecer mais sobre cada uma delas.</p>
+<h2 id="listas-1"><a class="header" href="#listas-1">Listas</a></h2>
+<p>Para acessarmos um valor de uma lista, procuramos pelo seu índice <code>[1]</code>, por exemplo:</p>
+<pre><code class="language-python">lista = [1, 2, 3, 4]
+print(lista[2])
+# Saída: 3
+</code></pre>
+<p>Para acessarmos apenas alguns itens da lista, podemos usar a seguinte sintaxe: <code>[:]</code>, o valor colocado antes do <code>:</code>, será usado como o início de onde você quer exibir os itens, consequentemente, o valor colocado depois, será até quanto, caso a esquerda fique vazio, será entendido como o primeiro, se o da direita ficar vazio, será considerado o último por exemplo:</p>
+<pre><code class="language-python">lista = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+print(lista[2:])
+# Saída: [3, 4, 5, 6, 7, 8, 9]
+print(lista[2:3])
+# Saída: [3]
+print(lista[:3])
+# Saída: [1, 2, 3]
+</code></pre>
+<p>Para procurarmos algo em uma lista, podemos usar a seguinte estrutura:</p>
+<pre><code class="language-python">lista = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;]
+if &quot;Maçã&quot; in thislist:
+  print(&quot;Sim, 'Maçã' existe nesta lista!&quot;)
+# Saída: Sim, 'Maçã' existe nesta lista!
+</code></pre>
+<p>Para inserirmos um item na lista em determinada posição, usamos <code>insert</code>, vejamos o exemplo:</p>
+<pre><code class="language-python">lista = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;]
+lista.insert(2, &quot;Goiaba&quot;)
+print(lista)
+# Saída: ['Maçã', 'Banana', 'Goiaba', 'Melancia']
+</code></pre>
+<p>Para inserirmos um item no final da lista, usamos <code>append</code>, vejamos um exeplo:</p>
+<pre><code class="language-python">lista = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;]
+lista.insert(&quot;Goiaba&quot;)
+print(lista)
+# Saída: ['Maçã', 'Banana', 'Melancia', 'Goiaba']
+</code></pre>
+<p>Para adicionarmos uma coleção no final de uma lista, usamos <code>extend</code>, veja o exemplo:</p>
+<pre><code class="language-python">lista = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;]
+lista2 = [&quot;Limão&quot;, &quot;Laranja&quot;]
+lista.extend(lista2)
+print(lista)
+# Saída: ['Maçã', 'Banana', 'Melancia', 'Limão', 'Laranja']
+</code></pre>
+<p>Para removermos um item da lista, temos várias soluções, vejamos os exemplo abaixo:</p>
+<pre><code class="language-python">lista = [&quot;Maçã&quot;, &quot;Banana&quot;, &quot;Melancia&quot;]
+lista.remove(&quot;Melancia&quot;) # remove o item citado
+lista.pop(2) # remove o item de index 2
+lista.pop() # remove o último item
+del lista[2] # remove o último item
+print(lista)
+# Saída em todos os casos: ['Maçã', 'Banana']
+del lista # remove a lista inteira
+print(lista)
+# Saída: ERRO
+lista.clear()
+print(lista) #Limpa a lista
+# Saída: []
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

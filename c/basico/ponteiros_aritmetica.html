@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Aritmética de Ponteiros</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.</strong> Básico</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="../basico/primeiro_programa.html"><strong aria-hidden="true">1.2.</strong> Primeiro Programa</a></li><li class="chapter-item expanded "><a href="../basico/diretiva_include.html"><strong aria-hidden="true">1.3.</strong> Diretiva #include</a></li><li class="chapter-item expanded "><a href="../basico/funcoes.html"><strong aria-hidden="true">1.4.</strong> Funções</a></li><li class="chapter-item expanded "><a href="../basico/variaveis.html"><strong aria-hidden="true">1.5.</strong> Variáveis</a></li><li class="chapter-item expanded "><a href="../basico/tipos.html"><strong aria-hidden="true">1.6.</strong> Tipos Fundamentais Básicos</a></li><li class="chapter-item expanded "><a href="../basico/tabelas.html"><strong aria-hidden="true">1.7.</strong> Tabelas de Tipos Fundamentais</a></li><li class="chapter-item expanded "><a href="../basico/saida.html"><strong aria-hidden="true">1.8.</strong> Saída Básica</a></li><li class="chapter-item expanded "><a href="../basico/entrada.html"><strong aria-hidden="true">1.9.</strong> Entrada Básica</a></li><li class="chapter-item expanded "><a href="../basico/ops_aritmeticos.html"><strong aria-hidden="true">1.10.</strong> Operadores Aritméticos Básicos</a></li><li class="chapter-item expanded "><a href="../basico/ops_incremento_decremento.html"><strong aria-hidden="true">1.11.</strong> Operadores de Incremento e Decremento</a></li><li class="chapter-item expanded "><a href="../basico/ops_logicos_relacionais.html"><strong aria-hidden="true">1.12.</strong> Operadores Lógicos e Relacionais</a></li><li class="chapter-item expanded "><a href="../basico/controle_de_fluxo.html"><strong aria-hidden="true">1.13.</strong> Controle de Fluxo</a></li><li class="chapter-item expanded "><a href="../basico/arrays.html"><strong aria-hidden="true">1.14.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../basico/while.html"><strong aria-hidden="true">1.15.</strong> Instrução while</a></li><li class="chapter-item expanded "><a href="../basico/for.html"><strong aria-hidden="true">1.16.</strong> Instrução for</a></li><li class="chapter-item expanded "><a href="../basico/ponteiros.html"><strong aria-hidden="true">1.17.</strong> Ponteiros</a></li><li class="chapter-item expanded "><a href="../basico/sizeof.html"><strong aria-hidden="true">1.18.</strong> Operador sizeof</a></li><li class="chapter-item expanded "><a href="../basico/ponteiros_aritmetica.html" class="active"><strong aria-hidden="true">1.19.</strong> Aritmética de Ponteiros</a></li><li class="chapter-item expanded "><a href="../basico/memoria.html"><strong aria-hidden="true">1.20.</strong> Gerenciamento de Memória</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Intermediário</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../intermediario/conversoes_implicitas.html"><strong aria-hidden="true">2.1.</strong> Conversões Implícitas</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Avançado</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../avancado/selecao_generica.html"><strong aria-hidden="true">3.1.</strong> Seleção Genérica</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="aritmética-de-ponteiros"><a class="header" href="#aritmética-de-ponteiros">Aritmética de Ponteiros</a></h1>
+<p>Embora possa parecer estranho à primeira vista, ponteiros (exceto <code>void *</code>)
+suportam soma e subtração. Para entender o funcionamento, é necessário primeiro
+compreender como arrays são armazenados na memória.</p>
+<h2 id="somando-e-subtraindo-inteiros"><a class="header" href="#somando-e-subtraindo-inteiros">Somando e Subtraindo Inteiros</a></h2>
+<p>Imaginemos um array de <code>char</code>s <code>{'a', 'f', 'c', 'k', 'b'}</code>. O array seria
+disposto na memória como na tabela abaixo. Cada endereço se refere a um byte.</p>
+<table><thead><tr><th>Endereço</th><th>Valor</th></tr></thead><tbody>
+<tr><td>X</td><td><code>'a'</code></td></tr>
+<tr><td>X + 1</td><td><code>'f'</code></td></tr>
+<tr><td>X + 2</td><td><code>'c'</code></td></tr>
+<tr><td>X + 3</td><td><code>'k'</code></td></tr>
+<tr><td>X + 4</td><td><code>'b'</code></td></tr>
+</tbody></table>
+<hr />
+<p>Para facilitar a compreensão, estamos supondo que um <code>int</code> possui 4 bytes em
+qualquer sistema.</p>
+<hr />
+<p>No caso de um array <code>int arr[] = {10, 5, 9, 2, 1};</code> com <code>int</code>s de 4 bytes, o
+array seria disposto como na tabela abaixo.</p>
+<table><thead><tr><th>Endereço</th><th>Valor</th></tr></thead><tbody>
+<tr><td>X</td><td><code>10</code></td></tr>
+<tr><td>X + 4</td><td><code>5</code></td></tr>
+<tr><td>X + 8</td><td><code>9</code></td></tr>
+<tr><td>X + 12</td><td><code>2</code></td></tr>
+<tr><td>X + 16</td><td><code>1</code></td></tr>
+</tbody></table>
+<p>Perceba que os elementos são contíguos na memória, i.e. um vem imediatamente
+após o outro. Na tabela acima <code>10</code> ocupa X até X + 3, <code>5</code> ocupa X + 4 até X + 7,
+<code>9</code> ocupa X + 8 até X + 11, etc. Isso significa que se um ponteiro aponta para o
+endereço de <code>10</code>, esse <strong>endereço</strong> somado com 4 (<code>sizeof(int)</code>) será o endereço
+de <code>5</code>.</p>
+<p>Dado o ponteiro <code>Tipo *p = X</code>, <code>p + 1</code> se refere a <code>X + sizeof(Tipo)</code>. Isso
+significa que dado <code>int *p = &amp;arr[0]</code>, <code>p + 1</code> referencia <code>arr[1]</code>. e <code>p + 2</code>
+referencia <code>arr[2]</code>. Ou seja, somar <code>1</code> a <code>p</code> na verdade incrementa o endereço
+em 4. Subtração funciona da mesma forma: Dado <code>int *p = &amp;arr[2]</code>, <code>p - 2</code>
+referencia <code>arr[0]</code>.</p>
+<p>Voltemos para a tabela acima. Um ponteiro para X, somado com 1 apontará para X +
+4 e somado com 2 apontará para X + 8. Isso pode parecer contraintuitivo a
+princípio, porém é conveniente: Para acessar o próximo elemento contíguo basta
+somar 1 ao ponteiro independentemente de seu tipo.</p>
+<pre><code class="language-c">int arr[] = {0, 0, 9, 0, 0};
+
+int *p = &amp;arr[1];
+
+*p = 10;
+
+p = p + 2; // p agora se refere a arr[3]
+*p = 8;
+
+p = p + 1; // p agora se refere a arr[4]
+*p = 7;
+
+p = p - 4; // p agora se refere a arr[0]
+*p = 11;
+
+</code></pre>
+<p>Após a execução do código acima, os elementos de <code>arr</code> serão <code>11, 10, 9, 8, 7</code>.</p>
+<h2 id="subtraindo-ponteiros"><a class="header" href="#subtraindo-ponteiros">Subtraindo Ponteiros</a></h2>
+<p>Embora inteiros possam ser somados a ponteiros, ponteiros não. Já a subtração
+entre ponteiros é possível quando ambos ponteiros referenciam elementos do mesmo
+array (ou a posição logo após o final do array), e resulta na diferença entre os
+índices dos elementos apontados. O resultado é do tipo <code>ptrdiff_t</code> de
+<code>&lt;stddef.h&gt;</code>, que é um inteiro com sinal. Veja abaixo, lembrando que o resultado
+do operador unário <code>&amp;</code> é um ponteiro.</p>
+<pre><code class="language-c">int arr[50];
+
+// A especificação %td serve para ptrdiff_t
+printf(&quot;%td\n&quot;, &amp;arr[10] - &amp;arr[20]); // Exibe &quot;-10&quot; (10 - 20)
+printf(&quot;%td\n&quot;, &amp;arr[25] - &amp;arr[20]); // Exibe &quot;5&quot;   (25 - 20)
+
+int *p = &amp;arr[10] + 20;
+printf(&quot;%td\n&quot;, p - &amp;arr[10]); // Exibe &quot;20&quot; (30 - 10)
+</code></pre>
+<h2 id="referências"><a class="header" href="#referências">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:<!-- Operações aritméticas em ponteiros -->
+<ul>
+<li>6.5.6 Additive operators</li>
+</ul>
+<!-- Tipo ptrdiff_t -->
+<ul>
+<li>7.19 Common definitions &lt;stddef.h&gt;</li>
+</ul>
+<!-- Especificação %td -->
+<ul>
+<li>7.21.6.1 The fprintf function</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basico/sizeof.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../basico/memoria.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basico/sizeof.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../basico/memoria.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

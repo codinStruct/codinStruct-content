@@ -1,0 +1,2436 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title></title>
+        <meta name="robots" content="noindex" />
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="basico/introducao.html"><strong aria-hidden="true">1.</strong> Básico</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="basico/introducao.html"><strong aria-hidden="true">1.1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="basico/primeiro_programa.html"><strong aria-hidden="true">1.2.</strong> Primeiro Programa</a></li><li class="chapter-item expanded "><a href="basico/diretiva_include.html"><strong aria-hidden="true">1.3.</strong> Diretiva #include</a></li><li class="chapter-item expanded "><a href="basico/funcoes.html"><strong aria-hidden="true">1.4.</strong> Funções</a></li><li class="chapter-item expanded "><a href="basico/variaveis.html"><strong aria-hidden="true">1.5.</strong> Variáveis</a></li><li class="chapter-item expanded "><a href="basico/tipos.html"><strong aria-hidden="true">1.6.</strong> Tipos Fundamentais Básicos</a></li><li class="chapter-item expanded "><a href="basico/tabelas.html"><strong aria-hidden="true">1.7.</strong> Tabelas de Tipos Fundamentais</a></li><li class="chapter-item expanded "><a href="basico/saida.html"><strong aria-hidden="true">1.8.</strong> Saída Básica</a></li><li class="chapter-item expanded "><a href="basico/entrada.html"><strong aria-hidden="true">1.9.</strong> Entrada Básica</a></li><li class="chapter-item expanded "><a href="basico/ops_aritmeticos.html"><strong aria-hidden="true">1.10.</strong> Operadores Aritméticos Básicos</a></li><li class="chapter-item expanded "><a href="basico/ops_incremento_decremento.html"><strong aria-hidden="true">1.11.</strong> Operadores de Incremento e Decremento</a></li><li class="chapter-item expanded "><a href="basico/ops_logicos_relacionais.html"><strong aria-hidden="true">1.12.</strong> Operadores Lógicos e Relacionais</a></li><li class="chapter-item expanded "><a href="basico/controle_de_fluxo.html"><strong aria-hidden="true">1.13.</strong> Controle de Fluxo</a></li><li class="chapter-item expanded "><a href="basico/arrays.html"><strong aria-hidden="true">1.14.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="basico/while.html"><strong aria-hidden="true">1.15.</strong> Instrução while</a></li><li class="chapter-item expanded "><a href="basico/for.html"><strong aria-hidden="true">1.16.</strong> Instrução for</a></li><li class="chapter-item expanded "><a href="basico/ponteiros.html"><strong aria-hidden="true">1.17.</strong> Ponteiros</a></li><li class="chapter-item expanded "><a href="basico/sizeof.html"><strong aria-hidden="true">1.18.</strong> Operador sizeof</a></li><li class="chapter-item expanded "><a href="basico/ponteiros_aritmetica.html"><strong aria-hidden="true">1.19.</strong> Aritmética de Ponteiros</a></li><li class="chapter-item expanded "><a href="basico/memoria.html"><strong aria-hidden="true">1.20.</strong> Gerenciamento de Memória</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Intermediário</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="intermediario/conversoes_implicitas.html"><strong aria-hidden="true">2.1.</strong> Conversões Implícitas</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Avançado</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="avancado/selecao_generica.html"><strong aria-hidden="true">3.1.</strong> Seleção Genérica</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="introdução"><a class="header" href="#introdução">Introdução</a></h1>
+<h2 id="o-que-é-c"><a class="header" href="#o-que-é-c">O que é C?</a></h2>
+<p>C é uma linguagem de programação amplamente utilizada que influenciou várias
+linguagens populares, como C++. É pequena, de baixo nível e fortemente focada em
+desempenho. Algumas de suas características podem ser vistas negativamente por
+alguns programadores, mas são vantagens em diversas situações.</p>
+<h2 id="sua-história"><a class="header" href="#sua-história">Sua História</a></h2>
+<p>Desenvolvida na década de 70 por Dennis Ritchie, Ken Thompson e outros na Bell
+Laboratories, C foi criada como uma extensão de B — linguagem que fez parte do
+desenvolvimento do sistema operacional UNIX, que foi depois reescrito em C.</p>
+<p>A linguagem evoluiu com o tempo e começou a ser usada em diversos outros
+projetos, porém ainda não tinha um padrão formal bem estabelecido e seus
+compiladores se comportavam de forma imprevisível. Isso foi resolvido nos
+próximos anos, onde um padrão de C foi aprovado pela Organização Internacional
+de Normalização (ISO), como ISO/IEC 9899:1990. Esse padrão é comumente chamado
+C89, e atualmente existem várias revisões, como as informalmente chamadas C99,
+C11 e C17.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="introdução-1"><a class="header" href="#introdução-1">Introdução</a></h1>
+<h2 id="o-que-é-c-1"><a class="header" href="#o-que-é-c-1">O que é C?</a></h2>
+<p>C é uma linguagem de programação amplamente utilizada que influenciou várias
+linguagens populares, como C++. É pequena, de baixo nível e fortemente focada em
+desempenho. Algumas de suas características podem ser vistas negativamente por
+alguns programadores, mas são vantagens em diversas situações.</p>
+<h2 id="sua-história-1"><a class="header" href="#sua-história-1">Sua História</a></h2>
+<p>Desenvolvida na década de 70 por Dennis Ritchie, Ken Thompson e outros na Bell
+Laboratories, C foi criada como uma extensão de B — linguagem que fez parte do
+desenvolvimento do sistema operacional UNIX, que foi depois reescrito em C.</p>
+<p>A linguagem evoluiu com o tempo e começou a ser usada em diversos outros
+projetos, porém ainda não tinha um padrão formal bem estabelecido e seus
+compiladores se comportavam de forma imprevisível. Isso foi resolvido nos
+próximos anos, onde um padrão de C foi aprovado pela Organização Internacional
+de Normalização (ISO), como ISO/IEC 9899:1990. Esse padrão é comumente chamado
+C89, e atualmente existem várias revisões, como as informalmente chamadas C99,
+C11 e C17.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="primeiro-programa"><a class="header" href="#primeiro-programa">Primeiro Programa</a></h1>
+<p>O primeiro programa que várias pessoas costumam escrever consiste em exibir
+&quot;Hello, World!&quot; (&quot;Olá, Mundo!&quot; em inglês). Um simples código C para essa tarefa
+é o seguinte:</p>
+<h2 id="código-fonte"><a class="header" href="#código-fonte">Código-Fonte</a></h2>
+<p>Arquivo <code>main.c</code>:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    puts(&quot;Hello, World!&quot;);
+    return 0;
+}
+</code></pre>
+<p>Esse programa simples é composto por várias partes. Primeiro, <code>stdio.h</code> é o
+arquivo que fornece as principais funções de entrada e saída no C. A linha
+<code>#include &lt;stdio.h&gt;</code> essencialmente permite ao programa usar essas funções.</p>
+<p><code>main</code> é o ponto de entrada do programa, ou seja, onde começa a execução do
+código. As chaves <code>{</code> e <code>}</code> representam o corpo do <code>main</code>, e o código entre elas
+faz parte dele.</p>
+<p>A primeira tarefa realizada em nosso <code>main</code> é a linha <code>puts(&quot;Hello, World!&quot;);</code>.
+<code>puts</code> é uma das funções de entrada e saída do <code>stdio.h</code>, e ela exibe seu
+argumento (em nosso caso, <code>&quot;Hello, World&quot;</code>) na tela.</p>
+<p>Logo após isso temos a linha <code>return 0;</code>. <code>return</code> termina a execução da função,
+que nesse caso é <code>main</code>, e <code>0</code> é um valor que será enviado ao sistema
+operacional. <code>0</code> costuma significar que o programa foi executado corretamente.</p>
+<h2 id="executando"><a class="header" href="#executando">Executando</a></h2>
+<p>O <a href="basico/primeiro_programa.html#c%C3%B3digo-fonte">código-fonte</a> acima está completo, mas ainda não é executável;
+precisamos utilizar um compilador C para transformar código-fonte em código
+objeto. Esse processo é chamado compilação e, por si só, não é suficiente para
+produzir um executável. Antes da compilação deve ocorrer o pré-processamento e,
+após a compilação, a ligação. Ambos processos são realizados automaticamente em
+compiladores atuais (como <a href="https://gcc.gnu.org/">GCC</a> e
+<a href="https://clang.llvm.org/">Clang</a>), portanto ainda não serão detalhados.</p>
+<p>Para criar um executável utilizando o compilador GCC, por exemplo, você deve
+fornecer como argumento o arquivo de extensão <code>.c</code> contendo o código-fonte. No
+caso do programa acima, o comando seria <code>gcc main.c</code>. O executável comumente
+será chamado <code>a.exe</code> ou <code>a.out</code>, mas o nome pode ser alterado fornecendo a opção
+<code>-o</code> seguida pelo caminho de destino. Para criar o executável <code>Programa</code>
+usaríamos o comando <code>gcc main.c -o Programa</code>.</p>
+<p>Se tudo der certo, a execução do programa exibirá <code>Hello, World!</code>.</p>
+<h2 id="referências"><a class="header" href="#referências">Referências</a></h2>
+<ul>
+<li>Padrão C18 (<a href="https://www.iso.org/standard/74528.html">ISO/IEC 9899:2018</a>):
+<ul>
+<li>5.1.2.2 Hosted environment</li>
+<li>6.8.6.4 The return statement</li>
+<li>7.21 Input/output &lt;stdio.h&gt;</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="diretiva-include"><a class="header" href="#diretiva-include">Diretiva #include</a></h1>
+<p>As diretivas de pré-processamento são processadas antes da compilação do
+programa e alteram o código-fonte que será compilado. Como compiladores
+sofisticados realizam essa tarefa automaticamente, você não verá o resultado
+dessa etapa; o código gerado será enviado diretamente ao compilador e
+descartado.</p>
+<h2 id="exemplos"><a class="header" href="#exemplos">Exemplos</a></h2>
+<p>A diretiva <code>#include</code> faz que o pré-processador inclua código externo no arquivo
+a ser compilado. Imagine dois arquivos:</p>
+<p>Arquivo <code>externo.c</code>:</p>
+<pre><code class="language-c">int a;
+int b;
+int c;
+</code></pre>
+<p>Arquivo <code>main.c</code>:</p>
+<pre><code class="language-c">#include &quot;externo.c&quot;
+
+int main(void)
+{
+    return 0;
+}
+</code></pre>
+<p>Quando a compilação de <code>main.c</code> for solicitada, o pré-processador enviará o
+seguinte código para o compilador:</p>
+<pre><code class="language-c">int a;
+int b;
+int c;
+
+int main(void)
+{
+    return 0;
+}
+</code></pre>
+<p>Como pode ser observado, a diretiva <code>#include</code> é substituída pelos conteúdos do
+arquivo incluído. Aqui está mais um exemplo:</p>
+<p>Arquivo <code>externo.c</code>:</p>
+<pre><code class="language-c">    return 0;
+</code></pre>
+<p>Arquivo <code>main.c</code>:</p>
+<pre><code class="language-c">int main(void)
+{
+#include &quot;externo.c&quot;
+}
+</code></pre>
+<p>Resultado do pré-processamento de <code>main.c</code>:</p>
+<pre><code class="language-c">int main(void)
+{
+    return 0;
+}
+</code></pre>
+<h2 id="variações"><a class="header" href="#variações">Variações</a></h2>
+<p>É possível incluir certo arquivo de duas formas:</p>
+<ul>
+<li><strong><code>#include &lt;arquivo&gt;</code></strong>:
+<ul>
+<li>Deve ser utilizado com arquivos cuja localização é conhecida pelo
+pré-processador; os arquivos da biblioteca padrão como <code>stdio.h</code> normalmente
+podem ser incluídos dessa forma. As localizações buscadas costumam ser
+definidas em uma
+<a href="https://pt.wikipedia.org/wiki/Vari%C3%A1vel_de_ambiente">variável de ambiente</a>.</li>
+</ul>
+</li>
+<li><strong><code>#include &quot;arquivo&quot;</code></strong>:
+<ul>
+<li>Deve conter o caminho para o arquivo, como
+<code>C:/Users/João/Documents/arquivo</code>. Normalmente esse caminho pode também ser
+relativo à localização atual. Caso o arquivo não seja encontrado, ele será
+buscado da forma anterior.</li>
+</ul>
+</li>
+</ul>
+<p>Caso seu compilador não realize o pré-processamento automaticamente, aprenda a
+utilizar algum pré-processador adequado. Isso está fora do escopo desse
+conteúdo.</p>
+<h2 id="referências-1"><a class="header" href="#referências-1">Referências</a></h2>
+<ul>
+<li>Padrão C18 (<a href="https://www.iso.org/standard/74528.html">ISO/IEC 9899:2018</a>):
+<ul>
+<li>6.10.2 Source file inclusion</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="funções"><a class="header" href="#funções">Funções</a></h1>
+<h2 id="o-que-são"><a class="header" href="#o-que-são">O que são?</a></h2>
+<p>Em C uma função é um bloco de código que pode ser executado quando necessário. O
+ponto de entrada <code>main</code>, utilizado até nos programas mais simples, é uma função.
+Funções podem também receber e retornar dados, e isso é muito importante.</p>
+<p>Um grande motivo para utilizar uma função é que basta utilizar o nome dela para
+executá-la. Não é necessário reescrever seu código, e isso facilita o
+desenvolvimento de qualquer programa.</p>
+<h2 id="definição-e-uso"><a class="header" href="#definição-e-uso">Definição e Uso</a></h2>
+<p>Definir uma função é simples e consiste em especificar:</p>
+<ol>
+<li>O tipo de dado que a função retorna.</li>
+<li>O nome da função.</li>
+<li>Os dados que a função recebe (parâmetros).</li>
+<li>O código que deve ser executado pela função.</li>
+</ol>
+<p>Vamos criar uma função simples chamada <code>foo</code>. Funções que não retornam algum
+valor possuem o tipo <code>void</code>, então começamos com:</p>
+<pre><code class="language-c">void foo
+</code></pre>
+<p>Agora, imagine que queremos que <code>foo</code> receba um número inteiro que será chamado
+<code>num</code>. Inteiros podem ser representados com o tipo <code>int</code> (outros tipos serão
+mostrados mais à frente):</p>
+<pre><code class="language-c">void foo(int num)
+</code></pre>
+<p>A função ainda não possui um corpo. Precisamos escrever algum código para ser
+executado, então faremos <code>foo</code> multiplicar <code>num</code> por <code>2</code>:</p>
+<pre><code class="language-c">void foo(int num)
+{
+  num * 2;
+}
+</code></pre>
+<p>Como a função não retorna nenhum valor, a operação <code>num * 2</code> é realizada em vão.
+Vamos fazer a função retornar o resultado da operação, e para isso basta trocar
+<code>void</code> por <code>int</code> (número inteiro) e usar a palavra-chave <code>return</code>, que faz a
+função retornar o valor à sua frente (em nosso caso, <code>num * 2</code>):</p>
+<pre><code class="language-c">int foo(int num)
+{
+  return num * 2;
+}
+</code></pre>
+<p>A função está pronta. Para utilizá-la, basta chamá-la e fornecer um número:</p>
+<pre><code class="language-c">foo(5);
+</code></pre>
+<p>Isso é uma expressão que resulta no valor <code>10</code>.</p>
+<h2 id="funções-na-biblioteca-padrão"><a class="header" href="#funções-na-biblioteca-padrão">Funções na biblioteca padrão</a></h2>
+<p>Antes de criar uma função, verifique se uma equivalente já não existe na
+biblioteca padrão do C. Para calcular o logaritmo natural de um número, por
+exemplo, basta utilizar a função <code>log</code> do arquivo <code>math.h</code>. Um programa que
+calcula o logaritmo natural de <code>5</code> pode ser feito assim:</p>
+<pre><code class="language-c">#include &lt;math.h&gt;
+
+int main(void)
+{
+  log(5);
+
+  return 0;
+}
+</code></pre>
+<p>Embora <code>math.h</code> seja parte da biblioteca padrão, seu respectivo código pode não
+ser ligado automaticamente ao programa. Para solicitar a ligação no compilador
+GCC, adicione o argumento <code>-lm</code> na compilação (e.g. <code>gcc main.c -lm</code>). Em outros
+compiladores o procedimento pode ser diferente.</p>
+<p>Lembre-se também que a linha <code>return 0;</code> existe apenas para informar ao sistema
+operacional que o programa terminou de executar corretamente.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="variáveis"><a class="header" href="#variáveis">Variáveis</a></h1>
+<h2 id="definição-e-inicialização"><a class="header" href="#definição-e-inicialização">Definição e Inicialização</a></h2>
+<p>A maneira mais simples de armazenar dados em C é pelo uso de variáveis.</p>
+<p>Variáveis simples podem ser criadas especificando:</p>
+<ol>
+<li>O tipo de dado que a variável armazena.</li>
+<li>Seu declarador, que nos casos mais simples é simplesmente o identificador
+(nome) da variável</li>
+</ol>
+<p>Para armazenar um número inteiro podemos criar uma variável do tipo <code>int</code>. Vamos
+criar, por exemplo, a variável <code>num</code> com a sintaxe <code>&lt;tipo&gt; &lt;declarador&gt;;</code>:</p>
+<pre><code class="language-c">int num;
+</code></pre>
+<p>Como a variável <code>num</code> foi definida sem algum valor especificado, na maioria dos
+casos ela é uma variável não inicializada—armazena um valor &quot;lixo&quot; que já estava
+na memória. Para inicializá-la, basta especificar um inicializador (valor
+inicial), tornando a sintaxe <code>&lt;tipo&gt; &lt;declarador&gt; = &lt;inicializador&gt;;</code>:</p>
+<pre><code class="language-c">int num = 62;
+</code></pre>
+<p>Assim, a variável armazena o número <code>62</code> e não algum valor aleatório. O <code>62</code>
+pode ser trocado por qualquer outro número representável como um <code>int</code>, e.g.
+<code>-5</code> ou <code>0</code>.</p>
+<p>Várias variáveis podem ser definidas de uma só vez, para isso basta utilizar a
+sintaxe <code>&lt;tipo&gt; &lt;decl-init-lista&gt;;</code>, sendo <code>decl-init-lista</code> uma lista (separada
+por vírgula) de 1 ou mais declaradores opcionalmente seguidos de
+inicializadores. Seguem 3 exemplos:</p>
+<pre><code class="language-c">int a = 62, b = 30, c = 49;
+
+int d, e = 50, f;
+
+int g = 32, h, i;
+</code></pre>
+<h2 id="uso"><a class="header" href="#uso">Uso</a></h2>
+<p>Uma variável substituir um valor em vários casos, como uma chamada de função. As
+duas funções a seguir retornam o mesmo resultado, porém a primeira faz o uso de
+uma variável <code>n</code>:</p>
+<pre><code class="language-c">int foo(void)
+{
+    int n = 13;
+
+    return log(n);
+}
+
+int bar(void)
+{
+    return log(13);
+}
+</code></pre>
+<p>Variáveis, assim como o nome sugere, podem ter seus valores alterados durante a
+execução do código. A função a seguir retorna o valor <code>5</code>, e não <code>99</code>:</p>
+<pre><code class="language-c">int foo(void)
+{
+  int n = 99;
+
+  n = 5;
+
+  return n;
+}
+</code></pre>
+<h2 id="escopo"><a class="header" href="#escopo">Escopo</a></h2>
+<p>Todos os identificadores, como nomes de variáveis e funções, possuem um escopo
+que determina onde podem ser acessados.</p>
+<h3 id="escopo-de-bloco"><a class="header" href="#escopo-de-bloco">Escopo de Bloco</a></h3>
+<p>Os parâmetros de uma função podem ser acessados apenas em seu corpo, isso
+significa que <code>n</code> pode ser acessado em <code>foo</code> mas não em <code>bar</code>:</p>
+<pre><code class="language-c">int foo(int n)
+{
+    return n; // Okay
+}
+
+int bar(void)
+{
+    return n; // Erro: n não existe nesse contexto
+}
+</code></pre>
+<p>Isso se chama escopo de bloco, ou seja, o identificador é acessível dentro do
+bloco (<code>{}</code>}) a que pertence. No caso da seguinte variável <code>n</code>, o escopo é o
+mesmo que seria como parâmetro:</p>
+<pre><code class="language-c">int foo(void)
+{
+    int n;
+
+    return n; // Okay
+}
+
+int bar(void)
+{
+    return n; // Erro: n não existe nesse contexto
+}
+</code></pre>
+<p>Um identificador também não pode ser definido duas vezes no mesmo bloco, mas
+blocos podem ser aninhados:</p>
+<pre><code class="language-c">int foo(void)
+{
+    int n;
+
+    int n; // Erro: n já foi definido nesse bloco
+}
+
+int bar(void)
+{
+    int n;
+
+    {
+        int n; // Okay: Esse n está contido apenas nesse bloco
+    }
+}
+</code></pre>
+<p>Vale lembrar, também, que mesmo sendo o mesmo identificador, <code>n</code> representa uma
+entidade diferente em cada bloco que é redefinido:</p>
+<pre><code class="language-c">int foo(void)
+{
+    int n = 5;
+
+    {
+        int n = 10;
+
+        return n; // Isso retorna 10 e não 5, pois a redefinição de n torna o
+                  // n anterior inacessível
+    }
+
+    return n; // Isso retorna 5 pois aqui o segundo n sai de escopo e o primeiro
+              // volta a estar acessível
+}
+</code></pre>
+<p>Caso um identificador não seja redefinido em um bloco aninhado, sua definição
+anterior será acessada:</p>
+<pre><code class="language-c">int foo(void)
+{
+    int n = 5;
+
+    {
+        return n; // Isso retorna 5
+    }
+}
+</code></pre>
+<h3 id="escopo-de-arquivo"><a class="header" href="#escopo-de-arquivo">Escopo de Arquivo</a></h3>
+<p>Uma variável declarada fora de um bloco possui escopo de arquivo—pode ser
+acessada em qualquer lugar do arquivo após sua declaração:</p>
+<pre><code class="language-c">int n = 5;
+
+int foo(void)
+{
+    return n; // Retorna 5
+}
+
+int bar(void)
+{
+    return n; // Retorna 5
+}
+</code></pre>
+<p>Diferente de variáveis com escopo de bloco, variáveis com escopo de arquivo são
+inicializadas com um valor definido de acordo com seu tipo. Se o inicializador
+fosse removido do código acima <code>n</code> armazenaria <code>0</code>, enquanto se <code>n</code> tivesse
+escopo de bloco não haveria nenhuma garantia de seu valor.</p>
+<h2 id="referências-2"><a class="header" href="#referências-2">Referências</a></h2>
+<ul>
+<li>Padrão C18 (<a href="https://www.iso.org/standard/74528.html">ISO/IEC 9899:2018</a>):
+<ul>
+<li>6.2.1 Scopes of identifiers</li>
+<li>6.2.5 Types</li>
+<li>6.7 Declarations</li>
+<li>6.7.9 Initialization</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tipos-fundamentais-básicos"><a class="header" href="#tipos-fundamentais-básicos">Tipos Fundamentais Básicos</a></h1>
+<p>Anteriormente vimos que funções, parâmetros e variáveis podem representar
+diferentes tipos de dados. Alguns tipos já estão embutidos como palavras-chave
+na linguagem, e serão chamados de <strong>tipos fundamentais</strong>. Esse grupo inclui os
+tipos inteiros e os tipos flutuantes, que podem ser vistos abaixo.</p>
+<h2 id="tipos-inteiros"><a class="header" href="#tipos-inteiros">Tipos Inteiros</a></h2>
+<h3 id="tipo-int"><a class="header" href="#tipo-int">Tipo <code>int</code></a></h3>
+<p>Representa um número inteiro, como <code>-30</code> ou <code>529</code>. O menor e maior número
+representável em um <code>int</code> não está definido no padrão C, mas um <code>int</code>
+representará, no mínimo, qualquer número inteiro no intervalo
+[<code>-32767</code>,<code>32767</code>].</p>
+<h3 id="tipo-char"><a class="header" href="#tipo-char">Tipo <code>char</code></a></h3>
+<p>Representa um caractere, como <code>' '</code> (espaço em branco), <code>s</code> (letra S minúscula)
+ou <code>?</code> (ponto de interrogação). Os caracteres em C devem estar dentro de aspas
+simples; <code>&quot;a&quot;</code> não é um caractere, mas <code>'a'</code> é.</p>
+<pre><code class="language-c">char bar = 'a'; // Okay
+
+char foo = &quot;a&quot;; // Erro
+</code></pre>
+<p>Alguns caracteres não podem ser simplesmente digitados, portanto são
+representados utilizando <strong>sequências de escape</strong>, nesse caso uma barra
+invertida <code>\</code> seguida de um caractere. Na tabela abaixo estão algumas sequências
+de escape.</p>
+<table><thead><tr><th style="text-align: center">Sequência</th><th style="text-align: left">Descrição</th></tr></thead><tbody>
+<tr><td style="text-align: center"><code>\a</code></td><td style="text-align: left">Produz um alerta audível ou visual</td></tr>
+<tr><td style="text-align: center"><code>\n</code></td><td style="text-align: left">Produz uma quebra de linha</td></tr>
+<tr><td style="text-align: center"><code>\\'</code></td><td style="text-align: left">Produz uma aspa simples</td></tr>
+</tbody></table>
+<p>Tentar armazenar uma aspa simples em um <code>char</code> pode ser complicado, pois em
+<code>char ch = ''';</code> o compilador procura um caractere contido entre o primeiro par
+de aspas, porém não há nada dentro. Nesse caso devemos utilizar a sequência de
+escape <code>\'</code>: <code>char ch = '\'';</code>.</p>
+<pre><code class="language-c">char ch = '''; // Erro
+
+char ch = '\''; // Okay
+</code></pre>
+<p>Valores <code>char</code> são internamente representados por valores inteiros, e o valor de
+cada caractere depende do sistema. Muitos sistemas utilizam o conjunto de
+caracteres ASCII, parcialmente mostrado na tabela abaixo.</p>
+<table><thead><tr><th style="text-align: right">Valor</th><th style="text-align: left">Caractere</th><th style="text-align: right">Valor</th><th style="text-align: left">Caractere</th><th style="text-align: right">Valor</th><th style="text-align: left">Caractere</th></tr></thead><tbody>
+<tr><td style="text-align: right"><code>32</code></td><td style="text-align: left">(espaço)</td><td style="text-align: right"><code>65</code></td><td style="text-align: left">A</td><td style="text-align: right"><code>97</code></td><td style="text-align: left">a</td></tr>
+<tr><td style="text-align: right"><code>48</code></td><td style="text-align: left">0</td><td style="text-align: right"><code>66</code></td><td style="text-align: left">B</td><td style="text-align: right"><code>98</code></td><td style="text-align: left">b</td></tr>
+<tr><td style="text-align: right"><code>49</code></td><td style="text-align: left">1</td><td style="text-align: right"><code>67</code></td><td style="text-align: left">C</td><td style="text-align: right"><code>99</code></td><td style="text-align: left">c</td></tr>
+<tr><td style="text-align: right"><code>50</code></td><td style="text-align: left">2</td><td style="text-align: right"><code>68</code></td><td style="text-align: left">D</td><td style="text-align: right"><code>100</code></td><td style="text-align: left">d</td></tr>
+<tr><td style="text-align: right"><code>51</code></td><td style="text-align: left">3</td><td style="text-align: right"><code>69</code></td><td style="text-align: left">E</td><td style="text-align: right"><code>101</code></td><td style="text-align: left">e</td></tr>
+<tr><td style="text-align: right"><code>52</code></td><td style="text-align: left">4</td><td style="text-align: right"><code>70</code></td><td style="text-align: left">F</td><td style="text-align: right"><code>102</code></td><td style="text-align: left">f</td></tr>
+<tr><td style="text-align: right"><code>53</code></td><td style="text-align: left">5</td><td style="text-align: right"><code>71</code></td><td style="text-align: left">G</td><td style="text-align: right"><code>103</code></td><td style="text-align: left">g</td></tr>
+<tr><td style="text-align: right"><code>54</code></td><td style="text-align: left">6</td><td style="text-align: right"><code>72</code></td><td style="text-align: left">H</td><td style="text-align: right"><code>104</code></td><td style="text-align: left">h</td></tr>
+<tr><td style="text-align: right"><code>55</code></td><td style="text-align: left">7</td><td style="text-align: right"><code>73</code></td><td style="text-align: left">I</td><td style="text-align: right"><code>105</code></td><td style="text-align: left">i</td></tr>
+<tr><td style="text-align: right"><code>56</code></td><td style="text-align: left">8</td><td style="text-align: right"><code>74</code></td><td style="text-align: left">J</td><td style="text-align: right"><code>106</code></td><td style="text-align: left">j</td></tr>
+<tr><td style="text-align: right"><code>57</code></td><td style="text-align: left">9</td><td style="text-align: right"><code>75</code></td><td style="text-align: left">K</td><td style="text-align: right"><code>107</code></td><td style="text-align: left">k</td></tr>
+</tbody></table>
+<p>Quando um <code>char</code> é convertido para um <code>int</code>, o resultado é o valor inteiro que
+representa o caractere no conjunto de caracteres utilizado. Quando um <code>int</code> é
+convertido para <code>char</code>, o resultado é o caractere que representa o valor inteiro
+no conjunto de caracteres utilizado.</p>
+<pre><code class="language-c">char ch = 65; // ch é igual a 'A' se o conjunto de caracteres for ASCII
+
+int i = 'A'; // i é igual a 65 se o conjunto de caracteres for ASCII
+</code></pre>
+<h3 id="tipo-_bool"><a class="header" href="#tipo-_bool">Tipo <code>_Bool</code></a></h3>
+<p>É equivalente ao <code>bool</code> de outras linguagens de programação, mas possui outro
+nome pois esse tipo foi adicionado no padrão C99 e usar o nome <code>bool</code> quebraria
+vários programas antigos.</p>
+<p>Serve para armazenar um de dois valores: verdadeiro ou falso. Aqui está um
+exemplo de duas variáveis <code>_Bool</code>, com valores que indicam, respectivamente,
+verdade e falsidade:</p>
+<pre><code class="language-c">_Bool verdadeiro = 1;
+_Bool falso = 0;
+</code></pre>
+<p>Utilizar a palavra-chave <code>_Bool</code> pode não ser intuitivo. Por conveniência, é
+recomendado incluir o arquivo <code>&lt;stdbool.h&gt;</code>, que faz com que <code>bool</code> se referia a
+<code>_Bool</code> e permite utilizar as palavras <code>true</code> (verdadeiro) e <code>false</code> (falso).
+Veja o mesmo código que acima porém utilizando <code>&lt;stdbool.h&gt;</code>:</p>
+<pre><code class="language-c">bool verdadeiro = true;
+bool falso = false;
+</code></pre>
+<p>Sempre que <code>bool</code>, <code>true</code> ou <code>false</code> forem utilizados, considere que estamos
+usando a diretiva <code>#include &lt;stdbool.h&gt;</code> mesmo que em alguns exemplos ela possa
+estar omitida por conveniência. É útil lembrar, também, que <code>true</code> se refere ao
+valor <code>1</code> e <code>false</code> ao valor <code>0</code>.</p>
+<p>Um exemplo de uso do <code>bool</code> são predicados—termo comum para funções que retornam
+verdadeiro ou falso. Suponhamos que a função <code>Paridade</code> seja um predicado que
+verifica a paridade de um número, retornando <code>true</code> caso ele seja par e <code>false</code>
+caso contrário.</p>
+<pre><code class="language-c">Paridade(1); // false
+Paridade(3); // false
+Paridade(5); // false
+
+Paridade(2); // true
+Paridade(4); // true
+Paridade(6); // true
+</code></pre>
+<p>Exemplos de predicados existentes na biblioteca padrão são algumas funções do
+<code>&lt;ctype.h&gt;</code>, como <code>isalpha</code> que retorna <code>true</code> caso a função receba um caractere
+alfabético, como uma letra (o comportamento pode variar conforme a localidade).</p>
+<pre><code class="language-c">isalpha('a'); // true
+isalpha('x'); // true
+isalpha('L'); // true
+
+isalpha('1'); // false
+isalpha(','); // false
+isalpha('?'); // false
+</code></pre>
+<h2 id="tipos-flutuantes"><a class="header" href="#tipos-flutuantes">Tipos Flutuantes</a></h2>
+<h3 id="tipo-double"><a class="header" href="#tipo-double">Tipo <code>double</code></a></h3>
+<p>Representa um número real, como <code>-30.52</code> ou <code>529.0023</code>. Ao ser convertido para
+um inteiro a parte fracionária é descartada, portanto <code>15.89</code> se torna <code>15</code>. Se
+o valor for alto/baixo demais para ser representado por um <code>int</code>, o
+comportamento é indefinido.</p>
+<pre><code class="language-c">int i = 15.89; // i é igual a 15
+</code></pre>
+<h2 id="referências-3"><a class="header" href="#referências-3">Referências</a></h2>
+<ul>
+<li>Padrão C18 (<a href="https://www.iso.org/standard/74528.html">ISO/IEC 9899:2018</a>):
+<ul>
+<li>5.2 Environmental considerations:<!-- Sequências de escape para caracteres não gráficos -->
+<ul>
+<li>5.2.2 Character display semantics</li>
+</ul>
+<!-- O tamanho de um int -->
+<ul>
+<li>5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;</li>
+</ul>
+<!-- Sequência de escape \' -->
+</li>
+<li>6.4.4.4 Character constants</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="tabelas-de-tipos-fundamentais"><a class="header" href="#tabelas-de-tipos-fundamentais">Tabelas de Tipos Fundamentais</a></h1>
+<h2 id="tipos-inteiros-1"><a class="header" href="#tipos-inteiros-1">Tipos Inteiros</a></h2>
+<table><thead><tr><th>Especificadores (palavras-chave, a ordem não importa)</th><th style="text-align: center">Tipo equivalente</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>_Bool</code></td><td style="text-align: center"><code>_Bool</code></td><td>Tipo booleano, armazena <code>1</code> ou <code>0</code></td></tr>
+<tr><td><code>signed char</code></td><td style="text-align: center"><code>signed char</code></td><td>Caractere armazenado como inteiro com sinal</td></tr>
+<tr><td><code>unsigned char</code></td><td style="text-align: center"><code>unsigned char</code></td><td>Caractere armazenado como inteiro sem sinal</td></tr>
+<tr><td><code>char</code></td><td style="text-align: center"><code>char</code></td><td>Se comporta igual <code>signed char</code> ou <code>unsigned char</code> dependendo do sistema</td></tr>
+<tr><td><code>short</code> ou<br><code>short int</code> ou<br><code>signed short</code> ou<br><code>signed short int</code></td><td style="text-align: center"><code>short int</code></td><td>Tipo inteiro, menor ou igual a <code>int</code></td></tr>
+<tr><td><code>unsigned short</code> ou<br><code>unsigned short int</code></td><td style="text-align: center"><code>unsigned short int</code></td><td>Versão sem sinal de <code>short</code></td></tr>
+<tr><td><code>int</code> ou<br><code>signed</code> ou<br><code>signed int</code></td><td style="text-align: center"><code>int</code></td><td>Tipo inteiro, menor ou igual a <code>long</code></td></tr>
+<tr><td><code>unsigned</code> ou<br><code>unsigned int</code></td><td style="text-align: center"><code>unsigned int</code></td><td>Versão sem sinal de <code>int</code></td></tr>
+<tr><td><code>long</code> ou<br><code>long int</code> ou<br><code>signed long</code> ou<br><code>signed long int</code></td><td style="text-align: center"><code>long int</code></td><td>Tipo inteiro, menor ou igual a <code>long long</code></td></tr>
+<tr><td><code>unsigned long</code> ou<br><code>unsigned long int</code></td><td style="text-align: center"><code>unsigned long int</code></td><td>Versão sem sinal de <code>long</code></td></tr>
+<tr><td><code>long long</code> ou<br><code>long long int</code> ou<br><code>signed long long</code> ou<br><code>signed long long int</code></td><td style="text-align: center"><code>long long int</code></td><td>Maior tipo inteiro exigido pelo padrão C</td></tr>
+<tr><td><code>unsigned long long</code> ou<br><code>unsigned long long int</code></td><td style="text-align: center"><code>unsigned long int</code></td><td>Versão sem sinal de <code>long long</code></td></tr>
+</tbody></table>
+<h2 id="tipos-flutuantes-1"><a class="header" href="#tipos-flutuantes-1">Tipos flutuantes</a></h2>
+<table><thead><tr><th>Especificadores (palavras-chave, a ordem não importa)</th><th>Descrição</th></tr></thead><tbody>
+<tr><td><code>float</code></td><td>Representa números reais</td></tr>
+<tr><td><code>double</code></td><td>Representa números reais com precisão maior ou igual a <code>float</code></td></tr>
+<tr><td><code>long double</code></td><td>Representa números reais com precisão maior ou igual a <code>double</code></td></tr>
+</tbody></table>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="saída-básica"><a class="header" href="#saída-básica">Saída Básica</a></h1>
+<p>As funções de saída do C permitem ao programa interagir com o usuário exibindo
+informações. Algumas funções para isso são <code>puts</code>, <code>putchar</code> e <code>printf</code>—todas
+incluídas em <code>&lt;stdio.h&gt;</code>.</p>
+<h2 id="função-puts"><a class="header" href="#função-puts">Função <code>puts</code></a></h2>
+<p>A função <code>puts</code> recebe uma string (sequência de caracteres) e a exibe. Podemos
+exibir a string <code>&quot;Olá, Mundo!&quot;</code> simplesmente utilizando-a como argumento de
+<code>puts</code>:</p>
+<pre><code class="language-c">puts(&quot;Olá, Mundo!&quot;); // Saída: Olá, Mundo!
+</code></pre>
+<p>Note o uso de aspas duplas. Diferente de um <code>char</code>, uma string não deve ser
+delimitada por aspas simples.</p>
+<p>A função <code>puts</code> automaticamente insere uma quebra de linha (<code>\n</code>) na saída após
+a string fornecida, portanto a próxima operação de saída ocorrerá na linha
+seguinte:</p>
+<pre><code class="language-c">puts(&quot;Essa é a 1ª linha&quot;);
+puts(&quot;Essa é a 2ª linha&quot;);
+puts(&quot;Essa é a 3ª linha&quot;);
+/* Saída:
+ * Essa é a 1ª linha
+ * Essa é a 2ª linha
+ * Essa é a 3ª linha
+ */
+</code></pre>
+<p>Várias chamadas seguidas de <code>puts</code> com literais string (strings predefinidas,
+entre aspas duplas) podem ser substituídas por apenas uma:</p>
+<pre><code class="language-c">puts(&quot;Essa é a 1ª linha\n&quot;
+     &quot;Essa é a 2ª linha\n&quot;
+     &quot;Essa é a 3ª linha&quot;);
+/* Saída:
+ * Essa é a 1ª linha
+ * Essa é a 2ª linha
+ * Essa é a 3ª linha
+ */
+</code></pre>
+<p>Note que as três strings passadas para <code>puts</code> não estão separadas por vírgula,
+portanto o compilador as mescla em uma só (processo que ocorre com literais
+string). O resultado final é o mesmo que ao utilizar a string
+<code>&quot;Essa é a 1ª linha\nEssa é 2ª linha\nEssa é a 3ª linha&quot;</code>, porém dividir as
+linhas torna o código mais compreensível. Utilize essa funcionalidade para uma
+melhor legibilidade de código.</p>
+<p>Tentar separar as três strings utilizando vírgulas resultará em um erro, pois
+serão consideradas três argumentos e a função <code>puts</code> deve receber apenas um:</p>
+<pre><code class="language-c">// Erro: Passando três argumentos para uma função que recebe apenas um
+puts(&quot;Essa é a 1ª linha\n&quot;,
+     &quot;Essa é a 2ª linha\n&quot;,
+     &quot;Essa é a 3ª linha&quot;);
+</code></pre>
+<p>Se os caracteres <code>é</code> e/ou <code>ª</code> não forem exibidos corretamente, seu sistema
+operacional pode estar simplesmente utilizando um conjunto de caracteres que não
+os suporta.</p>
+<h2 id="função-putchar"><a class="header" href="#função-putchar">Função <code>putchar</code></a></h2>
+<p>A função <code>putchar</code> é similar à função <code>puts</code>, porém exibe apenas um caractere e
+não insere uma quebra de linha. Seu uso é simples, basta fornecer um caractere:</p>
+<pre><code class="language-c">putchar('O');
+putchar('i');
+putchar('!');
+// Saída: Oi!
+</code></pre>
+<p>Não esqueça que funções podem receber variáveis, não apenas valores manualmente
+especificados. Imaginando que <code>v</code> é uma variável do tipo <code>char</code>, <code>putchar(v);</code>
+exibirá seu valor.</p>
+<p>Aqui está um exemplo de um programa simples, com uma função (<code>ExibirDuo</code>) que
+recebe dois caracteres e os exibe com uma exclamação no final:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+void ExibirDuo(char primeiro, char segundo)
+{
+    putchar(primeiro);
+    putchar(segundo);
+    putchar('!');
+}
+
+int main(void)
+{
+    ExibirDuo('O', 'i');
+    // Saída: Oi!
+
+    return 0;
+}
+</code></pre>
+<p>Não se engane, a função <code>ExibirDuo</code> é apenas um exemplo e não deve ser muito
+útil em um projeto sério.</p>
+<h2 id="função-printf"><a class="header" href="#função-printf">Função <code>printf</code></a></h2>
+<p>A função <code>printf</code>, diferente de <code>puts</code>, tem a capacidade de formatar os dados
+antes de exibi-los. O primeiro parâmetro da função é uma string de formato, que
+informa à função a série de operações de saída a serem realizadas.</p>
+<p>A string <code>&quot;Hello, World!&quot;</code>, ao ser usada como string de formato, faz com que
+<code>printf</code> simplesmente a exiba. Para realizarmos operações de saída mais
+complexas, utilizamos especificações de conversão, como <code>%d</code>. Vamos dissecá-la:</p>
+<ol>
+<li><strong>%</strong>: Introduz uma especificação de conversão.</li>
+<li><strong>d</strong>: Um <em>especificador</em> de conversão. Indica um valor do tipo <code>int</code> em
+base 10.</li>
+</ol>
+<p>Ao exibir, <code>printf</code> substitui as especificações de conversão pelos valores dos
+argumentos recebidos. Por exemplo:</p>
+<pre><code class="language-c">// %d é substituído pelo argumento 5
+// Saída: O valor de 5 é 5
+printf(&quot;O valor de 5 é %d&quot;, 5);
+</code></pre>
+<p>Quando há várias especificações de conversão, a enésima especificação é
+substituída pelo enésimo argumento após a string de formato:</p>
+<pre><code class="language-c">// O 1º %d é substituído pelo 1º argumento após a string de formato (5)
+// O 2º %d é substituído pelo 2º argumento após a string de formato (9)
+// Saída: O valor de 5 é 5 e o valor de 9 é 9
+printf(&quot;O valor de 5 é %d e o valor de 9 é %d&quot;, 5, 9);
+</code></pre>
+<p>Para os diversos tipos há diversos especificadores de conversão. Vejamos alguns
+deles:</p>
+<table><thead><tr><th style="text-align: center">Especificador</th><th>Significado</th></tr></thead><tbody>
+<tr><td style="text-align: center">c</td><td>Um <code>char</code>, exibido como um caractere</td></tr>
+<tr><td style="text-align: center">u</td><td>Um <code>unsigned int</code>, exibido em base 10</td></tr>
+<tr><td style="text-align: center">f</td><td>Um <code>double</code>, exibido com 6 casas decimais por padrão</td></tr>
+<tr><td style="text-align: center">s</td><td>Uma string</td></tr>
+</tbody></table>
+<p>E alguns exemplos de uso:</p>
+<pre><code class="language-c">// %s é substituído por &quot;falar da&quot;.
+// Saída: Você já ouviu falar da tragédia de Darth Plagueis, o sábio?
+printf(&quot;Você já ouviu %s tragédia de Darth Plagueis, o sábio?&quot;, &quot;falar da&quot;);
+
+// %f é substituído pelo valor da expressão acos(-1), função de &lt;math.h&gt;.
+// Isso exibirá um valor aproximado de π com 6 casas decimais, e pode variar
+//  conforme o seu sistema. Teste você mesmo.
+printf(&quot;O valor de pi é %f&quot;, acos(-1));
+
+// %c é substituído pelo caractere &quot;+&quot;.
+// Saída: 1 + 1
+printf(&quot;1 %c 1&quot;, '+');
+</code></pre>
+<p>Diferente do que acontece com <code>puts</code>, o repetido uso de <code>printf</code> acima irá
+exibir toda a saída em uma linha só. Para iniciar uma nova linha utilize a
+sequência de escape <code>\n</code> no final da string de formato anterior ou no início da
+string de formato atual, por exemplo:</p>
+<pre><code class="language-c">printf(&quot;Você já ouviu falar da tragédia de Darth Plagueis, o sábio?\n&quot;);
+printf(&quot;Não&quot;);
+
+// Alternativamente:
+printf(&quot;Você já ouviu falar da tragédia de Darth Plagueis, o sábio?&quot;);
+printf(&quot;\nNão&quot;);
+</code></pre>
+<p>Nos casos acima seria melhor utilizar <code>printf</code> apenas uma vez, mas serve como
+exemplo. Mesmo assim, aqui está uma forma de exibir com um <code>printf</code>:</p>
+<pre><code class="language-c">printf(&quot;Você já ouviu falar da tragédia de Darth Plagueis, o sábio?\n&quot;
+       &quot;Não&quot;);
+
+// Alternativamente:
+printf(&quot;Você já ouviu falar da tragédia de Darth Plagueis, o sábio?\nNão&quot;);
+</code></pre>
+<p>Na primeira opção acima as duas strings se tornam um argumento só, efetivamente
+causando o mesmo resultado que a segunda opção. Esse processo foi explicado em
+<a href="basico/saida.html#fun%C3%A7%C3%A3o-puts">Função puts</a>.</p>
+<p>O especificador de conversão <code>f</code> irá funcionar até quando o argumento
+correspondente for <code>float</code> e o especificador <code>d</code> irá funcionar até quando o
+argumento correspondente for <code>short</code>. A razão disso é relativamente complexa,
+portanto só é explicada em páginas mais avançadas.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="entrada-básica"><a class="header" href="#entrada-básica">Entrada Básica</a></h1>
+<p>As funções de entrada do C permitem ao programa interagir com o usuário lendo
+informações. A função principal que usaremos pra isso é a função <code>scanf</code> de
+<code>&lt;stdio.h&gt;</code>.</p>
+<h2 id="função-scanf"><a class="header" href="#função-scanf">Função <code>scanf</code></a></h2>
+<p>Assim como <code>printf</code>, a função <code>scanf</code> recebe uma string de formato; a diferença
+é que nesse caso a string determina não o que será exibido, mas o que será lido.</p>
+<p>Os modificadores de comprimento e especificadores de conversão na string de
+formato determinam o tipo do valor que será lido. Vejamos algumas especificações
+(todas devem iniciar com <code>%</code>):</p>
+<table><thead><tr><th style="text-align: right">Modificador</th><th style="text-align: left">Especificador</th><th>Significado</th></tr></thead><tbody>
+<tr><td style="text-align: right"></td><td style="text-align: left">c</td><td>Um caractere, será armazenado em um <code>char</code></td></tr>
+<tr><td style="text-align: right"></td><td style="text-align: left">d</td><td>Um número inteiro, será armazenado em um <code>int</code></td></tr>
+<tr><td style="text-align: right">l</td><td style="text-align: left">d</td><td>Um número inteiro, será armazenado em um <code>long int</code></td></tr>
+<tr><td style="text-align: right">ll</td><td style="text-align: left">d</td><td>Um número inteiro, será armazenado em um <code>long long int</code></td></tr>
+<tr><td style="text-align: right"></td><td style="text-align: left">f</td><td>Um número real, será armazenado em um <code>float</code></td></tr>
+<tr><td style="text-align: right">l</td><td style="text-align: left">f</td><td>Um número real, será armazenado em um <code>double</code></td></tr>
+<tr><td style="text-align: right">L</td><td style="text-align: left">f</td><td>Um número real, será armazenado em um <code>long double</code></td></tr>
+</tbody></table>
+<p>Diferente de <code>printf</code>, perceba que <code>scanf</code> utiliza a especificação <code>%f</code> para
+<code>float</code> e <code>%lf</code> para <code>double</code>. Você não deve utilizar <code>%f</code> no lugar de <code>%lf</code> ou
+<code>%d</code> lugar de <code>%c</code> e vice-versa.</p>
+<p>Para armazenar um valor lido com uma especificação de conversão, precisamos
+especificar seu alvo (uma localização na memória). No nosso caso, utilizaremos o
+operador <code>&amp;</code> (que será explicado depois) para obter o endereço de uma variável
+na memória:</p>
+<pre><code class="language-c">int n;
+scanf(&quot;%d&quot;, &amp;n);
+</code></pre>
+<p>A chamada de função acima lê um número inteiro da entrada e armazena seu valor
+em <code>n</code> por meio de seu endereço na memória. A especificação <code>%d</code> descarta
+quaisquer caracteres white-space da entrada até encontrar outro tipo de
+caractere, portanto esse <code>scanf</code> funciona com qualquer número de caracteres
+white-space precedendo o número na entrada.</p>
+<p>Antes de continuar é importante definir o que é um caractere white-space. Essa
+expressão se refere a qualquer caractere da lista abaixo.</p>
+<ul>
+<li><code>' '</code> (espaço)</li>
+<li><code>'\t'</code> (tabulação horizontal)</li>
+<li><code>'\v'</code> (tabulação vertical)</li>
+<li><code>'\n'</code> (quebra de linha)</li>
+<li><code>'\f'</code> (quebra de página)</li>
+</ul>
+<p>Retomando nosso foco, já podemos fazer um simples programa com entrada e saída:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf(&quot;Digite um número inteiro: &quot;);
+    int num;
+    scanf(&quot;%d&quot;, &amp;num);
+
+    printf(&quot;O número digitado foi %d.\n&quot;, num);
+
+    return 0;
+}
+</code></pre>
+<p>Execute o código acima e tente fazê-lo produzir um resultado incorreto. A
+leitura do número pode dar errado de várias formas, incluindo:</p>
+<ul>
+<li>A entrada não é um número. Nesse caso o <code>scanf</code> não modifica a entrada (exceto
+por descartar caracteres white-space iniciais) e ela pode ser lida
+futuramente.</li>
+<li>O número digitado pode ser grande demais para ser armazenado em um <code>int</code>.
+Nesse caso o comportamento do programa é indefinido.</li>
+<li>O número digitado pode conter casas decimais, e nesse caso o separador decimal
+e todos dígitos seguintes serão ignorados.</li>
+</ul>
+<p>Com a especificação <code>%d</code> a sequência de dígitos será lida até um caractere de
+outro tipo (ex. uma letra) ser encontrado. Com a entrada <code>163p90</code>, <code>scanf</code>
+associará <code>163</code> ao <code>%d</code> e <code>p90</code> continuará na entrada para ser lido futuramente.</p>
+<p>Podemos decompor a entrada <code>163p90</code> em duas variáveis <code>int</code> e uma <code>char</code> da
+seguinte forma:</p>
+<pre><code class="language-c">int n1,
+    n2;
+
+char ch;
+
+scanf(&quot;%d%c%d&quot;, &amp;n1, &amp;ch, &amp;n2);
+
+printf(&quot;n1: %d\n&quot;
+       &quot;n2: %d\n&quot;
+       &quot;ch: %c\n&quot;, n1, n2, ch);
+</code></pre>
+<p>O <code>scanf</code> acima associa <code>163</code> ao primeiro <code>%d</code>, armazena o valor em <code>n1</code> e a
+sequência <code>p90</code> continua na entrada. O próximo caractere (<code>'p'</code> nesse caso) se
+associa ao <code>%c</code> e é armazenado em <code>ch</code>. O último <code>%d</code> recebe o inteiro <code>90</code> que
+é armazenado em <code>n2</code>. Depois, os valores são exibidos com <code>printf</code>.</p>
+<p>Quando um caractere da string de formato não faz parte de uma especificação de
+conversão, o <code>scanf</code> verificará se esse caractere é igual ao próximo caractere
+da entrada. Se sim, o caractere da entrada é descartado e prosseguimos com a
+string de formato, caso contrário a execução do <code>scanf</code> para.</p>
+<pre><code class="language-c">printf(&quot;Quantos anos você tem? &quot;);
+int idade;
+scanf(&quot;Eu tenho %d&quot;, &amp;idade);
+</code></pre>
+<p>O <code>scanf</code> acima só chega ao <code>%d</code> se todos caracteres anteriores forem
+correspondentes na entrada. Se a entrada for <code>Eu tenho 5</code>, o valor de <code>idade</code>
+será 5, mas a entrada <code>Eu tinha 5</code> não armazena nada em <code>idade</code> e seu valor é
+indeterminado. Um espaço na string de formato se encaixa em qualquer número
+(inclusive zero) de caracteres white-space na entrada, então a entrada
+<code>Eutenho5</code> também funciona corretamente.</p>
+<p>A string de formato <code>&quot;Eu tenho%d&quot;</code> também funciona corretamente pois, como dito
+no início, a especificação <code>%d</code> automaticamente pula qualquer espaço em branco
+até encontrar um caractere non-white-space (caracteres não white-space, como
+letras e dígitos).</p>
+<p>Não se esqueça que após digitar um número e ele ser lido, o <code>scanf</code> não descarta
+o caractere de quebra de linha (<code>\n</code>) do final da linha de entrada. Isso pode
+fazer com que esse caractere se associe a uma futura especificação <code>%c</code> e isso
+pode ser indesejado. Para descartar esse caractere de uma forma simples, utilize
+um espaço antes da especificação <code>%c</code> e isso pulará a quebra de linha.</p>
+<p>Aqui está um código em que a quebra de linha na entrada pode ser prejudicial:</p>
+<pre><code class="language-c">int num;
+scanf(&quot;%d&quot;, &amp;num);
+
+char ch;
+scanf(&quot;%c&quot;, &amp;ch); // Isso lerá uma quebra de linha se o usuário tiver digitado
+                  //  um número e pressionado ENTER.
+
+printf(&quot;O caractere lido é '%c'\n&quot;, ch);
+</code></pre>
+<p>E aqui está uma versão que se previne disso:</p>
+<pre><code class="language-c">int num;
+scanf(&quot;%d&quot;, &amp;num);
+
+char ch;
+//     ↓
+scanf(&quot; %c&quot;, &amp;ch); // O usuário pode inserir espaços e pressionar ENTER o quanto
+                   // quiser. Apenas um caractere non-white-space se associará.
+
+printf(&quot;O caractere lido é '%c'\n&quot;, ch);
+</code></pre>
+<h2 id="referências-4"><a class="header" href="#referências-4">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310<!-- Sequências de escape -->
+<ul>
+<li>5.2.2 Character display semantics</li>
+</ul>
+<!-- Caracteres white-space -->
+<ul>
+<li>6.4 Lexical elements</li>
+</ul>
+<!-- Comportamento que se aplica à função scanf -->
+<ul>
+<li>7.21.6.2 The fscanf function</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operadores-aritméticos-básicos"><a class="header" href="#operadores-aritméticos-básicos">Operadores Aritméticos Básicos</a></h1>
+<p>Virtualmente toda manipulação de dados em um programa C é feita por operadores,
+que são tokens que indicam ações a serem realizadas com seus operandos (valores
+que a operação recebe).</p>
+<p>Na matemática, a soma é uma operação representada por <code>+</code> e se aplica a dois
+valores, i.e. uma operação binária. A aridade de uma função/operação é o número
+de operandos que ela recebe. Uma operação é unária quando tem aridade 1 e
+binária quando tem aridade 2.</p>
+<p>No C é possível separar os operadores em grupos de acordo com a aridade de cada
+um, e vamos fazer isso agora.</p>
+<h2 id="operadores-binários"><a class="header" href="#operadores-binários">Operadores Binários</a></h2>
+<p>Todos os operadores binários no C recebem um operando de cada lado, no formato
+<code>&lt;operando&gt; &lt;operador&gt; &lt;operando&gt;</code> (o número de espaços não importa, podendo ser
+até mesmo zero).</p>
+<h3 id="-binário"><a class="header" href="#-binário"><code>+</code> binário</a></h3>
+<p>O operador binário <code>+</code> funciona igual na matemática: o valor da operação é a
+soma dos dois operandos. <code>5 + 3</code>, por exemplo, é uma expressão de valor 8.</p>
+<p>Como exemplo, aqui está um programa que soma dois números que o usuário digitar:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int a, b;
+    printf(&quot;Digite dois números: &quot;);
+    scanf(&quot;%d%d&quot;, &amp;a, &amp;b); // &quot;%d %d&quot; pode ser mais legível
+    printf(&quot;%d\n&quot;, a + b);
+
+    return 0;
+}
+</code></pre>
+<h3 id="--binário"><a class="header" href="#--binário"><code>-</code> binário</a></h3>
+<p>O operador binário <code>-</code> funciona de forma parecida ao operador <code>+</code> binário, porém
+o valor resultante é o valor do operando à esquerda subtraído pelo valor do
+operando à direita. <code>5 - 3</code>, por exemplo, é uma expressão de valor 2.</p>
+<h3 id=""><a class="header" href="#"><code>*</code></a></h3>
+<p>O operador binário <code>*</code> realiza a multiplicação de seus operandos. O valor de
+<code>5 * 3</code> é 15.</p>
+<h3 id="-1"><a class="header" href="#-1"><code>/</code></a></h3>
+<p>O operador binário <code>/</code> realiza a divisão do valor do operando à esquerda pelo
+valor do operando à direita. O valor de <code>5 / 3</code> é 1. Como ambos operandos são
+inteiros o resultado é um inteiro (A parte fracionária é removida). Se algum dos
+operandos fosse real, e.g. <code>5 / 3.</code>, o resultado seria a dízima infinita
+1,666..., arredondada conforme seu sistema.</p>
+<h3 id="-2"><a class="header" href="#-2"><code>%</code></a></h3>
+<p>O operador binário <code>%</code> resulta no resto da divisão (inteira) do operando à
+esquerda pelo operando à direita. O valor de <code>5 % 3</code>, e.g., é 2, pois resultado
+da divisão inteira é 1 e o resto é 2.</p>
+<p>Mais alguns exemplos:</p>
+<table><thead><tr><th style="text-align: center">Operação</th><th style="text-align: center">Valor</th><th>Raciocínio</th></tr></thead><tbody>
+<tr><td style="text-align: center"><code>10 % 3</code></td><td style="text-align: center">1</td><td><code>10 / 3</code> é igual a 3, <code>3 * 3</code> é igual a 9, e <code>10 - 1</code> é 1</td></tr>
+<tr><td style="text-align: center"><code>10 % 2</code></td><td style="text-align: center">0</td><td><code>10 / 2</code> é igual a 5, <code>2 * 5</code> é igual a 10, e <code>10 - 10</code> é 0</td></tr>
+<tr><td style="text-align: center"><code>40 % 7</code></td><td style="text-align: center">5</td><td><code>40 / 7</code> é igual a 5, <code>7 * 5</code> é igual a 35 e <code>40 - 35</code> é 5</td></tr>
+<tr><td style="text-align: center"><code>-10 % 3</code></td><td style="text-align: center">-1</td><td><code>-10 / 3</code> é igual a -3, <code>3 * -3</code> é igual a -9 e <code>-10 -(-9)</code> é -1</td></tr>
+</tbody></table>
+<h2 id="operadores-unários"><a class="header" href="#operadores-unários">Operadores Unários</a></h2>
+<p>Todos os operadores unários ficam à esquerda do operando, no formato
+<code>&lt;operador&gt; &lt;operando&gt;</code> (o número de espaços geralmente não importa).</p>
+<h3 id="-unário"><a class="header" href="#-unário"><code>+</code> unário</a></h3>
+<p>O operador unário <code>+</code> é quase sempre um no-op uma operação que não faz nada.</p>
+<p>Apenas em alguns casos, o operador unário <code>+</code> irá converter seu operando para
+outro tipo. Esse processo é chamado promoção inteira, que será detalhado bem
+depois.</p>
+<p>Por enquanto, não se preocupe com esse operador, pois é raro encontrar um motivo
+legítimo para usá-lo.</p>
+<h3 id="--unário"><a class="header" href="#--unário"><code>-</code> unário</a></h3>
+<p>Diferente do <code>+</code> unário, esse operador raramente é um no-op. Ele inverte o sinal
+de seu operando, transformando 50 em -50, -25 em 25, etc.</p>
+<p>Ele pode ser no-op quando seu operando possui valor zero, mas em alguns sistemas
+é possível distinguir entre zero positivo e zero negativo. Não se preocupe muito
+com isso, pois o sinal do zero raramente altera o comportamento de um programa.</p>
+<p>Como exemplo de uso do <code>-</code> unário, aqui está um programa que inverte o número
+que o usuário digitar:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int num;
+
+    printf(&quot;Digite um número: &quot;);
+    scanf(&quot;%d&quot;, &amp;num);
+    printf(&quot;%d\n&quot;, -num);
+
+    return 0;
+}
+</code></pre>
+<h2 id="precedência"><a class="header" href="#precedência">Precedência</a></h2>
+<p>Assim como na matemática, aqui temos o conceito de precedência de operadores.
+Isso significa que alguns operadores são executados antes dos outros,
+independente da ordem de escrita em uma expressão.</p>
+<p>Os operadores <code>*</code> e <code>/</code> possuem maior precedência que os operadores binários <code>+</code>
+e <code>-</code>, portanto, a expressão <code>a + b / 2</code> é o mesmo que <code>a + (b / 2)</code>. As versões
+unárias de <code>+</code> e <code>-</code> possuem maior precedência que todos os operadores acima,
+portanto <code>a + b * -c</code> é o mesmo que <code>a + (b * (-c))</code>.</p>
+<p>Aqui estão mais alguns exemplos da precedência desses operadores:</p>
+<pre><code class="language-c">int   a = 1 + 2 * 3;   // a = 7
+int   b = 10 + 2 / 2;  // b = 11
+float c = 1 + 3.f / 2; // c = 2.5
+                       // Perceba o &quot;.f&quot; após o 3. Isso torna 3 um float
+                       //  para que a divisão produza um resultado real.
+</code></pre>
+<h2 id="referências-5"><a class="header" href="#referências-5">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:
+<ul>
+<li>6.5 Expressions:<!-- Operadores unários + e - -->
+<ul>
+<li>6.5.3.3 Unary arithmetic operators</li>
+</ul>
+<!-- Operadores binários *, / e % -->
+<ul>
+<li>6.5.5 Multiplicative operators</li>
+</ul>
+<!-- Operadores binários + e - -->
+<ul>
+<li>6.5.6 Additive operators</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operadores-de-incremento-e-decremento"><a class="header" href="#operadores-de-incremento-e-decremento">Operadores de Incremento e Decremento</a></h1>
+<p>Incrementar ou decrementar algum número por 1 é muito comum, portanto existem
+operadores para fazer isso de forma concisa.</p>
+<h2 id="operadores-de-prefixo--e---"><a class="header" href="#operadores-de-prefixo--e---">Operadores de Prefixo <code>++</code> e <code>--</code></a></h2>
+<p>Esses operadores unários ficam à esquerda de seus operandos e os modificam,
+incrementando (no caso de <code>++</code>) ou decrementando (no caso de <code>--</code>) o valor em 1.</p>
+<pre><code class="language-c">int n = 5;
+
+++n; // Incrementa n em 1
+printf(&quot;%d\n&quot;, n); // Exibe 6
+
+--n; // Decrementa n em 1
+printf(&quot;%d\n&quot;, n); // Exibe 5
+</code></pre>
+<p>Essas operações não só modificam o operando mas também possuem o valor dele.
+Isso significa que o valor de <code>++n</code> é <code>n + 1</code> e o valor de <code>--n</code> é <code>n - 1</code>.</p>
+<pre><code class="language-c">int n = 5;
+
+printf(&quot;%d\n&quot;, ++n); // Exibe 6
+printf(&quot;%d\n&quot;, --n); // Exibe 5
+</code></pre>
+<h2 id="operadores-de-sufixo--e---"><a class="header" href="#operadores-de-sufixo--e---">Operadores de Sufixo <code>++</code> e <code>--</code></a></h2>
+<p>Ao contrário dos operadores de prefixo, esses operadores ficam à direita do
+operando. O comportamento é similar: <code>++</code> incrementa e <code>--</code> decrementa, porém a
+alteração no valor não ocorre imediatamente. A alteração ocorre durante o
+próximo ponto de sequência. Pontos de sequência existem em vários lugares
+diferentes no C, mas considerar todo <code>;</code> um ponto de sequência é uma heurística
+razoável.</p>
+<pre><code class="language-c">int n = 5;
+
+printf(&quot;%d\n&quot;, n++); // Exibe 5
+printf(&quot;%d\n&quot;, n); // Exibe 6 (pois o ponto de sequência já passou)
+
+int o = n++;
+
+printf(&quot;%d\n&quot;, o); // Exibe 6
+printf(&quot;%d\n&quot;, n); // Exibe 7
+</code></pre>
+<h2 id="referências-6"><a class="header" href="#referências-6">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:<!-- Efeito de pontos de sequência na avaliação de expressões -->
+<ul>
+<li>5.1.2.3 Program execution</li>
+<li>6.5 Expressions:<!-- Operadores de sufixo ++ e -- -->
+<ul>
+<li>6.5.2.4 Postfix increment and decrement operators</li>
+</ul>
+<!-- Operadores de prefixo ++ e -- -->
+<ul>
+<li>6.5.3.1 Prefix increment and decrement operators</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operadores-lógicos-e-relacionais"><a class="header" href="#operadores-lógicos-e-relacionais">Operadores Lógicos e Relacionais</a></h1>
+<h2 id="operadores-relacionais"><a class="header" href="#operadores-relacionais">Operadores relacionais</a></h2>
+<p>Os operadores relacionais consistem na comparação de dois valores de várias
+formas diferentes.</p>
+<h3 id="operadores--e-"><a class="header" href="#operadores--e-">Operadores <code>==</code> e <code>!=</code></a></h3>
+<p>O operador <code>==</code> (&quot;igual a&quot;) produz o valor <code>1</code> (<code>true</code>) quando seus operandos
+tiverem valores equivalentes. A expressão <code>5 == 5</code> tem valor <code>1</code>, enquanto a
+expressão <code>5 == 6</code> tem valor <code>0</code> (<code>false</code>).</p>
+<p>O operador <code>!=</code> (&quot;não igual a&quot;) é o oposto de <code>==</code>. Quando ambos operandos
+possuem valores equivalentes a expressão tem valor <code>0</code>, caso contrário <code>1</code>.
+<code>7 != 9</code> resulta em <code>1</code>, e <code>7 != 7</code> resulta em <code>0</code>.</p>
+<p>Imaginemos a expressão <code>A &lt;op&gt; B</code>, com <code>&lt;op&gt;</code> sendo um dos operadores <code>==</code> ou
+<code>!=</code>.</p>
+<table><thead><tr><th style="text-align: right">A</th><th style="text-align: center">op</th><th style="text-align: left">B</th><th style="text-align: center">Resultado</th></tr></thead><tbody>
+<tr><td style="text-align: right">10</td><td style="text-align: center">==</td><td style="text-align: left">10</td><td style="text-align: center"><code>true</code></td></tr>
+<tr><td style="text-align: right">10</td><td style="text-align: center">!=</td><td style="text-align: left">10</td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right">10</td><td style="text-align: center">==</td><td style="text-align: left">25</td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right">10</td><td style="text-align: center">!=</td><td style="text-align: left">25</td><td style="text-align: center"><code>true</code></td></tr>
+</tbody></table>
+<p>Se <code>A == B</code> for <code>true</code>, <code>A != B</code> é necessariamente <code>false</code>.</p>
+<h3 id="operadores--e"><a class="header" href="#operadores--e">Operadores <code>&lt;</code> e <code>&gt;</code></a></h3>
+<p>O operador <code>&lt;</code> (&quot;menor que&quot;) produz o valor <code>1</code> quando o valor do operando à
+esquerda for <strong>menor</strong> que o do valor à direita, e o operador <code>&gt;</code> (&quot;maior que&quot;)
+produz o valor <code>1</code> quando o valor do operando à esquerda for <strong>maior</strong> que o
+operando à direita.</p>
+<p>Imaginemos a expressão <code>A &lt;op&gt; B</code>, com <code>&lt;op&gt;</code> sendo um dos operadores <code>&lt;</code> ou
+<code>&gt;</code>.</p>
+<table><thead><tr><th style="text-align: right">A</th><th style="text-align: center">op</th><th style="text-align: left">B</th><th style="text-align: center">Resultado</th></tr></thead><tbody>
+<tr><td style="text-align: right">0</td><td style="text-align: center">&lt;</td><td style="text-align: left">15</td><td style="text-align: center"><code>true</code></td></tr>
+<tr><td style="text-align: right">0</td><td style="text-align: center">&gt;</td><td style="text-align: left">15</td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right">15</td><td style="text-align: center">&lt;</td><td style="text-align: left">15</td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right">15</td><td style="text-align: center">&gt;</td><td style="text-align: left">15</td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right">15</td><td style="text-align: center">&lt;</td><td style="text-align: left">0</td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right">15</td><td style="text-align: center">&gt;</td><td style="text-align: left">0</td><td style="text-align: center"><code>true</code></td></tr>
+</tbody></table>
+<!-- Isso abaixo está correto, considerando os valores especiais de ponto flutuante? -->
+<p>Se ambos <code>A &gt; B</code> e <code>A &lt; B</code> forem <code>false</code>, então <code>A == B</code> é <code>true</code> e vice-versa.</p>
+<h3 id="operadores--e--1"><a class="header" href="#operadores--e--1">Operadores <code>&lt;=</code> e <code>&gt;=</code></a></h3>
+<p>Os operadores <code>&lt;=</code> (&quot;menor que ou igual a&quot;) e <code>&gt;=</code> (&quot;maior que ou igual a&quot;) são
+similares aos operadores acima.<br />
+<code>A &lt;= B</code> é <code>true</code> quando <code>A</code> for <strong>menor</strong> ou igual a <code>B</code>, e<br />
+<code>A &gt;= B</code> é <code>true</code> quando <code>A</code> for <strong>maior</strong> ou igual a <code>B</code>.</p>
+<p>É possível que tanto <code>A &lt;= B</code> quanto <code>A &gt;= B</code> sejam <code>true</code>, nesse caso <code>A</code> e <code>B</code>
+possuem valores equivalentes.</p>
+<h2 id="operadores-lógicos"><a class="header" href="#operadores-lógicos">Operadores lógicos</a></h2>
+<h3 id="operador-"><a class="header" href="#operador-">Operador <code>!</code></a></h3>
+<p>O operador <code>!</code> (&quot;NÃO lógico&quot;) inverte o valor lógico de uma expressão—<code>true</code> se
+torna <code>false</code> e <code>false</code> se torna <code>true</code>.</p>
+<p>Se a expressão <code>&lt;expr&gt;</code> for <code>true</code>, a expressão <code>!(&lt;expr&gt;)</code> é necessariamente
+<code>false</code>. <code>!</code> tem precedência maior que todos os operadores apresentados nessa
+página.</p>
+<h3 id="operadores--e--2"><a class="header" href="#operadores--e--2">Operadores <code>&amp;&amp;</code> e <code>||</code></a></h3>
+<p>Os operadores <code>&amp;&amp;</code> (&quot;E lógico&quot;) e <code>||</code> (&quot;OU lógico&quot;) são simples. O resultado da
+aplicação de <code>&amp;&amp;</code> é <code>true</code> quando ambos operandos possuem valor <code>true</code>, enquanto
+<code>||</code> produz <code>true</code> quando pelo menos <strong>um</strong> de seus operandos tiver valor
+<code>true</code>.</p>
+<table><thead><tr><th style="text-align: right">A</th><th style="text-align: center">op</th><th style="text-align: left">B</th><th style="text-align: center">Resultado</th></tr></thead><tbody>
+<tr><td style="text-align: right"><code>false</code></td><td style="text-align: center">||</td><td style="text-align: left"><code>false</code></td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right"><code>false</code></td><td style="text-align: center">&amp;&amp;</td><td style="text-align: left"><code>false</code></td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right"><code>true</code></td><td style="text-align: center">||</td><td style="text-align: left"><code>false</code></td><td style="text-align: center"><code>true</code></td></tr>
+<tr><td style="text-align: right"><code>true</code></td><td style="text-align: center">&amp;&amp;</td><td style="text-align: left"><code>false</code></td><td style="text-align: center"><code>false</code></td></tr>
+<tr><td style="text-align: right"><code>true</code></td><td style="text-align: center">||</td><td style="text-align: left"><code>true</code></td><td style="text-align: center"><code>true</code></td></tr>
+<tr><td style="text-align: right"><code>true</code></td><td style="text-align: center">&amp;&amp;</td><td style="text-align: left"><code>true</code></td><td style="text-align: center"><code>true</code></td></tr>
+</tbody></table>
+<p>Assim, podemos utilizar várias expressões para produzir um valor lógico. Por
+exemplo: <code>a &lt; b &amp;&amp; b &lt; c</code> só é <code>true</code> se <code>a</code>, <code>b</code> e <code>c</code> cada um tiver um valor
+maior que o anterior. A precedência dos operadores lógicos E e OU é menor do que
+a dos operadores relacionais, portanto a expressão anterior é equivalente a
+<code>(a &lt; b) &amp;&amp; (b &lt; c)</code>.</p>
+<p>A precedência do operador <code>||</code> é menor do que a de <code>&amp;&amp;</code>, portanto
+<code>a || b || c &amp;&amp; d || e</code> é equivalente a <code>a || b || (c &amp;&amp; d) || e</code>.</p>
+<p>Vamos utilizar os operadores que vimos para fazer uma função que verifica se
+vários números estão ordenados, isso significa que cada número na sequência deve
+ser maior ou igual ao anterior.</p>
+<pre><code class="language-c">#include &lt;stdbool.h&gt; // Para o tipo bool e os valores true/false
+
+bool Ordenados(int a, int b, int c, int d, int e)
+{
+    return a &lt;= b &amp;&amp; b &lt;= c &amp;&amp; c &lt;= d &amp;&amp; d &lt;= e;
+}
+</code></pre>
+<p>A função <code>Ordenados</code> retorna <code>true</code> com os argumentos 1, 2, 3, 4, 5, mas retorna
+<code>false</code> com os argumentos 1, 2, 3, 4, 3. Vamos utilizá-la em um programa
+interativo:</p>
+<pre><code class="language-c">int main(void)
+{
+    int a, b, c, d, e;
+
+    printf(&quot;Digite 5 inteiros separados por vírgula: &quot;);
+    scanf(&quot;%d ,%d ,%d ,%d ,%d&quot;,
+           &amp;a, &amp;b, &amp;c, &amp;d, &amp;e);
+
+    // Isso exibirá &quot;1&quot; (true) ou &quot;0&quot; (false)
+    printf(&quot;Os números estão ordenados? %d\n&quot;,
+           Ordenados(a, b, c, d, e));
+}
+</code></pre>
+<p>O posicionamento das vírgulas no <code>scanf</code> acima pode ser contraintuitivo, mas
+lembre-se de um detalhe que vimos sobre a string de formato: um espaço em branco
+faz o <code>scanf</code> pular <strong>zero ou mais</strong> caracteres white-space na leitura, portanto
+ele funciona corretamente até se a vírgula estiver logo após o número. A
+especificação <code>%d</code> também pula caracteres white-space caso existam, assim até a
+entrada <code>1 , 2,3, 4, 5</code> funcionaria corretamente.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="controle-de-fluxo"><a class="header" href="#controle-de-fluxo">Controle de Fluxo</a></h1>
+<p>Até agora vimos programas totalmente lineares, sem mais de um caminho possível.
+Nessa página vamos introduzir duas instruções que permitem ao programa decidir,
+durante a execução, qual caminho percorrer.</p>
+<h2 id="instrução-if"><a class="header" href="#instrução-if">Instrução <code>if</code></a></h2>
+<p>A instrução <code>if</code> faz com que o programa execute uma instrução se uma condição
+for verdadeira (<code>true</code>). A condição deve estar entre parênteses após o <code>if</code>, e
+após o fechamento dos parênteses deve estar a instrução a ser executada:</p>
+<pre><code class="language-c">       // ⬐ Condição
+    if (a &gt; b) // ⬐ Executado se a condição for true (verdadeira)
+        puts(&quot;a é maior que b&quot;);
+</code></pre>
+<p>Na maioria dos casos, uma instrução é um trecho de código entre dois <code>;</code>. Como o
+<code>if</code> apenas pode executar uma instrução, o segundo <code>puts</code> do código abaixo é
+executado incondicionalmente.</p>
+<pre><code class="language-c">    if (a &gt; b) // ⬐ Executada se a condição for true
+        puts(&quot;a é maior que b&quot;);
+        puts(&quot;Não tenho nada a ver com isso&quot;);
+//       ⬑ Não faz parte do if, sempre será executada
+</code></pre>
+<p>Para que a instrução <code>puts(&quot;Não tenho nada a ver com isso&quot;);</code> faça parte do
+<code>if</code>, precisamos transformar as duas instruções em uma instrução composta.
+Fazemos isso colocando elas entre chaves:</p>
+<pre><code class="language-c">if (a &gt; b)
+{ // ← Início da instrução composta
+    puts(&quot;a é maior que b&quot;);
+    puts(&quot;Agora tenho algo a ver com isso&quot;);
+} // ← Fim da instrução composta
+</code></pre>
+<p>Agora, ambos <code>puts</code> só são executados se a condição for verdadeira. Uma
+instrução composta pode ser formada por qualquer número de instruções, até mesmo
+compostas.</p>
+<p>Não é necessário alinhar o código da mesma forma que nos trechos acima. Por
+sinal, um programa em C pode ser escrito em uma linha apenas (exceto por
+diretivas de pré-processamento). O código abaixo faz exatamente o mesmo que o
+código anterior.</p>
+<pre><code class="language-c">if(a&gt;b){puts(&quot;a é maior que b&quot;);puts(&quot;Agora tenho algo a ver com isso&quot;);}
+</code></pre>
+<p>Por questão de legibilidade, virtualmente todos os programadores optam por
+&quot;embelezar&quot; o código com espaços em branco desnecessários. Isso não é algo ruim,
+muito pelo contrário.</p>
+<p>Vamos modificar um trecho de um programa apresentado anteriormente, que verifica
+se os números digitados estão em ordem crescente. O trecho antigo foi comentado:</p>
+<pre><code class="language-c">/* Trecho antigo
+printf(&quot;Os números estão ordenados? %d\n&quot;,
+       Ordenados(a, b, c, d, e));
+*/
+
+if (Ordenados(a, b, c, d, e))
+    puts(&quot;Os números estão ordenados.&quot;);
+</code></pre>
+<p>Agora, em vez de exibir <code>1</code> ou <code>0</code>, o programa é mais descritivo. Infelizmente,
+ele não exibe nada se os números não estiverem ordenados. Para isso existe a
+instrução <code>else</code>.</p>
+<h2 id="palavra-chave-else"><a class="header" href="#palavra-chave-else">Palavra-chave <code>else</code></a></h2>
+<p>Formalmente, <code>else</code> não é uma instrução e sim uma palavra-chave que produz uma
+forma alternativa da instrução <code>if</code>. A palavra-chave <code>else</code> só pode aparecer
+após o &quot;corpo&quot; (a instrução seguinte) de um <code>if</code>. Assim como <code>if</code>, <code>else</code>
+condicionalmente executa uma instrução; porém apenas se a condição do <code>if</code>
+precedente for falsa.</p>
+<p>Uma forma simples de visualizar isso é adicionando um <code>else</code> em nosso código
+anterior:</p>
+<pre><code class="language-c">if (Ordenados(a, b, c, d, e))
+    puts(&quot;Os números estão ordenados.&quot;);
+else
+    puts(&quot;Os números não estão ordenados.&quot;);
+</code></pre>
+<p>O segundo <code>puts</code> só executa se a condição <code>Ordenados(a, b, c, d, e)</code> for falsa,
+e assim nosso programa finalmente gera saídas apropriadas para ambos os casos.</p>
+<p>Um <code>if</code>, seu corpo e quaisquer <code>else</code>s seguintes são considerados uma só
+instrução, portanto é possível encadear vários <code>if</code> e <code>else</code>:</p>
+<pre><code class="language-c">if (Ordenados(a, b, c, d, e))
+    puts(&quot;Os números estão em ordem crescente.&quot;);
+else if (Ordenados(e, d, c, b, a))
+    puts(&quot;Os números estão em ordem decrescente.&quot;);
+else
+    puts(&quot;Os números não estão ordenados.&quot;);
+</code></pre>
+<p>Analise com atenção o código acima, pois o uso de condicionais encadeadas é
+bastante comum em C. Em português, o funcionamento do programa é o seguinte.</p>
+<ul>
+<li>Se os valores formam uma sequência crescente:
+<ul>
+<li>Exibe &quot;Os números estão em ordem crescente.&quot;</li>
+</ul>
+</li>
+<li>Caso contrário, se os valores formam uma sequência decrescente:
+<ul>
+<li>Exibe &quot;Os números estão em ordem decrescente.&quot;</li>
+</ul>
+</li>
+<li>Caso contrário, os valores não estão em ordem crescente ou decrescente.
+<ul>
+<li>Exibe &quot;Os números não estão ordenados.&quot;</li>
+</ul>
+</li>
+</ul>
+<h2 id="referências-7"><a class="header" href="#referências-7">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:
+<ul>
+<li>6.8 Statements and blocks:<!-- Instruções compostas -->
+<ul>
+<li>6.8.2 Compound statement</li>
+</ul>
+<!-- Instruções de expressões (e.g. puts(...);) -->
+<ul>
+<li>6.8.3 Expression and null statements</li>
+</ul>
+<!-- Instruções de seleção (if, else). O padrão não deixa super
+     claro se else é uma instrução, mas a p.491 dá a entender -->
+<ul>
+<li>6.8.4 Selection statements</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="arrays"><a class="header" href="#arrays">Arrays</a></h1>
+<p>Até agora vimos apenas tipos escalares—representam objetos conceitualmente
+indivisíveis. Um <code>int</code> é logicamente composto por um único inteiro, e não várias
+entidades. Tipos compostos por múltiplas partes são chamados agregados, e arrays
+são um exemplo disso.</p>
+<p>Arrays representam sequências de objetos do mesmo tipo, e.g. 5 <code>float</code>s. A
+declaração de um array é parecida com a de uma variável comum, mas possui
+colchetes após o identificador, e.g. <code>int v[]</code>. Entre os colchetes especificamos
+o comprimento do array, ou seja a quantidade de elementos que ele possui. Para
+criar um array de 5 <code>int</code>s chamado <code>v</code>, usaríamos <code>int v[5]</code>.</p>
+<pre><code class="language-c">// Um array de 9 chars
+char c[9];
+
+// Um array de 2 ints
+int i[2];
+
+// Um array de 13 floats
+float f[13];
+</code></pre>
+<p>Após criar um array, você pode acessar um de seus valores utilizando o operador
+<code>[]</code> (subscrito). Interessantemente, nesse operador um dos operandos fica entre
+os colchetes.</p>
+<pre><code class="language-c">// Acessa o 5º char do array c
+c[4];
+
+// Acessa o 1º int do array i
+i[0]
+
+// Acessa o 10º float do array f
+f[9];
+</code></pre>
+<p>Como pode ter percebido com o trecho acima, os elementos de um array são
+contados a partir de 0 e não 1. Isso é uma fonte de confusões para vários
+programadores iniciantes, então esteja atento.</p>
+<p>Arrays são comumente usados para armazenar informações fortemente relacionadas
+entre si, por exemplo, coordenadas em um plano 2D podem ser armazenadas em duas
+variáveis ou em um array. No segundo caso fica explícito no código que os
+valores do array fazem parte de um todo, enquanto o primeiro caso não explicita
+nenhuma relação entre as variáveis.</p>
+<p>Aqui está um exemplo do armazenamento de coordenadas 2D em duas variáveis:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int y, x;
+
+    printf(&quot;Posição vertical: &quot;);
+    scanf(&quot;%d&quot;, &amp;y);
+    printf(&quot;Posição horizontal: &quot;);
+    scanf(&quot;%d&quot;, &amp;x);
+}
+</code></pre>
+<p>E aqui o mesmo código, porém utilizando um array:</p>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    int coords[2];
+
+    printf(&quot;Posição vertical: &quot;);
+    scanf(&quot;%d&quot;, &amp;coords[0]);
+    printf(&quot;Posição horizontal: &quot;);
+    scanf(&quot;%d&quot;, &amp;coords[1]);
+}
+</code></pre>
+<p>Assim como variáveis comuns, os valores de um array são indefinidos se não forem
+inicializados. Podemos inicializar um array com valores entre chaves:</p>
+<pre><code class="language-c">char c[4] = {'a', 'c', 'j', '2'};
+
+int i[2] = {9 + 5, 2};
+
+float f[3] = {7.5, 1.333, 6.0 / 2};
+</code></pre>
+<p>Para alguns arrays, pode ser mais legível dividir seus inicializadores entre
+várias linhas:</p>
+<pre><code class="language-c">int i[32] = {5, 9, 2, 1, 8, 0, 2, 5,
+             2, 2, 1, 3, 5, 6, 7, 5,
+             0, 7, 3, 4, 9, 9, 9, 8,
+             1, 8, 2, 3, 2, 6, 2, 6};
+</code></pre>
+<p>Uma vantagem de usar um inicializador, além de não causar valores indefinidos, é
+que o tamanho do array pode ser determinado automaticamente:</p>
+<pre><code class="language-c">int a[]; // Erro: Qual o tamanho do array?
+
+int b[] = {6, 2, 8}; // Ok: O tamanho é 3.
+</code></pre>
+<p>Se o inicializador de um array possuir menos valores que o array, os valores
+excedentes são inicializados com <code>0</code> ou o valor <code>NULL</code> (de <code>&lt;stddef.h&gt;</code>) de
+acordo com seus tipos. Para todos os tipos escalares vistos até agora, o valor é
+<code>0</code>.</p>
+<pre><code class="language-c">// Todos os valores do array serão 0
+int a[50] = {0};
+</code></pre>
+<p>Você pode estar se perguntando o que acontece ao tentar acessar, por exemplo, o
+décimo elemento em um array de comprimento 9. O comportamento resultante é
+indefinido—pode não acontecer nada e pode explodir o planeta.</p>
+<h2 id="referências-8"><a class="header" href="#referências-8">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:<!-- Tipos escalares/agregados -->
+<ul>
+<li>6.2.5 Types</li>
+</ul>
+<!-- Operador [] -->
+<ul>
+<li>6.5.2.1 Array subscripting</li>
+</ul>
+<!-- Inicialização de arrays, inicialização padrão de tipos agregados -->
+<ul>
+<li>6.7.9 Initialization</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="instrução-while"><a class="header" href="#instrução-while">Instrução <code>while</code></a></h1>
+<p>A instrução <code>while</code> é muito parecida com a instrução <code>if</code>, porém a instrução
+seguinte será executada repetidamente até que a condição seja falsa. Nas
+instruções de iteração, como <code>while</code>, a instrução após a condição é chamada
+<em>loop body</em>.</p>
+<p>Um exemplo de uso do <code>while</code> é um contador. Utilizando um <em>loop body</em> que exibe
+o valor de uma variável e a incrementa, podemos gradualmente incrementar essa
+variável até que a condição seja falsa. Você consegue imaginar a saída produzida
+pelo código abaixo?</p>
+<pre><code class="language-c">int contador = 0;
+
+//      ⬐ Enquanto contador for menor ou igual a 10
+while (contador &lt;= 10)
+{ // ← Início do loop body
+
+    // Exibir o valor do contador
+    printf(&quot;%d &quot;, contador);
+
+    // Incrementar o contador em 1
+    contador = contador + 1;
+
+} // ← Fim do loop body
+
+puts(&quot;e terminamos!&quot;);
+</code></pre>
+<p>Saída: <code>0 1 2 3 4 5 6 7 8 9 10 e terminamos!</code></p>
+<p>Enquanto esse tipo de laço tem seus usos, eles são mais poderosos quando
+utilizados com arrays. Utilizando um laço que percorre um array, podemos
+realizar operações com todos seus elementos um por um. Que tal reduzir um array
+à soma de todos valores nele contidos?</p>
+<pre><code class="language-c">int array[5] = {10, 5, 3, 5, 2};
+int soma = 0; // Armazenamos a soma aqui
+
+// Utilizamos esse &quot;índice&quot; para acessar cada elemento
+int i = 0;
+
+while (i &lt; 5)
+{
+    // Adicionamos o valor do elemento à soma
+    soma = soma + array[i];
+
+    // Incrementamos o índice
+    i = i + 1;
+}
+</code></pre>
+<p>Após a execução do código acima, a variável <code>soma</code> terá o valor <code>25</code>. A
+instrução <code>for</code> costuma ser mais apropriada para percorrer arrays. Ela será
+introduzida em breve.</p>
+<p>Outra utilidade do <code>while</code> é fazer menus com opções. Vejamos um exemplo:</p>
+<pre><code class="language-c">int opcao = 1;
+
+while (opcao != 0)
+{
+    // Exibir as opções
+    printf(&quot;0 - Sair\n&quot;
+           &quot;1 - Exibir \&quot;Olá\&quot;\n&quot;
+           &quot;2 - Exibir \&quot;Mundo!\&quot;\n&quot;
+           &quot;Opção: &quot;);
+
+    // Ler a opção escolhida
+    scanf(&quot;%d&quot;, &amp;opcao);
+
+    // Exibir a palavra escolhida
+    if (opcao == 1)
+        puts(&quot;Olá&quot;);
+    else if (opcao == 2)
+        puts(&quot;Mundo!&quot;);
+    else
+        puts(&quot;Opção inválida!&quot;);
+}
+</code></pre>
+<p>Assim que a opção for 0, o laço será interrompido. Enquanto isso não acontecer,
+&quot;Olá&quot; ou &quot;Mundo!&quot; serão exibidos conforme as escolhas.</p>
+<p>Você pode ter percebido que na primeira execução, verificar a condição é inútil
+pois <code>opcao</code> possui inicialmente o valor <code>1</code>. Para ignorar a condição na
+primeira execução, basta utilizar a palavra-chave <code>do</code> antes da instrução
+composta e mover o <code>while</code> com sua condição para após a instrução. Veja a versão
+modificada para isso ficar mais claro:</p>
+<pre><code class="language-c">int opcao = 1;
+
+do // Substituímos o while (...) por do
+{
+    printf(&quot;0 - Sair\n&quot;
+           &quot;1 - Exibir \&quot;Olá\&quot;\n&quot;
+           &quot;2 - Exibir \&quot;Mundo!\&quot;\n&quot;
+           &quot;Opção: &quot;);
+
+    scanf(&quot;%d&quot;, &amp;opcao);
+
+    if (opcao == 1)
+        puts(&quot;Olá&quot;);
+    else if (opcao == 2)
+        puts(&quot;Mundo!&quot;);
+    else
+        puts(&quot;Opção inválida!&quot;);
+} while (opcao != 0); // O while (...) fica após a instrução
+</code></pre>
+<p>Assim, não fazemos mais a verificação desnecessária do valor de <code>opcao</code>
+inicialmente.</p>
+<p>É possível interromper um laço prematuramente usando a palavra-chave <code>break</code>,
+que para a execução do laço assim que executada. Podemos fazer um laço com uma
+tautologia (condição sempre verdadeira) e utilizar <code>break</code> para pará-lo:</p>
+<pre><code class="language-c">while (true) // Lembre-se de incluir &lt;stdbool.h&gt;
+{
+    printf(&quot;0 - Sair\n&quot;
+           &quot;1 - Exibir \&quot;Olá\&quot;\n&quot;
+           &quot;2 - Exibir \&quot;Mundo!\&quot;\n&quot;
+           &quot;Opção: &quot;);
+
+    int opcao;
+    scanf(&quot;%d&quot;, &amp;opcao);
+
+    // Parar o laço caso a opção seja 0
+    if (opcao == 0)
+        break;
+
+    if (opcao == 1)
+        puts(&quot;Olá&quot;);
+    else if (opcao == 2)
+        puts(&quot;Mundo!&quot;);
+    else
+        puts(&quot;Opção inválida!&quot;);
+}
+</code></pre>
+<p>Repare que como a condição não utiliza mais a variável <code>opcao</code>, ela pôde ser
+movida para dentro da instrução composta, pois apenas lá ela é utilizada. Mesmo
+com as mudanças, o código ainda aparenta se comportar da mesma forma.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="instrução-for"><a class="header" href="#instrução-for">Instrução <code>for</code></a></h1>
+<p>A instrução de iteração <code>for</code> é similar à <code>while</code>, porém além de uma condição
+várias funcionalidades podem ser embutidas entre os parênteses. Entre os
+parênteses, podemos especificar <strong>três</strong> coisas:</p>
+<ol>
+<li>Uma ação inicial (e.g. definição e/ou inicialização de variáveis).</li>
+<li>Uma condição (assim como no <code>while</code>).</li>
+<li>Uma ação intermediária (ocorre após cada iteração).</li>
+</ol>
+<p>As expressões (ou, no caso de 1., definição) devem ser separadas por ponto e
+vírgula. Vamos fazer um laço que conta de 0 a 10 com um <code>for</code>, utilizando suas
+três partes e um <em>loop body</em>:</p>
+<ol>
+<li>A definição e inicialização <code>int i = 0</code>.</li>
+<li>A condição <code>i &lt;= 10</code>.</li>
+<li>O incremento <code>i = i + 1</code>.</li>
+<li>O <em>loop body</em> que imprime o valor de <code>i</code>.</li>
+</ol>
+<p>Isso é expresso da seguinte forma:</p>
+<pre><code class="language-c">//        ⬐ Definição      ⬐ Incremento
+for (int i = 0; i &lt;= 10; i = i + 1)
+//                 ⬑ Condição
+    printf(&quot;%d\n&quot;, i); // ← Loop body
+</code></pre>
+<p>Variáveis declaradas no <code>for</code> são temporárias, ou seja, só podem ser acessadas
+entre os parênteses e dentro do <em>loop body</em>.</p>
+<p>Anteriormente, fizemos a soma dos valores de um array utilizando a instrução
+<code>while</code>. Vamos refazê-la, mas dessa ver usando <code>for</code>:</p>
+<pre><code class="language-c">int array[5] = {10, 5, 3, 5, 2};
+int soma = 0;
+
+for (int i = 0; i &lt; 5; i = i + 1)
+    soma = soma + array[i];
+</code></pre>
+<p>Qualquer uma das três partes entre os parênteses de um <code>for</code> pode ser omitida.
+Caso a condição seja omitida, ela é substituída por alguma expressão <code>true</code>.
+Portanto o seguinte <code>for</code> executa interminavelmente:</p>
+<pre><code class="language-c">for (;;) // Equivalente a while (true)
+    puts(&quot;*&quot;);
+</code></pre>
+<p>O <em>loop body</em> de um <code>for</code> ou <code>while</code> pode ser uma instrução nula, i.e. um
+simples <code>;</code>. Dessa forma, toda a lógica de um laço simples pode ser especificada
+entre os parênteses da instrução:</p>
+<pre><code class="language-c">int array[5] = {10, 5, 3, 5, 2};
+int soma = 0;
+
+for (int i = 0; i &lt; 5; soma = soma + array[i], i = i + 1);
+</code></pre>
+<p>Isso soma os elementos do array assim como anteriormente, porém com <em>loop body</em>
+nulo. Você pode ter percebido o uso da vírgula entre <code>soma = soma + array[i]</code> e
+<code>i = i + 1</code>; o operador <code>,</code> (simplesmente &quot;vírgula&quot;) é usado para compor uma
+expressão a partir de duas, portanto <code>soma = soma + array[i], i = i + 1</code> é
+considerada uma só expressão e assim pode ser utilizada no <code>for</code>. Na maioria dos
+casos, fazer toda a lógica de um laço entre os parênteses piora a legibilidade
+do código; faça apenas quando a concisão do código for crucial.</p>
+<h2 id="referências-9"><a class="header" href="#referências-9">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:
+<ul>
+<li>6.5.17 Comma operator</li>
+<li>6.8.5 Iteration statements</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="ponteiros"><a class="header" href="#ponteiros">Ponteiros</a></h1>
+<p>Um ponteiro é um tipo que se refere a outro objeto. Utilizar o símbolo <code>*</code> em
+uma declaração faz com que ela seja um ponteiro, por exemplo:</p>
+<pre><code class="language-c">char  *a;  // a é um ponteiro para um char
+int   *b;  // b é um ponteiro para um int
+float *c;  // c é um ponteiro para um float
+float **d; // d é um ponteiro para um ponteiro para um float
+</code></pre>
+<p>Para fazer com que um ponteiro se refira a uma variável, precisamos adquirir o
+endereço da variável na memória com o operador <code>&amp;</code> e atribuí-lo ao ponteiro:</p>
+<pre><code class="language-c">char A;
+int B;
+float C;
+float *D;
+
+a = &amp;A; // a agora se refere à variável A
+b = &amp;B; // b agora se refere à variável B
+c = &amp;C; // c agora se refere à variável C
+d = &amp;D; // d agora se refere à variável D
+</code></pre>
+<h2 id="operador-de-indireção"><a class="header" href="#operador-de-indireção">Operador de Indireção</a></h2>
+<p>O símbolo <code>*</code> é comumente o operador &quot;produto&quot; e realiza multiplicação, mas
+quando precede um ponteiro esse mesmo símbolo é o operador &quot;indireção&quot;. A
+indireção serve para acessar o objeto alvo do ponteiro, por exemplo:</p>
+<pre><code class="language-c">int i;
+
+int *p = &amp;i; // p se refere a i
+
+*p = 5; // A indireção acessa i
+printf(&quot;%d\n&quot;, i);  // Exibe 5
+printf(&quot;%d\n&quot;, *p); // Exibe 5
+
+i = 12;
+printf(&quot;%d\n&quot;, i);  // Exibe 12
+printf(&quot;%d\n&quot;, *p); // Exibe 12
+</code></pre>
+<p>Como pode ser observado acima, a indireção de um ponteiro é análoga ao objeto a
+que ele se refere. I.e., <code>*p = 2</code> é efetivamente <code>i = 2</code>.</p>
+<h2 id="ponteiros-como-parâmetros"><a class="header" href="#ponteiros-como-parâmetros">Ponteiros como Parâmetros</a></h2>
+<p>Até agora vimos o que ponteiros fazem, mas não um motivo para usá-los. Um caso
+em que ponteiros são úteis é uma função que deve modificar o valor de seus
+argumentos, tome como exemplo uma função que incrementa um inteiro:</p>
+<pre><code class="language-c">void incremento(int valor)
+{
+    valor = valor + 1;
+}
+</code></pre>
+<p>Como o escopo de <code>valor</code> é o corpo da função, a atribuição não possui efeito no
+código externo. Para que o resultado seja utilizado, nesse caso, é preciso
+retorná-lo:</p>
+<pre><code class="language-c">int incremento(int valor)
+{
+    return valor + 1;
+}
+</code></pre>
+<p>Porém essa função é contraintuitiva, <code>incremento(num)</code> retorna <code>num + 1</code> mas o
+valor de <code>num</code> é inalterado a não ser que o retorno seja utilizado:
+<code>num = incremento(num)</code>. Utilizando ponteiros, esse incômodo pode ser evitado:</p>
+<pre><code class="language-c">void incremento(int *endereço)
+{
+    *endereço = *endereço + 1;
+}
+</code></pre>
+<p>A função acima recebe um ponteiro e incrementa o valor do inteiro a que ele se
+refere. Embora o escopo de <code>endereço</code> seja o corpo da função, o objeto alvo pode
+estar em algum lugar externo. Essa versão é mais intuitiva que a anterior, pois
+basta utilizar <code>incremento(&amp;num)</code> para <code>num</code> ser incrementado, sem necessidade
+de receber um valor de retorno.</p>
+<h2 id="inicialização"><a class="header" href="#inicialização">Inicialização</a></h2>
+<p>Como vimos, ponteiros se referem a outros objetos. Quando um ponteiro não é
+inicializado, seu valor é indefinido e utilizar o operador de indireção causará
+comportamento perigoso e indesejado.</p>
+<p>Uma maneira segura de especificar que um ponteiro não referencia algum objeto
+válido é utilizar a constante <code>NULL</code> definida em <code>&lt;stddef.h&gt;</code>, e.g.
+<code>int *p = NULL;</code>. <code>NULL</code> em uma condição é equivalente a <code>false</code>, assim, antes
+de realizar uma indireção no ponteiro, é possível verificar se ele é nulo:</p>
+<pre><code class="language-c">void incremento(int *endereço)
+{
+    if (endereço)
+        *endereço = *endereço + 1;
+}
+</code></pre>
+<p>Se o ponteiro recebido for nulo, a condição <code>endereço</code> será <code>false</code> e a
+instrução <code>*endereço = *endereço + 1;</code> não será executada.</p>
+<p>Em outras palavras, utilizar <code>NULL</code> é uma convenção para que ponteiros inválidos
+possuam um valor que os identifiquem. Funções de várias bibliotecas (incluindo a
+biblioteca padrão) verificam se um ponteiro é nulo antes de tentar utilizá-lo.</p>
+<h2 id="referências-10"><a class="header" href="#referências-10">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:<!-- Operadores unários * e & -->
+<ul>
+<li>6.5.3.2 Address and indirection operators</li>
+</ul>
+<!-- Declaração de ponteiros -->
+<ul>
+<li>6.7.6 Declarators</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="operador-sizeof"><a class="header" href="#operador-sizeof">Operador <code>sizeof</code></a></h1>
+<p>O padrão C economiza palavras ao falar sobre os tamanhos de objetos de cada tipo
+na memória. É possível que em uma plataforma um <code>int</code> ocupe 2 bytes, e em outra
+ocupe 8. Por isso, existe o operador <code>sizeof</code> para descobrir o tamanho em bytes
+de um tipo ou objeto.</p>
+<p>A aplicação do operador <code>sizeof</code> pode se dar de duas formas:</p>
+<ol>
+<li><code>sizeof(tipo)</code>: Equivale ao tamanho em bytes de um objeto desse tipo.</li>
+<li><code>sizeof expressão</code>: Equivale a <code>sizeof(tipo)</code> com <code>tipo</code> sendo o tipo da
+expressão. Pode também ser escrito <code>sizeof(expressão)</code>.</li>
+</ol>
+<p>Ambas formas retornam um valor do tipo inteiro sem sinal <code>size_t</code> (definido em
+<code>&lt;stddef.h&gt;</code>).</p>
+<h2 id="usos-simples"><a class="header" href="#usos-simples">Usos Simples</a></h2>
+<p>Um exemplo de uso do operador <code>sizeof</code> é não precisar digitar manualmente o
+tamanho de um array para percorrê-lo em um laço <code>for</code>. Os dois trechos abaixo
+são equivalentes, porém utilizando <code>sizeof</code>, ao alterar o array a condição não
+precisa ser alterada.</p>
+<pre><code class="language-c">int array[10];
+
+/* ... */
+
+// Percorre todos elementos do array
+for (size_t i = 0; i &lt; 10; i = i + 1)
+    /* ... */
+</code></pre>
+<pre><code class="language-c">int array[10];
+
+/* ... */
+
+// Percorre todos elementos do array
+for (size_t i = 0; i &lt; sizeof array / sizeof array[0]; i = i + 1)
+    /* ... */
+</code></pre>
+<p>A expressão <code>sizeof array / sizeof array[0]</code> resulta no número de elementos no
+array após 3 passos:</p>
+<ol>
+<li>Calcular o valor de <code>sizeof array</code>. <code>array</code> é do tipo <code>int[10]</code>, portanto o
+valor é <code>sizeof(int) * 10</code> (pois um array de 10 <code>int</code>s é 10 vezes maior que
+um <code>int</code>).</li>
+<li>Calcular o valor de <code>sizeof array[0]</code>. <code>array[0]</code> é um dos elementos do
+array, portanto seu tipo é <code>int</code>. Isso se torna <code>sizeof(int)</code>.</li>
+<li>Dividindo <code>sizeof(int) * 10</code> por <code>sizeof(int)</code> temos o resultado <code>10</code>, que é
+o número de <code>int</code>s no array.</li>
+</ol>
+<p><code>sizeof(char)</code> é sempre <code>1</code>, portanto o número de elementos em um array de
+<code>char</code> pode ser calculado utilizando simplesmente <code>sizeof(array)</code>. Utilize essa
+versão reduzida com moderação pois pode causar erros caso o tipo armazenado no
+array seja alterado por alguma mudança no código.</p>
+<h2 id="quantos-bits-tem-um-byte"><a class="header" href="#quantos-bits-tem-um-byte">Quantos Bits Tem Um Byte?</a></h2>
+<p>Curiosamente, o padrão ISO não especifica quantos bits há em um byte. A
+quantidade de bits em um byte no seu sistema é especificada no valor de
+<code>CHAR_BIT</code> (<code>&lt;limits.h&gt;</code>). Atualmente é muito provável que no seu caso esse
+valor seja <code>8</code>.</p>
+<h2 id="referências-11"><a class="header" href="#referências-11">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:<!-- Macro CHAR_BIT -->
+<ul>
+<li>5.2.4.2.1 Sizes of integer types &lt;limits.h&gt;</li>
+</ul>
+<!-- Operador sizeof -->
+<ul>
+<li>6.5.3.4 The sizeof and _Alignof operators</li>
+</ul>
+<!-- Tipo size_t -->
+<ul>
+<li>7.19 Common definitions &lt;stddef.h&gt;</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="aritmética-de-ponteiros"><a class="header" href="#aritmética-de-ponteiros">Aritmética de Ponteiros</a></h1>
+<p>Embora possa parecer estranho à primeira vista, ponteiros (exceto <code>void *</code>)
+suportam soma e subtração. Para entender o funcionamento, é necessário primeiro
+compreender como arrays são armazenados na memória.</p>
+<h2 id="somando-e-subtraindo-inteiros"><a class="header" href="#somando-e-subtraindo-inteiros">Somando e Subtraindo Inteiros</a></h2>
+<p>Imaginemos um array de <code>char</code>s <code>{'a', 'f', 'c', 'k', 'b'}</code>. O array seria
+disposto na memória como na tabela abaixo. Cada endereço se refere a um byte.</p>
+<table><thead><tr><th>Endereço</th><th>Valor</th></tr></thead><tbody>
+<tr><td>X</td><td><code>'a'</code></td></tr>
+<tr><td>X + 1</td><td><code>'f'</code></td></tr>
+<tr><td>X + 2</td><td><code>'c'</code></td></tr>
+<tr><td>X + 3</td><td><code>'k'</code></td></tr>
+<tr><td>X + 4</td><td><code>'b'</code></td></tr>
+</tbody></table>
+<hr />
+<p>Para facilitar a compreensão, estamos supondo que um <code>int</code> possui 4 bytes em
+qualquer sistema.</p>
+<hr />
+<p>No caso de um array <code>int arr[] = {10, 5, 9, 2, 1};</code> com <code>int</code>s de 4 bytes, o
+array seria disposto como na tabela abaixo.</p>
+<table><thead><tr><th>Endereço</th><th>Valor</th></tr></thead><tbody>
+<tr><td>X</td><td><code>10</code></td></tr>
+<tr><td>X + 4</td><td><code>5</code></td></tr>
+<tr><td>X + 8</td><td><code>9</code></td></tr>
+<tr><td>X + 12</td><td><code>2</code></td></tr>
+<tr><td>X + 16</td><td><code>1</code></td></tr>
+</tbody></table>
+<p>Perceba que os elementos são contíguos na memória, i.e. um vem imediatamente
+após o outro. Na tabela acima <code>10</code> ocupa X até X + 3, <code>5</code> ocupa X + 4 até X + 7,
+<code>9</code> ocupa X + 8 até X + 11, etc. Isso significa que se um ponteiro aponta para o
+endereço de <code>10</code>, esse <strong>endereço</strong> somado com 4 (<code>sizeof(int)</code>) será o endereço
+de <code>5</code>.</p>
+<p>Dado o ponteiro <code>Tipo *p = X</code>, <code>p + 1</code> se refere a <code>X + sizeof(Tipo)</code>. Isso
+significa que dado <code>int *p = &amp;arr[0]</code>, <code>p + 1</code> referencia <code>arr[1]</code>. e <code>p + 2</code>
+referencia <code>arr[2]</code>. Ou seja, somar <code>1</code> a <code>p</code> na verdade incrementa o endereço
+em 4. Subtração funciona da mesma forma: Dado <code>int *p = &amp;arr[2]</code>, <code>p - 2</code>
+referencia <code>arr[0]</code>.</p>
+<p>Voltemos para a tabela acima. Um ponteiro para X, somado com 1 apontará para X +
+4 e somado com 2 apontará para X + 8. Isso pode parecer contraintuitivo a
+princípio, porém é conveniente: Para acessar o próximo elemento contíguo basta
+somar 1 ao ponteiro independentemente de seu tipo.</p>
+<pre><code class="language-c">int arr[] = {0, 0, 9, 0, 0};
+
+int *p = &amp;arr[1];
+
+*p = 10;
+
+p = p + 2; // p agora se refere a arr[3]
+*p = 8;
+
+p = p + 1; // p agora se refere a arr[4]
+*p = 7;
+
+p = p - 4; // p agora se refere a arr[0]
+*p = 11;
+
+</code></pre>
+<p>Após a execução do código acima, os elementos de <code>arr</code> serão <code>11, 10, 9, 8, 7</code>.</p>
+<h2 id="subtraindo-ponteiros"><a class="header" href="#subtraindo-ponteiros">Subtraindo Ponteiros</a></h2>
+<p>Embora inteiros possam ser somados a ponteiros, ponteiros não. Já a subtração
+entre ponteiros é possível quando ambos ponteiros referenciam elementos do mesmo
+array (ou a posição logo após o final do array), e resulta na diferença entre os
+índices dos elementos apontados. O resultado é do tipo <code>ptrdiff_t</code> de
+<code>&lt;stddef.h&gt;</code>, que é um inteiro com sinal. Veja abaixo, lembrando que o resultado
+do operador unário <code>&amp;</code> é um ponteiro.</p>
+<pre><code class="language-c">int arr[50];
+
+// A especificação %td serve para ptrdiff_t
+printf(&quot;%td\n&quot;, &amp;arr[10] - &amp;arr[20]); // Exibe &quot;-10&quot; (10 - 20)
+printf(&quot;%td\n&quot;, &amp;arr[25] - &amp;arr[20]); // Exibe &quot;5&quot;   (25 - 20)
+
+int *p = &amp;arr[10] + 20;
+printf(&quot;%td\n&quot;, p - &amp;arr[10]); // Exibe &quot;20&quot; (30 - 10)
+</code></pre>
+<h2 id="referências-12"><a class="header" href="#referências-12">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:<!-- Operações aritméticas em ponteiros -->
+<ul>
+<li>6.5.6 Additive operators</li>
+</ul>
+<!-- Tipo ptrdiff_t -->
+<ul>
+<li>7.19 Common definitions &lt;stddef.h&gt;</li>
+</ul>
+<!-- Especificação %td -->
+<ul>
+<li>7.21.6.1 The fprintf function</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="gerenciamento-de-memória"><a class="header" href="#gerenciamento-de-memória">Gerenciamento de Memória</a></h1>
+<p>Até agora não vimos gerenciamento manual de memória, apenas automático. Todas
+variáveis <code>auto</code> que criamos são destruídas automaticamente quando saem do
+escopo onde foram declaradas. A duração estática de armazenamento evita essa
+destruição, porém o objeto estático é compartilhado entre todas chamadas da
+função e persiste durante toda a execução programa. Para ter controle total da
+duração de um objeto na memória, é necessário utilizar as funções de
+gerenciamento de memória <code>malloc</code> e <code>free</code>, de <code>&lt;stdlib.h&gt;</code>.</p>
+<h2 id="função-malloc"><a class="header" href="#função-malloc">Função <code>malloc</code></a></h2>
+<p>A função <code>malloc</code> recebe a quantidade de bytes a serem alocados e retorna um
+ponteiro que se refere à memória alocada. Isso significa que para alocar e
+utilizar um <code>int</code>, basta fazer <code>int *p = malloc(sizeof *p);</code> ou
+<code>int *p = malloc(sizeof(int));</code>. Todas as indireções no ponteiro acessarão o
+objeto alocado.</p>
+<pre><code class="language-c">int *AlocarInt(void)
+{
+    return malloc(sizeof(int));
+}
+
+int main(void)
+{
+    int *a = AlocarInt(),
+        *b = AlocarInt(),
+        *c = AlocarInt();
+
+    *a = 1;
+    *b = 2;
+    *c = 3;
+
+    // Exibe &quot;1, 2, 3&quot;
+    printf(&quot;%d, %d, %d\n&quot;,
+           *a, *b, *c);
+
+    return 0;
+}
+</code></pre>
+<p>Funções em C não podem retornar arrays mas podem retornar ponteiros. Assim, uma
+forma de simular o retorno de array é alocar um array com <code>malloc</code> e retornar um
+ponteiro para ele. Como exemplo, vejamos uma função abaixo.</p>
+<pre><code class="language-c">// Retorna um array de qtd ints com valor val
+int *FabricarArray(size_t qtd, int val)
+{
+    int *array = malloc(sizeof(int[qtd]));
+
+    for (size_t i = 0; i &lt; qtd; i = i + 1)
+        array[i] = val;
+
+    return array;
+}
+
+int main(void)
+{
+    int *array = FabricarArray(9, 5);
+
+    // Exibirá &quot;5 5 5 5 5 5 5 5 5 &quot;
+    for (size_t i = 0; i &lt; 9; i = i + 1)
+        printf(&quot;%d &quot;, array[i]);
+
+    return 0;
+}
+</code></pre>
+<p>Lembre-se que embora um ponteiro suporte o operador <code>[]</code> e simule um array, ele
+não é <em>exatamente</em> um array. O operador <code>sizeof</code> na variável <code>array</code> do código
+acima não resulta no tamanho do array retornado pela função e sim no tamanho do
+ponteiro.</p>
+<pre><code class="language-c">int array[100];
+int *ponteiro = FabricarArray(100, 0);
+
+printf(&quot;sizeof array: %zu\nsizeof ponteiro: %zu\n&quot;,
+        sizeof array, sizeof ponteiro);
+</code></pre>
+<p>Em um sistema específico, a execução do código acima exibiu <code>sizeof array: 400</code>
+e <code>sizeof ponteiro: 8</code>, embora ambos possam acessar 100 <code>int</code>s com o operador
+<code>[]</code>.</p>
+<h2 id="função-free"><a class="header" href="#função-free">Função <code>free</code></a></h2>
+<p>Toda a memória alocada por <code>malloc</code> continua alocada até ser manualmente
+liberada. Isso é feito aplicando a função <code>free</code> ao ponteiro que foi retornado
+por <code>malloc</code>. O ponteiro retornado pela nossa função <code>FabricarArray</code> é alocado
+por <code>malloc</code>, portanto esse procedimento deve ser feito.</p>
+<pre><code class="language-c">int main(void)
+{
+    int *array = FabricarArray(9, 5);
+
+    /* Utilizar o array ... */
+
+    free(array);
+
+    return 0;
+}
+</code></pre>
+<p>Após o <code>free</code>, acessar o ponteiro com <code>*</code> resulta em comportamento indefinido
+até que um novo alvo válido seja dado a ele.</p>
+<h2 id="referências-13"><a class="header" href="#referências-13">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:<!-- Função free -->
+<ul>
+<li>7.22.3.3 The free function</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="conversões-implícitas"><a class="header" href="#conversões-implícitas">Conversões Implícitas</a></h1>
+<p>Com a intenção de simplificar o código, em algumas situações os compiladores C
+convertem valores para outros tipos mesmo sem um cast. Esse processo realmente
+facilita o desenvolvimento, mas é necessário compreendê-lo para que não ocorram
+imprevistos. Essas conversões possuem regras complexas, memorizá-las é
+preferível mas pode ser desnecessário para programas relativamente simples.</p>
+<h2 id="conversões-de-atribuição"><a class="header" href="#conversões-de-atribuição">Conversões de Atribuição</a></h2>
+<p>Os tipos inteiros são claramente diferentes dos tipos de ponto flutuante. Essa
+diferença não se dá somente nos valores que podem assumir, mas também na
+representação dos mesmos na memória.</p>
+<pre><code class="language-c">int i = 1;
+float f = 1;
+</code></pre>
+<p>Por mais que <code>i</code> e <code>f</code> possuam o mesmo valor, ele pode ser representado de forma
+diferente em cada objeto. O seguinte código exibe a representação hexadecimal
+dos bytes que compõem esses objetos:</p>
+<pre><code class="language-c">for (int x = 0; x &lt; sizeof(i); ++x)
+    printf(&quot;%.2hhx &quot;, ((unsigned char *)&amp;i)[x]);
+
+putchar('\n');
+
+for (int x = 0; x &lt; sizeof(f); ++x)
+    printf(&quot;%.2hhx &quot;, ((unsigned char *)&amp;f)[x]);
+</code></pre>
+<!-- ? Esse código funciona em qualquer implementação? -->
+<p>A seguinte tabela exibe as informações obtidas executando os trechos acima em
+certo sistema Linux x86-64:</p>
+<table><thead><tr><th></th><th>i</th><th>f</th></tr></thead><tbody>
+<tr><td>Valor</td><td>1</td><td>1</td></tr>
+<tr><td>Bytes</td><td>01 00 00 00</td><td>00 00 80 3f</td></tr>
+</tbody></table>
+<p>Até atribuindo o valor de <code>f</code> para <code>i</code> com <code>i = f</code> e executando o código
+novamente, os resultados são os mesmos que na tabela. Como isso é possível?</p>
+<p>Esse é o efeito das conversões de atribuição no C. Para não haver resultados
+inesperados, o compilador gera código que converte o valor em ponto flutuante
+para um valor inteiro mesmo que as representações não batam. Isso significa que
+ao executar <code>i = f</code>, a memória não é apenas copiada mas também convertida na
+atribuição.</p>
+<h2 id="promoções-inteiras"><a class="header" href="#promoções-inteiras">Promoções Inteiras</a></h2>
+<p>Todos os tipos inteiros possuem a propriedade abstrata quantitativa rank, e aqui
+está a relação entre os ranks dos inteiros padrões: <code>_Bool</code> &lt; (<code>char</code> e
+<code>signed char</code>) &lt; <code>short</code> &lt; <code>int</code> &lt; <code>long</code> &lt; <code>long long</code> (Um tipo sem sinal
+possui o mesmo rank que sua contraparte com sinal). Essa propriedade define em
+parte como as conversões entre tipos inteiros ocorrem.</p>
+<p>Promoções inteiras são conversões implícitas de um valor de tipo inteiro para
+<code>int</code> ou <code>unsigned int</code>, com as seguintes regras:</p>
+<ul>
+<li>Se o tipo do valor possuir rank menor que o de <code>int</code>:
+<ul>
+<li>Se <code>int</code> puder representar qualquer valor desse tipo:
+<ul>
+<li>O valor é convertido para <code>int</code>.</li>
+</ul>
+</li>
+<li>Caso contrário:
+<ul>
+<li>O valor é convertido para <code>unsigned int</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Caso contrário:
+<ul>
+<li>O valor mantém seu tipo.</li>
+</ul>
+</li>
+</ul>
+<p>Os casos em que promoções inteiras ocorrem são bem especificados no padrão ISO
+mas não entraremos em muitos detalhes aqui. Por agora, basta saber que essas
+promoções ocorrem nos operadores unários <code>+</code> e <code>-</code>, nas conversões aritméticas
+usuais, e também na passagem de argumentos para funções variádicas—funções que
+recebem um número arbitrário de argumentos de qualquer tipo—ou sem protótipo.</p>
+<p>Por em isso sistemas em que <code>int</code> consegue armazenar qualquer valor <code>char</code>
+(virtualmente todos sistemas e até placas Arduino) a função <code>printf</code> (que é
+variádica) exibe corretamente um <code>char</code> mesmo com a string de formato <code>&quot;%d&quot;</code>.
+Afinal, esse <code>char</code> é convertido para <code>int</code> antes da função recebê-lo.</p>
+<pre><code class="language-c">char a,
+     b = 2,
+     c = 3;
+
+// b e c são convertidos para int (ou unsigned) e somados, e o resultado é
+//  convertido de volta para char e armazenado em a.
+a = b + c;
+
+// Em sistemas onde int pode representar qualquer char, o valor de a é
+//  convertido para int e passado para printf, que deve exibir &quot;a == 5&quot;
+printf(&quot;a == %d&quot;, a);
+
+// Em raros sistemas onde int não pode representar qualquer char, o valor de a é
+//  convertido para unsigned int e passado para printf, que deve exibir &quot;a == 5&quot;
+printf(&quot;a == %u&quot;, a);
+</code></pre>
+<h2 id="conversões-aritméticas-usuais"><a class="header" href="#conversões-aritméticas-usuais">Conversões Aritméticas Usuais</a></h2>
+<p>As conversões aritméticas usuais ocorrem quando um operador aritmético é
+aplicado a operandos de diferentes tipos, portanto há a necessidade de pelo
+menos um deles ser convertido. Esse processo segue várias regras bem
+estabelecidas no padrão C ISO. Resumidamente:</p>
+<ul>
+<li>
+<p>Se um operando for do tipo <code>long double</code>:</p>
+<ul>
+<li>O outro operando é convertido para <code>long double</code></li>
+</ul>
+</li>
+<li>
+<p>Caso contrário, se um operando for do tipo <code>double</code>:</p>
+<ul>
+<li>O outro operando é convertido para o tipo <code>double</code></li>
+</ul>
+</li>
+<li>
+<p>Caso contrário, se um operando for do tipo <code>float</code>:</p>
+<ul>
+<li>O outro operando é convertido para o tipo <code>float</code></li>
+</ul>
+</li>
+<li>
+<p>Caso contrário, as promoções inteiras ocorrem onde aplicável.</p>
+</li>
+<li>
+<p>Se após isso os operandos ainda forem de diferentes tipos:</p>
+<ul>
+<li>Se um tipo possuir sinal e outro não (ex. <code>int + unsigned long</code>):
+<ul>
+<li>Se o rank do tipo sem sinal for maior ou igual que o outro:
+<ul>
+<li>O tipo com sinal é convertido para o tipo sem sinal.</li>
+</ul>
+</li>
+<li>Caso contrário:
+<ul>
+<li>Se o tipo com sinal puder representar qualquer valor do tipo sem sinal:
+<ul>
+<li>O tipo sem sinal é convertido para o tipo com sinal.</li>
+</ul>
+</li>
+<li>Caso contrário:
+<ul>
+<li>Ambos operandos são convertidos para a versão sem sinal do tipo com
+sinal.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Caso contrário (ex. <code>int + long</code>):
+<ul>
+<li>O tipo de menor rank é convertido para o tipo de maior rank.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Quando consideramos tipos complexos e imaginários as regras são similares, porém
+tipos complexos só se convertem para tipos complexos e tipos imaginários só se
+convertem para tipos imaginários, enquanto tipos reais continuam sendo reais.</p>
+<h2 id="considerações-sobre-desempenho"><a class="header" href="#considerações-sobre-desempenho">Considerações sobre Desempenho</a></h2>
+<p>Quando seu objetivo for atingir desempenho máximo em um programa, tenha em mente
+o custo da conversão entre tipos. Em um certo sistema x86-64 a atribuição da
+variável <code>int b</code> à variável <code>int a</code> é feita com duas instruções:</p>
+<ol>
+<li>O valor de <code>b</code> é copiado para um registrador.</li>
+<li>O valor desse registrador é copiado para <code>a</code>.</li>
+</ol>
+<p>Se a variável <code>b</code> fosse <code>float</code>, o processo seria mais longo:</p>
+<ol>
+<li>O valor de <code>b</code> é copiado para um registrador.</li>
+<li>O valor desse registrador é convertido para um valor inteiro com sinal e
+copiado para um segundo registrador.</li>
+<li>O valor do segundo registrador é copiado para <code>a</code>.</li>
+</ol>
+<p>E com <code>b</code> do tipo <code>long double</code>, dez instruções são necessárias!</p>
+<p>Embora os números acima sejam alarmantes, não faça otimizações sem necessidade.
+Em muitos casos a legibilidade do código é mais importante que seu desempenho,
+portanto saiba quando priorizar a manutenibilidade do seu código.</p>
+<h2 id="referências-14"><a class="header" href="#referências-14">Referências</a></h2>
+<ul>
+<li>Padrão C18 (<a href="https://www.iso.org/standard/74528.html">ISO/IEC 9899:2018</a>):
+<ul>
+<li>6.2.5 Types</li>
+<li>6.2.6 Representations of types</li>
+<li>6.3 Conversions:
+<ul>
+<li>6.3.1.8 Usual arithmetic conversions</li>
+</ul>
+<!-- Conversões usadas na atribuição -->
+</li>
+<li>6.5.16 Assignment operators</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="seleção-genérica"><a class="header" href="#seleção-genérica">Seleção Genérica</a></h1>
+<h2 id="funções-genéricas-tradicionais"><a class="header" href="#funções-genéricas-tradicionais">Funções Genéricas Tradicionais</a></h2>
+<p>Funções genéricas são um ponto fraco do C. Quando queremos que uma função
+funcione com parâmetros de qualquer tipo, é comum recebê-los com o tipo
+<code>void *</code>. Como passar um argumento como <code>void *</code> remove as informações sobre seu
+tipo original, muitas vezes a função &quot;genérica&quot; precisa também receber outra
+função que sabe lidar com o tipo original do argumento. Aqui está a
+implementação de uma função <code>Max</code> genérica:</p>
+<pre><code class="language-c">// Recebe o endereço de dois valores e uma função comparadora, e retorna o
+//  endereço do maior entre os dois valores utilizando o comparador.
+void *Max(void *lhs, void *rhs, int cmp(void *lhs, void *rhs))
+{
+    return cmp(lhs, rhs) &lt; 0 ? rhs : lhs;
+}
+</code></pre>
+<p>Interpretar essa declaração de <code>Max</code> deve ser simples para programadores
+experientes, mas para chamar a função é necessário ter um comparador definido e
+isso pode ser contraproducente. É possível que por falta de conhecimento
+múltiplos comparadores equivalentes sejam definidos no mesmo programa,
+introduzindo redundância. Aqui está um exemplo onde há dois comparadores
+equivalentes:</p>
+<pre><code class="language-c">int CmpInt1(void *lhs, void *rhs)
+{
+    return *(int *)lhs - *(int *)rhs;
+}
+
+int CmpInt2(void *lhs, void *rhs)
+{
+    return *(int *)lhs - *(int *)rhs;
+}
+</code></pre>
+<p>Chamar <code>Max</code> com qualquer um desses comparadores terá o mesmo resultado,
+portanto ter mais de um é desnecessário. Uma maneira de evitar esse problema é
+criar um wrapper de <code>Max</code> específico para comparar dois <code>int</code> da mesma forma que
+os comparadores acima.</p>
+<pre><code class="language-c">// Comparador interno para MaxInt
+static int MaxIntCmp(void *lhs, void *rhs)
+{
+    return *(int *)lhs - *(int *)rhs;
+}
+
+int MaxInt(int lhs, int rhs)
+{
+    return *(int *)Max(&amp;lhs, &amp;rhs, MaxIntCmp);
+}
+</code></pre>
+<p>O problema de redundância foi resolvido. Não há mais necessidade de criar
+comparadores e <code>MaxInt</code> recebe e retorna valores <code>int</code> diretamente, mas temos
+outros problemas: O excesso de ponteiros e indireções pode impactar
+consideravelmente o desempenho da função, e agora temos duas funções que fazem
+essencialmente a mesma coisa: <code>Max</code> e <code>MaxInt</code>. Nesse ritmo, teremos também
+<code>MaxShort</code>, <code>MaxUnsignedShort</code>, <code>MaxUnsigned</code>, <code>MaxLong</code> etc. e digitar um nome
+diferente para realizar a mesma operação em cada tipo não agrada muitos
+desenvolvedores.</p>
+<p>Essa é uma situação comum no desenvolvimento de software: A solução de um
+problema causar mais problemas. Existe, afinal, alguma forma padrão de amenizar
+todos os problemas acima?</p>
+<h2 id="palavra-chave-_generic"><a class="header" href="#palavra-chave-_generic">Palavra-chave _Generic</a></h2>
+<p>A palavra-chave <code>_Generic</code> foi adicionada no padrão C11 e recebe uma expressão
+controladora seguida de uma lista de associações. Uma associação possui a
+sintaxe <code>tipo: expressão</code> e o compilador escolhe qual expressão avaliar com base
+no tipo da expressão controladora. Talvez você tenha morrido por dentro ao ler
+isso, mas é mais simples do que parece:</p>
+<pre><code class="language-c">int v;
+
+// O compilador transformará isso em puts(&quot;v é um int&quot;);
+_Generic(v, char:    puts(&quot;v é um char&quot;),
+            int:     puts(&quot;v é um int&quot;),
+            float:   puts(&quot;v é um float&quot;),
+            default: puts(&quot;v não é char, int, ou float&quot;));
+</code></pre>
+<p>No código acima temos a expressão controladora <code>v</code> e três associações. Se a
+expressão controladora <code>v</code> possuir o tipo <code>char</code>, a seleção genérica será
+substituída pela expressão <code>puts(&quot;v é um char&quot;);</code>. A palavra-chave <code>default</code>
+define uma associação para tipos que não se encaixam em nenhuma associação
+anterior.</p>
+<p>Você talvez tenha notado que a seleção genérica se comporta de forma similar à
+instrução <code>switch</code>, porém resolvida durante a compilação e baseada em um tipo e
+não em um valor. Esse é um ponto de vista válido, mas a seleção genérica
+apresenta um detalhe importante: Sua expressão controladora não é avaliada. Isso
+significa que a expressão controladora <code>puts(&quot;Olá, Mundo!&quot;)</code> não exibirá nada na
+tela, e a expressão controladora <code>exit(0)</code> não finalizará o programa. O
+compilador deve saber previamente tipo de retorno dessas funções, portanto não
+há necessidade de executá-las para realizar a seleção.</p>
+<p>Enfim, como utilizar isso para resolver os problemas de nossas funções <code>Max</code> e
+<code>MaxInt</code>?</p>
+<pre><code class="language-c">#define MAX(lhs, ...) _Generic(lhs, int:     MaxInt,\
+                                    default: Max)(lhs, __VA_ARGS__)
+
+void *Max(void *lhs, void *rhs, int cmp(void *lhs, void *rhs))
+{
+    return cmp(lhs, rhs) &lt; 0 ? rhs : lhs;
+}
+
+int MaxInt(int lhs, int rhs)
+{
+    return lhs &lt; rhs ? rhs : lhs;
+}
+</code></pre>
+<p>Agora não precisamos utilizar <code>Max</code> ou <code>MaxInt</code> explicitamente. Basta utilizar o
+macro <code>MAX</code> com os parâmetros desejados, e o compilador selecionará a função
+mais apropriada:</p>
+<pre><code class="language-c">// Comparador para floats
+int CmpFloat(void *lhs, void *rhs)
+{
+    return *(float *)lhs == *(float *)rhs ?  0 :
+           *(float *)lhs &lt; *(float *)rhs  ? -1 :
+                                             1;
+}
+
+int main(void)
+{
+    int ai = 5,
+        bi = 3;
+
+    float af = 5.f,
+          bf = 3.f;
+
+    // Isso se torna int vi = MaxInt(ai, bi);
+    int vi = MAX(ai, bi);
+
+    // Isso se torna float vf = *(float *)Max(&amp;af, &amp;bf, CmpFloat);
+    float vf = *(float *)MAX(&amp;af, &amp;bf, CmpFloat);
+
+    // vi agora vale 5 e vf agora vale 5.0
+
+    return 0;
+}
+</code></pre>
+<p>Como o tipo <code>float</code> não possui nenhuma associação explícita na seleção genérica,
+a função <code>Max</code> é selecionada e precisamos utilizar ponteiros (eliminando a
+possibilidade de utilizar rvalues). Para resolver isso, basta criar uma função
+para comparar valores <code>float</code>:</p>
+<pre><code class="language-c">#define MAX(lhs, ...) _Generic(lhs, int:     MaxInt,\
+                                    float:   MaxFloat,\
+                                    default: Max)(lhs, __VA_ARGS__)
+
+void *Max(void *lhs, void *rhs, int cmp(void *lhs, void *rhs))
+{
+    return cmp(lhs, rhs) &lt; 0 ? rhs : lhs;
+}
+
+int MaxInt(int lhs, int rhs)
+{
+    return lhs &lt; rhs ? rhs : lhs;
+}
+
+float MaxFloat(float lhs, float rhs)
+{
+    return lhs &lt; rhs ? rhs : lhs;
+}
+</code></pre>
+<p>Agora podemos utilizar <code>MAX</code> com valores <code>float</code> sem ponteiros:
+<code>float vf = MAX(af, bf)</code>. O uso de rvalues também se torna possível:
+<code>float vf = MAX(5.f, 3.f)</code>.</p>
+<p>Há vários meios de melhorar nossa seleção genérica. As funções <code>MaxInt</code> e
+<code>MaxFloat</code> podem ser criadas com macros, pois têm a mesma estrutura. Também há
+como aninhar palavras-chave <code>_Generic</code> para que <code>MAX</code> não precise de ponteiros
+na associação <code>default</code>. As possibilidades são incontáveis e não é difícil
+exagerar ao ponto de tornar o código virtualmente ilegível, mas se usadas
+corretamente, seleções genéricas são uma forma padronizada de lidar com diversos
+problemas.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript">
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+    </body>
+</html>

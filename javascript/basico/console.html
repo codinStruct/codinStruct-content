@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Console</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.</strong> Básico</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="../basico/tipos.html"><strong aria-hidden="true">1.2.</strong> Tipos</a></li><li class="chapter-item expanded "><a href="../basico/comentarios.html"><strong aria-hidden="true">1.3.</strong> Comentários</a></li><li class="chapter-item expanded "><a href="../basico/variaveis.html"><strong aria-hidden="true">1.4.</strong> Variáveis</a></li><li class="chapter-item expanded "><a href="../basico/funcoes.html"><strong aria-hidden="true">1.5.</strong> Funções</a></li><li class="chapter-item expanded "><a href="../basico/console.html" class="active"><strong aria-hidden="true">1.6.</strong> Console</a></li><li class="chapter-item expanded "><a href="../basico/condicional_if.html"><strong aria-hidden="true">1.7.</strong> Condicional If</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Intermediário</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../intermediario/objetos.html"><strong aria-hidden="true">2.1.</strong> Objetos</a></li><li class="chapter-item expanded "><a href="../intermediario/funcoes_arrow.html"><strong aria-hidden="true">2.2.</strong> Funções Arrow</a></li><li class="chapter-item expanded "><a href="../intermediario/arrays.html"><strong aria-hidden="true">2.3.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../intermediario/arrays_multidimensionais.html"><strong aria-hidden="true">2.4.</strong> Arrays Multidimensionais</a></li><li class="chapter-item expanded "><a href="../intermediario/for_loop.html"><strong aria-hidden="true">2.5.</strong> For Loop</a></li><li class="chapter-item expanded "><a href="../intermediario/condicional_switch.html"><strong aria-hidden="true">2.6.</strong> Condicional Switch</a></li><li class="chapter-item expanded "><a href="../intermediario/operador_condicional.html"><strong aria-hidden="true">2.7.</strong> Operador Condicional (Ternário)</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Avançado</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../avancado/parametros_rest.html"><strong aria-hidden="true">3.1.</strong> Parâmetros Rest</a></li><li class="chapter-item expanded "><a href="../avancado/geradores.html"><strong aria-hidden="true">3.2.</strong> Geradores</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="console"><a class="header" href="#console">Console</a></h1>
+<p>O console JavaScript é uma ferramenta presente em todos os navegadores modernos,
+que permite executar comandos de forma rápida e fácil e visualizar o resultado
+desses comandos. Todos os códigos aqui apresentados podem ser executados no
+console para fins de teste.</p>
+<p>Para acessar o console no Chrome ou no Edge basta apertar a tecla <code>F12</code>.</p>
+<p>Quando se estiver utilizando o console, você tem acesso ao objeto <code>console</code> que
+é utilizado para executar comandos relacionados aos console em si.</p>
+<p>Algumas das aplicações do objeto <code>console</code> são:</p>
+<h2 id="consolelog"><a class="header" href="#consolelog"><code>console.log()</code></a></h2>
+<p>Pode ser usado para exibir o valor de qualquer tipo de dado, incluindo strings,
+números, objetos, arrays, etc.</p>
+<pre><code class="language-javascript">console.log(&quot;Hello World&quot;);
+console.log(123);
+console.log({ name: &quot;João&quot;, age: 18 });
+console.log([1, 2, 3, 4]);
+
+// Resultado exibido no console:
+// Hello World
+// 123
+// { name: 'João', age: 18 }
+// [ 1, 2, 3, 4 ]
+</code></pre>
+<h2 id="consoleinfo-consolewarn-consoleerror"><a class="header" href="#consoleinfo-consolewarn-consoleerror"><code>console.info()</code>, <code>console.warn()</code>, <code>console.error()</code></a></h2>
+<p>Funcionam como <code>console.log()</code> mas servem para exibir mensagens de informação,
+avisos ou erros, respectivamente. O navegador exibe essas mensagens de cores
+diferentes, dependendo do tipo de mensagem. Além disso é possível escolher o
+nível de mensagem que será exibida no menu do navegador, de forma que, por
+exemplo, se escolhermos o nível <code>error</code>, apenas mensagens de erro serão
+exibidas.</p>
+<h2 id="consoleclear"><a class="header" href="#consoleclear"><code>console.clear()</code></a></h2>
+<p>É usado para limpar completamente o console. Os comandos que foram executados
+anteriormente não são apagados mas apenas deixam de ser exibidos.</p>
+<h2 id="consoletime"><a class="header" href="#consoletime"><code>console.time()</code></a></h2>
+<p>É usado para medir o tempo de execução de um determinado bloco de código entre
+duas chamadas de <code>console.time()</code> e <code>console.timeEnd()</code>.</p>
+<pre><code class="language-javascript">console.time(&quot;Timer&quot;);
+
+/* Código que demora 1 segundo ... */
+
+console.timeEnd(&quot;Timer&quot;);
+
+// Resultado exibido no console:
+// Timer: 1000.0 ms
+</code></pre>
+<p>É possível até usar nomes diferentes para os timers, permitindo ter mais de um
+timer ao mesmo tempo.</p>
+<pre><code class="language-javascript">console.time(&quot;Timer 1&quot;);
+
+/* Código que demora 1 segundo ... */
+
+console.time(&quot;Timer 2&quot;);
+
+/* Código que demora 1 segundo ... */
+
+console.timeEnd(&quot;Timer 1&quot;);
+console.timeEnd(&quot;Timer 2&quot;);
+
+// Resultado exibido no console:
+// Timer 1: 2000.0 ms
+// Timer 2: 1000.0 ms
+</code></pre>
+<h2 id="consoletable"><a class="header" href="#consoletable"><code>console.table()</code></a></h2>
+<p>É usado para exibir uma tabela com os dados de um objeto.</p>
+<pre><code class="language-javascript">console.table({ name: &quot;João&quot;, age: 18 });
+
+// Resultado:
+//          +-------+
+//          | Valor |
+// +--------+-------+
+// | name   | João  |
+// +--------+-------+
+// | age    | 18    |
+// +--------+-------+
+</code></pre>
+<h2 id="consolecount"><a class="header" href="#consolecount"><code>console.count()</code></a></h2>
+<p>É usado para contar o número de vezes que um determinado comando foi executado.</p>
+<pre><code class="language-javascript">console.count(&quot;Hello World&quot;);
+console.count(&quot;Hello World&quot;);
+console.count(&quot;Hello World&quot;);
+
+// Resultado:
+// Hello World: 1
+// Hello World: 2
+// Hello World: 3
+</code></pre>
+<h2 id="referências"><a class="header" href="#referências">Referências</a></h2>
+<ul>
+<li>Mozilla Foundation
+(<a href="https://developer.mozilla.org/pt-BR/docs/Web/API/console">Console</a>)</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basico/funcoes.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../basico/condicional_if.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basico/funcoes.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../basico/condicional_if.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>

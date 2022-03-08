@@ -1,0 +1,294 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Controle de Fluxo</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.</strong> Básico</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../basico/introducao.html"><strong aria-hidden="true">1.1.</strong> Introdução</a></li><li class="chapter-item expanded "><a href="../basico/primeiro_programa.html"><strong aria-hidden="true">1.2.</strong> Primeiro Programa</a></li><li class="chapter-item expanded "><a href="../basico/diretiva_include.html"><strong aria-hidden="true">1.3.</strong> Diretiva #include</a></li><li class="chapter-item expanded "><a href="../basico/funcoes.html"><strong aria-hidden="true">1.4.</strong> Funções</a></li><li class="chapter-item expanded "><a href="../basico/variaveis.html"><strong aria-hidden="true">1.5.</strong> Variáveis</a></li><li class="chapter-item expanded "><a href="../basico/tipos.html"><strong aria-hidden="true">1.6.</strong> Tipos Fundamentais Básicos</a></li><li class="chapter-item expanded "><a href="../basico/tabelas.html"><strong aria-hidden="true">1.7.</strong> Tabelas de Tipos Fundamentais</a></li><li class="chapter-item expanded "><a href="../basico/saida.html"><strong aria-hidden="true">1.8.</strong> Saída Básica</a></li><li class="chapter-item expanded "><a href="../basico/entrada.html"><strong aria-hidden="true">1.9.</strong> Entrada Básica</a></li><li class="chapter-item expanded "><a href="../basico/ops_aritmeticos.html"><strong aria-hidden="true">1.10.</strong> Operadores Aritméticos Básicos</a></li><li class="chapter-item expanded "><a href="../basico/ops_incremento_decremento.html"><strong aria-hidden="true">1.11.</strong> Operadores de Incremento e Decremento</a></li><li class="chapter-item expanded "><a href="../basico/ops_logicos_relacionais.html"><strong aria-hidden="true">1.12.</strong> Operadores Lógicos e Relacionais</a></li><li class="chapter-item expanded "><a href="../basico/controle_de_fluxo.html" class="active"><strong aria-hidden="true">1.13.</strong> Controle de Fluxo</a></li><li class="chapter-item expanded "><a href="../basico/arrays.html"><strong aria-hidden="true">1.14.</strong> Arrays</a></li><li class="chapter-item expanded "><a href="../basico/while.html"><strong aria-hidden="true">1.15.</strong> Instrução while</a></li><li class="chapter-item expanded "><a href="../basico/for.html"><strong aria-hidden="true">1.16.</strong> Instrução for</a></li><li class="chapter-item expanded "><a href="../basico/ponteiros.html"><strong aria-hidden="true">1.17.</strong> Ponteiros</a></li><li class="chapter-item expanded "><a href="../basico/sizeof.html"><strong aria-hidden="true">1.18.</strong> Operador sizeof</a></li><li class="chapter-item expanded "><a href="../basico/ponteiros_aritmetica.html"><strong aria-hidden="true">1.19.</strong> Aritmética de Ponteiros</a></li><li class="chapter-item expanded "><a href="../basico/memoria.html"><strong aria-hidden="true">1.20.</strong> Gerenciamento de Memória</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> Intermediário</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../intermediario/conversoes_implicitas.html"><strong aria-hidden="true">2.1.</strong> Conversões Implícitas</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Avançado</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../avancado/selecao_generica.html"><strong aria-hidden="true">3.1.</strong> Seleção Genérica</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title"></h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="controle-de-fluxo"><a class="header" href="#controle-de-fluxo">Controle de Fluxo</a></h1>
+<p>Até agora vimos programas totalmente lineares, sem mais de um caminho possível.
+Nessa página vamos introduzir duas instruções que permitem ao programa decidir,
+durante a execução, qual caminho percorrer.</p>
+<h2 id="instrução-if"><a class="header" href="#instrução-if">Instrução <code>if</code></a></h2>
+<p>A instrução <code>if</code> faz com que o programa execute uma instrução se uma condição
+for verdadeira (<code>true</code>). A condição deve estar entre parênteses após o <code>if</code>, e
+após o fechamento dos parênteses deve estar a instrução a ser executada:</p>
+<pre><code class="language-c">       // ⬐ Condição
+    if (a &gt; b) // ⬐ Executado se a condição for true (verdadeira)
+        puts(&quot;a é maior que b&quot;);
+</code></pre>
+<p>Na maioria dos casos, uma instrução é um trecho de código entre dois <code>;</code>. Como o
+<code>if</code> apenas pode executar uma instrução, o segundo <code>puts</code> do código abaixo é
+executado incondicionalmente.</p>
+<pre><code class="language-c">    if (a &gt; b) // ⬐ Executada se a condição for true
+        puts(&quot;a é maior que b&quot;);
+        puts(&quot;Não tenho nada a ver com isso&quot;);
+//       ⬑ Não faz parte do if, sempre será executada
+</code></pre>
+<p>Para que a instrução <code>puts(&quot;Não tenho nada a ver com isso&quot;);</code> faça parte do
+<code>if</code>, precisamos transformar as duas instruções em uma instrução composta.
+Fazemos isso colocando elas entre chaves:</p>
+<pre><code class="language-c">if (a &gt; b)
+{ // ← Início da instrução composta
+    puts(&quot;a é maior que b&quot;);
+    puts(&quot;Agora tenho algo a ver com isso&quot;);
+} // ← Fim da instrução composta
+</code></pre>
+<p>Agora, ambos <code>puts</code> só são executados se a condição for verdadeira. Uma
+instrução composta pode ser formada por qualquer número de instruções, até mesmo
+compostas.</p>
+<p>Não é necessário alinhar o código da mesma forma que nos trechos acima. Por
+sinal, um programa em C pode ser escrito em uma linha apenas (exceto por
+diretivas de pré-processamento). O código abaixo faz exatamente o mesmo que o
+código anterior.</p>
+<pre><code class="language-c">if(a&gt;b){puts(&quot;a é maior que b&quot;);puts(&quot;Agora tenho algo a ver com isso&quot;);}
+</code></pre>
+<p>Por questão de legibilidade, virtualmente todos os programadores optam por
+&quot;embelezar&quot; o código com espaços em branco desnecessários. Isso não é algo ruim,
+muito pelo contrário.</p>
+<p>Vamos modificar um trecho de um programa apresentado anteriormente, que verifica
+se os números digitados estão em ordem crescente. O trecho antigo foi comentado:</p>
+<pre><code class="language-c">/* Trecho antigo
+printf(&quot;Os números estão ordenados? %d\n&quot;,
+       Ordenados(a, b, c, d, e));
+*/
+
+if (Ordenados(a, b, c, d, e))
+    puts(&quot;Os números estão ordenados.&quot;);
+</code></pre>
+<p>Agora, em vez de exibir <code>1</code> ou <code>0</code>, o programa é mais descritivo. Infelizmente,
+ele não exibe nada se os números não estiverem ordenados. Para isso existe a
+instrução <code>else</code>.</p>
+<h2 id="palavra-chave-else"><a class="header" href="#palavra-chave-else">Palavra-chave <code>else</code></a></h2>
+<p>Formalmente, <code>else</code> não é uma instrução e sim uma palavra-chave que produz uma
+forma alternativa da instrução <code>if</code>. A palavra-chave <code>else</code> só pode aparecer
+após o &quot;corpo&quot; (a instrução seguinte) de um <code>if</code>. Assim como <code>if</code>, <code>else</code>
+condicionalmente executa uma instrução; porém apenas se a condição do <code>if</code>
+precedente for falsa.</p>
+<p>Uma forma simples de visualizar isso é adicionando um <code>else</code> em nosso código
+anterior:</p>
+<pre><code class="language-c">if (Ordenados(a, b, c, d, e))
+    puts(&quot;Os números estão ordenados.&quot;);
+else
+    puts(&quot;Os números não estão ordenados.&quot;);
+</code></pre>
+<p>O segundo <code>puts</code> só executa se a condição <code>Ordenados(a, b, c, d, e)</code> for falsa,
+e assim nosso programa finalmente gera saídas apropriadas para ambos os casos.</p>
+<p>Um <code>if</code>, seu corpo e quaisquer <code>else</code>s seguintes são considerados uma só
+instrução, portanto é possível encadear vários <code>if</code> e <code>else</code>:</p>
+<pre><code class="language-c">if (Ordenados(a, b, c, d, e))
+    puts(&quot;Os números estão em ordem crescente.&quot;);
+else if (Ordenados(e, d, c, b, a))
+    puts(&quot;Os números estão em ordem decrescente.&quot;);
+else
+    puts(&quot;Os números não estão ordenados.&quot;);
+</code></pre>
+<p>Analise com atenção o código acima, pois o uso de condicionais encadeadas é
+bastante comum em C. Em português, o funcionamento do programa é o seguinte.</p>
+<ul>
+<li>Se os valores formam uma sequência crescente:
+<ul>
+<li>Exibe &quot;Os números estão em ordem crescente.&quot;</li>
+</ul>
+</li>
+<li>Caso contrário, se os valores formam uma sequência decrescente:
+<ul>
+<li>Exibe &quot;Os números estão em ordem decrescente.&quot;</li>
+</ul>
+</li>
+<li>Caso contrário, os valores não estão em ordem crescente ou decrescente.
+<ul>
+<li>Exibe &quot;Os números não estão ordenados.&quot;</li>
+</ul>
+</li>
+</ul>
+<h2 id="referências"><a class="header" href="#referências">Referências</a></h2>
+<ul>
+<li>ISO/IEC JTC1/SC22/WG14 N2310:
+<ul>
+<li>6.8 Statements and blocks:<!-- Instruções compostas -->
+<ul>
+<li>6.8.2 Compound statement</li>
+</ul>
+<!-- Instruções de expressões (e.g. puts(...);) -->
+<ul>
+<li>6.8.3 Expression and null statements</li>
+</ul>
+<!-- Instruções de seleção (if, else). O padrão não deixa super
+     claro se else é uma instrução, mas a p.491 dá a entender -->
+<ul>
+<li>6.8.4 Selection statements</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../basico/ops_logicos_relacionais.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../basico/arrays.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../basico/ops_logicos_relacionais.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../basico/arrays.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+    </body>
+</html>
