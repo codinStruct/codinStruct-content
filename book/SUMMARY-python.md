@@ -1,0 +1,16 @@
+# Sumário
+
+- [Básico](basico/introducao.md)
+  - [Introdução](basico/introducao.md)
+  - [Primeiros Passos](basico/primeiros_passos.md)
+  - [Primeiro Programa](basico/primeiro_programa.md)
+  - [Entrada de Dados](basico/entrada_dados.md)
+  - [Tipos de Dados](basico/tipagem.md)
+  - [Operações Aritméticas](basico/operacoes_aritmeticas.md)
+  - [Comentários](basico/comentario.md)
+- [Intermediário]()
+  - [Listas](intermediario/listas.md)
+  - [Tuplas](intermediario/tuplas.md)
+  - [Conjuntos](intermediario/conjuntos.md)
+  - [Dicionários](intermediario/dicionarios.md)
+  - [Coleções](intermediario/colecoes.md)
