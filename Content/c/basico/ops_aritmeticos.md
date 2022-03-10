@@ -68,19 +68,19 @@ Mais alguns exemplos:
 
 | Operação  | Valor | Raciocínio                                                       |
 | :-------: | :---: | ---------------------------------------------------------------- |
-| `10 % 3`  |   1   | `10 / 3` é igual a 3, `3 * 3` é igual a 9, e `10 - 1` é 1        |
+| `10 % 3`  |   1   | `10 / 3` é igual a 3, `3 * 3` é igual a 9, e `10 - 9` é 1        |
 | `10 % 2`  |   0   | `10 / 2` é igual a 5, `2 * 5` é igual a 10, e `10 - 10` é 0      |
 | `40 % 7`  |   5   | `40 / 7` é igual a 5, `7 * 5` é igual a 35 e `40 - 35` é 5       |
 | `-10 % 3` |  -1   | `-10 / 3` é igual a -3, `3 * -3` é igual a -9 e `-10 -(-9)` é -1 |
 
 ## Operadores Unários
 
-Todos os operadores unários ficam à esquerda do operando, no formato
+A maioria dos operadores unários ficam à esquerda do operando, no formato
 `<operador> <operando>` (o número de espaços geralmente não importa).
 
 ### `+` unário
 
-O operador unário `+` é quase sempre um no-op uma operação que não faz nada.
+O operador unário `+` é quase sempre um no-op—uma operação que não faz nada.
 
 Apenas em alguns casos, o operador unário `+` irá converter seu operando para
 outro tipo. Esse processo é chamado promoção inteira, que será detalhado bem
